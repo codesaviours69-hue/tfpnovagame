@@ -8,6 +8,7 @@ interface AdSenseBannerProps {
   className?: string;
   style?: React.CSSProperties;
   minHeight?: string;
+  label?: string;
 }
 
 declare global {
@@ -24,6 +25,7 @@ export const AdSenseBanner: React.FC<AdSenseBannerProps> = ({
   className = '',
   style = {},
   minHeight = '250px',
+  label,
 }) => {
   const adRef = useRef<HTMLModElement>(null);
   const pushedRef = useRef(false);
@@ -45,6 +47,12 @@ export const AdSenseBanner: React.FC<AdSenseBannerProps> = ({
       className={`relative mx-auto flex flex-col items-center justify-center p-2 rounded-2xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-sm shadow-lg overflow-visible w-full ${className}`}
       style={{ minHeight }}
     >
+      {label && (
+        <div className="w-full flex items-center justify-between text-[9px] font-bold text-slate-500 uppercase tracking-widest px-2 pb-1.5 border-b border-slate-800/40 mb-1">
+          <span>{label}</span>
+          <span className="text-slate-600">Google AdSense</span>
+        </div>
+      )}
       {/* AdSense ins tag */}
       <div className="w-full flex justify-center items-center overflow-visible" style={{ minHeight }}>
         <ins
