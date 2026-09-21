@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="courtGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0369a1" />
+      <stop offset="100%" stop-color="#0c4a6e" />
+    </linearGradient>
+    <linearGradient id="ballGrad" x1="20%" y1="20%" x2="80%" y2="80%">
+      <stop offset="0%" stop-color="#fb923c" />
+      <stop offset="40%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#9a3412" />
+    </linearGradient>
+    <linearGradient id="fireGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="50%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#facc15" />
+    </linearGradient>
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="500" fill="url(#skyGrad)" />
+
+  <!-- Stadium Floodlights Glow -->
+  <circle cx="80" cy="80" r="100" fill="#00f0ff" opacity="0.15" filter="blur(30px)" />
+  <circle cx="320" cy="80" r="100" fill="#f43f5e" opacity="0.15" filter="blur(30px)" />
+
+  <!-- 3D Basketball Court Floor (Perspective) -->
+  <polygon points="20,500 380,500 330,340 70,340" fill="url(#courtGrad)" stroke="#00f0ff" stroke-width="2" />
+  <!-- Court Lines -->
+  <ellipse cx="200" cy="400" rx="100" ry="30" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.6" />
+  <line x1="200" y1="340" x2="200" y2="500" stroke="#38bdf8" stroke-width="2" opacity="0.4" />
+
+  <!-- Glass Backboard & Neon Rim -->
+  <g transform="translate(200, 180)">
+    <!-- Backboard Support Arm -->
+    <rect x="-8" y="-120" width="16" height="50" fill="#334155" />
+    <!-- Glass Backboard -->
+    <rect x="-100" y="-80" width="200" height="120" rx="8" fill="#0f172a" fill-opacity="0.8" stroke="#00f0ff" stroke-width="3" filter="drop-shadow(0 0 15px rgba(0,240,255,0.4))" />
+    <!-- Inner Target Square -->
+    <rect x="-40" y="-30" width="80" height="60" fill="none" stroke="#f43f5e" stroke-width="3" filter="drop-shadow(0 0 8px #f43f5e)" />
+    <!-- Orange Rim -->
+    <ellipse cx="0" cy="30" rx="36" ry="12" fill="none" stroke="#f97316" stroke-width="5" filter="drop-shadow(0 0 10px #f97316)" />
+    <!-- Net Strands -->
+    <path d="M -30,32 L -20,70 L 0,75 L 20,70 L 30,32 M -15,34 L -10,72 M 15,34 L 10,72 M -25,48 L 25,48 M -20,62 L 20,62" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.8" stroke-dasharray="2 2" />
+  </g>
+
+  <!-- Glowing Fireball Trail Behind Basketball -->
+  <path d="M 200,240 Q 230,320 200,420" fill="none" stroke="url(#fireGrad)" stroke-width="22" stroke-linecap="round" opacity="0.5" filter="blur(6px)" />
+  <path d="M 200,240 Q 220,330 200,420" fill="none" stroke="#facc15" stroke-width="10" stroke-linecap="round" opacity="0.8" filter="blur(3px)" />
+
+  <!-- 3D Basketball Sinking Into Hoop -->
+  <g transform="translate(200, 205)">
+    <!-- Ball Base -->
+    <circle cx="0" cy="0" r="28" fill="url(#ballGrad)" stroke="#7c2d12" stroke-width="2" filter="drop-shadow(0 0 20px rgba(249,115,22,0.8))" />
+    <!-- Ball Seams -->
+    <path d="M -28,0 L 28,0 M 0,-28 L 0,28" stroke="#431407" stroke-width="2" />
+    <path d="M -20,-20 Q 0,0 -20,20 M 20,-20 Q 0,0 20,20" fill="none" stroke="#431407" stroke-width="2" />
+    <!-- Fire Sparkles -->
+    <circle cx="-16" cy="-14" r="3" fill="#ffffff" filter="drop-shadow(0 0 5px #ffffff)" />
+  </g>
+
+  <!-- Title Banner -->
+  <g transform="translate(200, 65)">
+    <rect x="-145" y="-35" width="290" height="70" rx="16" fill="#090d16" fill-opacity="0.9" stroke="#f97316" stroke-width="2" filter="url(#neonGlow)" />
+    <text x="0" y="-6" font-family="system-ui, sans-serif" font-size="21" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">STREET BASKETBALL 3D</text>
+    <text x="0" y="18" font-family="system-ui, sans-serif" font-size="11" font-weight="800" fill="#facc15" text-anchor="middle" letter-spacing="3">SWIPE HOOP STARS</text>
+  </g>
+</svg>

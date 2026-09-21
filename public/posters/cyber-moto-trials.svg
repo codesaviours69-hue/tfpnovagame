@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050814" />
+      <stop offset="40%" stop-color="#0b1329" />
+      <stop offset="80%" stop-color="#190a38" />
+      <stop offset="100%" stop-color="#030014" />
+    </linearGradient>
+
+    <!-- Glowing Cyber Gradients -->
+    <linearGradient id="cyanNeon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#0077fe" />
+    </linearGradient>
+    <linearGradient id="magentaNeon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff007f" />
+      <stop offset="100%" stop-color="#9d00ff" />
+    </linearGradient>
+    <linearGradient id="amberGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+    <linearGradient id="nitroFlame" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <!-- Filters & Glows -->
+    <filter id="glowCyan" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="glowMagenta" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Deep Cyber Space Background -->
+  <rect width="800" height="500" fill="url(#bgGrad)" />
+
+  <!-- Distant Cyber City Skyline -->
+  <g opacity="0.35">
+    <rect x="40" y="240" width="55" height="260" fill="#0f172a" />
+    <rect x="110" y="200" width="70" height="300" fill="#1e1b4b" />
+    <rect x="200" y="270" width="45" height="230" fill="#0f172a" />
+    <rect x="260" y="160" width="90" height="340" fill="#1e1b4b" />
+    <rect x="370" y="220" width="60" height="280" fill="#0f172a" />
+    <rect x="450" y="180" width="80" height="320" fill="#1e1b4b" />
+    <rect x="550" y="250" width="65" height="250" fill="#0f172a" />
+    <rect x="635" y="190" width="95" height="310" fill="#1e1b4b" />
+    <rect x="745" y="260" width="55" height="240" fill="#0f172a" />
+    <!-- City Windows / Grid Glows -->
+    <circle cx="280" cy="180" r="1.5" fill="#00f0ff" />
+    <circle cx="320" cy="210" r="1.5" fill="#ff007f" />
+    <circle cx="490" cy="200" r="1.5" fill="#facc15" />
+    <circle cx="670" cy="220" r="1.5" fill="#00f0ff" />
+  </g>
+
+  <!-- Perspective Perspective Neon Grid Runway -->
+  <g opacity="0.45">
+    <path d="M 0 460 L 800 460" stroke="#00f0ff" stroke-width="1.5" />
+    <path d="M 0 480 L 800 480" stroke="#00f0ff" stroke-width="2" />
+    <path d="M 0 495 L 800 495" stroke="#ff007f" stroke-width="2.5" />
+    <!-- Radiating perspective grid lines -->
+    <line x1="400" y1="360" x2="-100" y2="500" stroke="#00f0ff" stroke-width="1" />
+    <line x1="400" y1="360" x2="100" y2="500" stroke="#00f0ff" stroke-width="1" />
+    <line x1="400" y1="360" x2="300" y2="500" stroke="#00f0ff" stroke-width="1" />
+    <line x1="400" y1="360" x2="500" y2="500" stroke="#00f0ff" stroke-width="1" />
+    <line x1="400" y1="360" x2="700" y2="500" stroke="#00f0ff" stroke-width="1" />
+    <line x1="400" y1="360" x2="900" y2="500" stroke="#00f0ff" stroke-width="1" />
+  </g>
+
+  <!-- Mega Jump Ramp Left & Loop Background Arc -->
+  <path d="M -20 480 Q 150 470 250 360 L 290 320" fill="none" stroke="url(#cyanNeon)" stroke-width="8" filter="url(#glowCyan)" />
+  <path d="M 290 320 L 295 500" stroke="rgba(0, 240, 255, 0.3)" stroke-dasharray="6,6" stroke-width="2" />
+
+  <!-- 360 Loop Track in Background -->
+  <path d="M 520 480 C 650 480 720 320 640 220 C 560 120 440 260 520 480" fill="none" stroke="url(#magentaNeon)" stroke-width="6" opacity="0.6" filter="url(#glowMagenta)" />
+
+  <!-- Speed & Stunt Wind Trails -->
+  <g opacity="0.6" filter="url(#glowCyan)">
+    <path d="M 120 180 Q 260 220 380 210" fill="none" stroke="#38bdf8" stroke-width="3" stroke-dasharray="14,14" />
+    <path d="M 180 240 Q 320 280 440 270" fill="none" stroke="#ec4899" stroke-width="2" stroke-dasharray="10,8" />
+    <path d="M 220 140 Q 340 180 480 170" fill="none" stroke="#00f0ff" stroke-width="1.5" />
+  </g>
+
+  <!-- Explosive Stunt Particles -->
+  <g>
+    <circle cx="340" cy="310" r="4" fill="#ff007f" filter="url(#glowMagenta)" />
+    <circle cx="310" cy="270" r="3" fill="#00f0ff" filter="url(#glowCyan)" />
+    <circle cx="560" cy="180" r="5" fill="#facc15" />
+    <circle cx="490" cy="130" r="3.5" fill="#38bdf8" />
+  </g>
+
+  <!-- 🏍️ CYBER STUNT BIKE PERFORMING EPIC AIR FLIP -->
+  <g transform="translate(420, 230) rotate(-28)" filter="url(#glowCyan)">
+    <!-- Nitro Exhaust Thruster Flames -->
+    <path d="M -110 10 L -180 -5 Q -220 12 -160 25 Z" fill="url(#nitroFlame)" opacity="0.9" />
+    <path d="M -110 12 L -150 6 L -130 18 Z" fill="#ffffff" />
+
+    <!-- Rear Wheel & Glowing Rim -->
+    <g transform="translate(-85, 45)">
+      <!-- Outer Tire -->
+      <circle cx="0" cy="0" r="38" fill="#090d16" stroke="#00f0ff" stroke-width="4.5" />
+      <circle cx="0" cy="0" r="28" fill="#020617" stroke="#ff007f" stroke-width="2.5" />
+      <!-- Spoke Luminescence -->
+      <line x1="-28" y1="0" x2="28" y2="0" stroke="#00f0ff" stroke-width="2" />
+      <line x1="0" y1="-28" x2="0" y2="28" stroke="#00f0ff" stroke-width="2" />
+      <line x1="-20" y1="-20" x2="20" y2="20" stroke="#00f0ff" stroke-width="1.5" />
+      <line x1="-20" y1="20" x2="20" y2="-20" stroke="#00f0ff" stroke-width="1.5" />
+      <!-- Central Hub Axis -->
+      <circle cx="0" cy="0" r="9" fill="#00f0ff" />
+      <circle cx="0" cy="0" r="4" fill="#ffffff" />
+    </g>
+
+    <!-- Front Wheel & Glowing Rim -->
+    <g transform="translate(85, 45)">
+      <!-- Outer Tire -->
+      <circle cx="0" cy="0" r="38" fill="#090d16" stroke="#00f0ff" stroke-width="4.5" />
+      <circle cx="0" cy="0" r="28" fill="#020617" stroke="#ff007f" stroke-width="2.5" />
+      <!-- Spoke Luminescence -->
+      <line x1="-28" y1="0" x2="28" y2="0" stroke="#00f0ff" stroke-width="2" />
+      <line x1="0" y1="-28" x2="0" y2="28" stroke="#00f0ff" stroke-width="2" />
+      <line x1="-20" y1="-20" x2="20" y2="20" stroke="#00f0ff" stroke-width="1.5" />
+      <line x1="-20" y1="20" x2="20" y2="-20" stroke="#00f0ff" stroke-width="1.5" />
+      <!-- Central Hub Axis -->
+      <circle cx="0" cy="0" r="9" fill="#00f0ff" />
+      <circle cx="0" cy="0" r="4" fill="#ffffff" />
+    </g>
+
+    <!-- Heavy Suspension Swingarm & Front Forks -->
+    <path d="M -85 45 L -20 15 L 0 22 L -85 45" fill="#1e293b" stroke="#00f0ff" stroke-width="2" />
+    <!-- Front Telescopic Shock Absorbers -->
+    <line x1="85" y1="45" x2="42" y2="-28" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" />
+    <line x1="85" y1="45" x2="42" y2="-28" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+
+    <!-- Sleek Cyber Chassis & Plasma Engine Core -->
+    <path d="M -80 15 L -45 -18 L 10 -22 L 50 -15 L 35 15 L -20 22 Z" fill="#0f172a" stroke="#00f0ff" stroke-width="3" />
+    <!-- Plasma Battery Core Indicator Glow -->
+    <rect x="-18" y="-5" width="32" height="14" rx="4" fill="#ff007f" filter="url(#glowMagenta)" />
+    <rect x="-14" y="-3" width="24" height="10" rx="2" fill="#ffffff" />
+
+    <!-- Aerodynamic Fuel Tank & Cowling -->
+    <path d="M -45 -18 L -15 -35 L 28 -32 L 48 -18 L 10 -22 Z" fill="url(#cyanNeon)" stroke="#ffffff" stroke-width="1.5" />
+    <!-- Glowing Accent Stripes -->
+    <path d="M -30 -16 L 20 -18" stroke="#ff007f" stroke-width="3" />
+
+    <!-- Handlebars & Cyber Headlight -->
+    <path d="M 40 -28 L 52 -38 L 65 -36" fill="none" stroke="#e2e8f0" stroke-width="4" stroke-linecap="round" />
+    <polygon points="58,-28 72,-30 68,-18 52,-18" fill="#facc15" filter="url(#glowCyan)" />
+
+    <!-- 👤 CYBER STUNT RIDER -->
+    <!-- Lower Body / Legs in Motocross Tuck -->
+    <path d="M -25 -18 L -10 8 L -45 28" fill="none" stroke="#0284c7" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M -25 -18 L -10 8 L -45 28" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+
+    <!-- Torso Leaning into Stunt Flip -->
+    <path d="M -25 -18 L 10 -42" fill="none" stroke="#0f172a" stroke-width="15" stroke-linecap="round" />
+    <path d="M -25 -18 L 10 -42" fill="none" stroke="#00f0ff" stroke-width="4" stroke-linecap="round" />
+
+    <!-- Arms Holding Handlebars -->
+    <path d="M 6 -36 L 25 -22 L 52 -36" fill="none" stroke="#0284c7" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Cyber Helmet & Neon Visor -->
+    <g transform="translate(18, -56)">
+      <ellipse cx="0" cy="0" rx="15" ry="14" fill="#090d16" stroke="#00f0ff" stroke-width="2.5" />
+      <!-- Golden Hologram Visor -->
+      <path d="M 4 -6 Q 16 0 10 9 L 2 7 Z" fill="url(#amberGold)" filter="url(#glowCyan)" />
+      <circle cx="10" cy="2" r="1.5" fill="#ffffff" />
+    </g>
+  </g>
+
+  <!-- Foreground Cyber Badges & HUD Overlays -->
+  <g transform="translate(40, 40)">
+    <!-- Main Title Banner -->
+    <rect x="0" y="0" width="380" height="64" rx="16" fill="rgba(15, 23, 42, 0.85)" stroke="#00f0ff" stroke-width="2" filter="url(#glowCyan)" />
+    <text x="20" y="32" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="22" fill="#ffffff" letter-spacing="1">
+      CYBER MOTO TRIALS
+    </text>
+    <text x="20" y="52" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="12" fill="#00f0ff" letter-spacing="3">
+      ⚡ NEON STUNT X • 360° LOOPS • 60 FPS
+    </text>
+  </g>
+
+  <!-- Stunt Combo Badge Floating Top-Right -->
+  <g transform="translate(620, 45)">
+    <rect x="0" y="0" width="140" height="50" rx="14" fill="rgba(2, 6, 23, 0.9)" stroke="#ff007f" stroke-width="2" filter="url(#glowMagenta)" />
+    <text x="70" y="22" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="10" fill="#f472b6" letter-spacing="2">
+      AIR STUNT
+    </text>
+    <text x="70" y="40" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="15" fill="#ffffff">
+      BACKFLIP +500
+    </text>
+  </g>
+
+  <!-- Bottom Stats Footer Pills -->
+  <g transform="translate(40, 440)">
+    <rect x="0" y="0" width="190" height="32" rx="10" fill="rgba(2, 6, 23, 0.85)" stroke="rgba(0, 240, 255, 0.4)" stroke-width="1.5" />
+    <text x="14" y="21" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="11" fill="#38bdf8">
+      🏁 5 STUNT TRACKS • 6 BIKES
+    </text>
+  </g>
+</svg>

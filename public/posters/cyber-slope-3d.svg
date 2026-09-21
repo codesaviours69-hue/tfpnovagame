@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="slopeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050515"/>
+      <stop offset="50%" stop-color="#0f0728"/>
+      <stop offset="100%" stop-color="#24083a"/>
+    </linearGradient>
+
+    <!-- Ball Gradients -->
+    <linearGradient id="ballCyan" x1="25%" y1="20%" x2="80%" y2="85%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#22d3ee"/>
+      <stop offset="70%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#031d38"/>
+    </linearGradient>
+
+    <linearGradient id="rampNeon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#059669" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#064e3b" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <linearGradient id="nitroPad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="slopeGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="hyperGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur2"/>
+      <feComposite in="SourceGraphic" in2="blur2" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#slopeBg)"/>
+
+  <!-- Cyber City Distant Skylines & Neon Buildings -->
+  <g opacity="0.35">
+    <rect x="60" y="140" width="45" height="240" fill="#1e1b4b" stroke="#6366f1" stroke-width="1"/>
+    <rect x="120" y="100" width="60" height="280" fill="#0f172a" stroke="#00f0ff" stroke-width="1"/>
+    <rect x="200" y="160" width="40" height="220" fill="#1e1b4b" stroke="#a855f7" stroke-width="1"/>
+    <rect x="580" y="110" width="55" height="270" fill="#0f172a" stroke="#ec4899" stroke-width="1"/>
+    <rect x="650" y="150" width="45" height="230" fill="#1e1b4b" stroke="#00f0ff" stroke-width="1"/>
+    <rect x="710" y="90" width="50" height="290" fill="#0f172a" stroke="#f59e0b" stroke-width="1"/>
+  </g>
+
+  <!-- Distant Synthwave Sun / Core Horizon -->
+  <circle cx="400" cy="180" r="65" fill="#f43f5e" opacity="0.5" filter="url(#hyperGlow)"/>
+  <circle cx="400" cy="180" r="45" fill="#fbbf24" opacity="0.8" filter="url(#slopeGlow)"/>
+
+  <!-- Steep Downhill 3D Polygonal Runway / Track -->
+  <!-- Distant Narrow Track Tiles -->
+  <polygon points="385,200 415,200 430,240 370,240" fill="#042f2e" stroke="#10b981" stroke-width="1.5"/>
+  <polygon points="370,240 430,240 465,300 335,300" fill="#064e3b" stroke="#34d399" stroke-width="2"/>
+  <polygon points="335,300 465,300 520,380 280,380" fill="#065f46" stroke="#10b981" stroke-width="2.5"/>
+  <polygon points="280,380 520,380 580,450 220,450" fill="#047857" stroke="#6ee7b7" stroke-width="3"/>
+
+  <!-- Track Center Neon Dashed Guide Lines -->
+  <line x1="400" y1="200" x2="400" y2="450" stroke="#00f0ff" stroke-width="3" stroke-dasharray="16, 12" filter="url(#slopeGlow)"/>
+
+  <!-- Left & Right Neon Glowing Guard Rails / Edges -->
+  <line x1="385" y1="200" x2="220" y2="450" stroke="#00f0ff" stroke-width="4" filter="url(#slopeGlow)"/>
+  <line x1="415" y1="200" x2="580" y2="450" stroke="#00f0ff" stroke-width="4" filter="url(#slopeGlow)"/>
+
+  <!-- Speed Booster Nitro Arrows on Track -->
+  <g filter="url(#slopeGlow)">
+    <polygon points="400,320 380,345 390,345 390,360 410,360 410,345 420,345" fill="url(#nitroPad)"/>
+    <polygon points="400,270 385,290 393,290 393,302 407,302 407,290 415,290" fill="url(#nitroPad)"/>
+  </g>
+
+  <!-- Red Danger Hazard Blocks on Track Sides -->
+  <g filter="url(#slopeGlow)">
+    <polygon points="305,340 335,340 345,370 315,370" fill="#e11d48" stroke="#ffffff" stroke-width="1.5"/>
+    <polygon points="305,340 305,315 335,315 335,340" fill="#f43f5e" stroke="#ffffff" stroke-width="1.5"/>
+    <polygon points="475,320 500,320 510,345 485,345" fill="#e11d48" stroke="#ffffff" stroke-width="1.5"/>
+    <polygon points="475,320 475,300 500,300 500,320" fill="#f43f5e" stroke="#ffffff" stroke-width="1.5"/>
+  </g>
+
+  <!-- Floating Green / Cyan Energy Crystals / Diamond Collectibles -->
+  <g transform="translate(400, 240)" filter="url(#slopeGlow)">
+    <polygon points="0,-16 -12,0 0,16 12,0" fill="#22d3ee" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="4" fill="#ffffff"/>
+  </g>
+
+  <!-- High-Velocity Rolling Neon Sphere (Main Hero) -->
+  <!-- Motion Blur Streaks -->
+  <g filter="url(#slopeGlow)">
+    <line x1="390" y1="410" x2="400" y2="330" stroke="#00f0ff" stroke-width="10" opacity="0.6" stroke-linecap="round"/>
+    <line x1="410" y1="410" x2="400" y2="330" stroke="#38bdf8" stroke-width="6" opacity="0.8" stroke-linecap="round"/>
+  </g>
+
+  <!-- Sphere Body -->
+  <g transform="translate(400, 370)">
+    <!-- Shadow on Track -->
+    <ellipse cx="0" cy="36" rx="42" ry="12" fill="#020617" opacity="0.8"/>
+    <!-- Outer Glow Ring -->
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#22d3ee" stroke-width="3" filter="url(#hyperGlow)"/>
+    <!-- Main Sphere -->
+    <circle cx="0" cy="0" r="36" fill="url(#ballCyan)" stroke="#ffffff" stroke-width="2.5"/>
+    <!-- Specular Highlight -->
+    <ellipse cx="-12" cy="-12" rx="14" ry="7" fill="#ffffff" opacity="0.85" transform="rotate(-30, -12, -12)"/>
+    <!-- Inner Gyro Circuit Lines -->
+    <ellipse cx="0" cy="0" rx="34" ry="14" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.7" transform="rotate(45, 0, 0)"/>
+  </g>
+
+  <!-- Title Badge Top Header -->
+  <g transform="translate(400, 48)" text-anchor="middle">
+    <rect x="-220" y="-22" width="440" height="42" rx="21" fill="#059669" fill-opacity="0.35" stroke="#34d399" stroke-width="2" filter="url(#slopeGlow)"/>
+    <text x="0" y="5" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="21" letter-spacing="3" filter="url(#slopeGlow)">
+      CYBER SLOPE 3D
+    </text>
+  </g>
+
+  <!-- Tagline Banner Bottom -->
+  <g transform="translate(400, 430)" text-anchor="middle">
+    <text x="0" y="0" fill="#6ee7b7" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="12" letter-spacing="2">
+      ⚡ HIGH-VELOCITY 3D SPHERE RUNNER • BOOST PADS • GAP JUMPS • 60 FPS
+    </text>
+  </g>
+</svg>

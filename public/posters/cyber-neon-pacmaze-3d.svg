@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="pacGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047" />
+      <stop offset="50%" stop-color="#facc15" />
+      <stop offset="100%" stop-color="#eab308" />
+    </linearGradient>
+    <linearGradient id="ghostRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb7185" />
+      <stop offset="100%" stop-color="#e11d48" />
+    </linearGradient>
+    <linearGradient id="ghostCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="ghostPink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f472b6" />
+      <stop offset="100%" stop-color="#db2777" />
+    </linearGradient>
+    <linearGradient id="ghostAmber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="600" fill="url(#bgGrad)" />
+
+  <!-- 3D Isometric Neon Maze Walls -->
+  <g stroke="#00f0ff" stroke-width="6" fill="none" opacity="0.85" filter="url(#glow)">
+    <!-- Outer Border -->
+    <rect x="60" y="50" width="680" height="420" rx="20" stroke="#3b82f6" stroke-width="8" />
+    <!-- Maze Inner Partitions -->
+    <path d="M 160 50 L 160 160 Q 160 190 190 190 L 320 190" />
+    <path d="M 640 50 L 640 160 Q 640 190 610 190 L 480 190" />
+    <path d="M 400 50 L 400 150" />
+    <rect x="240" y="90" width="100" height="40" rx="8" />
+    <rect x="460" y="90" width="100" height="40" rx="8" />
+    <path d="M 60 260 L 220 260 Q 250 260 250 290 L 250 380" />
+    <path d="M 740 260 L 580 260 Q 550 260 550 290 L 550 380" />
+    <!-- Center Ghost House Box -->
+    <rect x="330" y="230" width="140" height="90" rx="12" stroke="#f43f5e" stroke-width="6" />
+    <line x1="370" y1="230" x2="430" y2="230" stroke="#ec4899" stroke-width="4" stroke-dasharray="6,4" />
+    <!-- Bottom Loops -->
+    <path d="M 160 470 L 160 380 Q 160 350 190 350 L 320 350" />
+    <path d="M 640 470 L 640 380 Q 640 350 610 350 L 480 350" />
+    <path d="M 400 370 L 400 470" />
+  </g>
+
+  <!-- Glowing Energy Dots Trail -->
+  <g fill="#fde047" opacity="0.9">
+    <circle cx="110" cy="110" r="5" />
+    <circle cx="110" cy="160" r="5" />
+    <circle cx="110" cy="210" r="5" />
+    <circle cx="110" cy="310" r="5" />
+    <circle cx="110" cy="360" r="5" />
+    <circle cx="110" cy="410" r="5" />
+    <circle cx="200" cy="110" r="5" />
+    <circle cx="200" cy="410" r="5" />
+    <circle cx="290" cy="410" r="5" />
+    <circle cx="370" cy="410" r="5" />
+    <circle cx="430" cy="410" r="5" />
+    <circle cx="510" cy="410" r="5" />
+    <circle cx="600" cy="410" r="5" />
+    <circle cx="690" cy="110" r="5" />
+    <circle cx="690" cy="210" r="5" />
+    <circle cx="690" cy="360" r="5" />
+    <circle cx="690" cy="410" r="5" />
+  </g>
+
+  <!-- Power Pellets (Super Energy Orbs) -->
+  <circle cx="110" cy="90" r="14" fill="#00f0ff" filter="url(#glow)" />
+  <circle cx="690" cy="90" r="14" fill="#00f0ff" filter="url(#glow)" />
+  <circle cx="110" cy="430" r="14" fill="#00f0ff" filter="url(#glow)" />
+  <circle cx="690" cy="430" r="14" fill="#00f0ff" filter="url(#glow)" />
+
+  <!-- 3D Cyber Pac Hero Character -->
+  <g transform="translate(240, 260) scale(1.15)">
+    <!-- Aura Glow -->
+    <circle cx="0" cy="0" r="44" fill="#fde047" opacity="0.25" filter="url(#glow)" />
+    <!-- Pac Body Chomp -->
+    <path d="M 0,0 L 36,-18 A 40 40 0 1 0 36,18 Z" fill="url(#pacGrad)" stroke="#ffffff" stroke-width="2.5" filter="url(#glow)" />
+    <!-- Cyberpunk Visor Eye -->
+    <circle cx="8" cy="-22" r="5" fill="#020617" />
+    <circle cx="10" cy="-22" r="2.5" fill="#00f0ff" />
+  </g>
+
+  <!-- Ghost 1: Blinky (Red) -->
+  <g transform="translate(420, 260) scale(0.95)">
+    <path d="M -24,18 L -24,-10 Q -24,-34 0,-34 Q 24,-34 24,-10 L 24,18 L 16,10 L 8,18 L 0,10 L -8,18 L -16,10 Z" fill="url(#ghostRed)" stroke="#ffffff" stroke-width="2" filter="url(#glow)" />
+    <!-- Big Cyber Eyes looking left -->
+    <ellipse cx="-10" cy="-14" rx="7" ry="9" fill="#ffffff" />
+    <circle cx="-13" cy="-14" r="4" fill="#0284c7" />
+    <ellipse cx="6" cy="-14" rx="7" ry="9" fill="#ffffff" />
+    <circle cx="3" cy="-14" r="4" fill="#0284c7" />
+  </g>
+
+  <!-- Ghost 2: Pinky (Pink) -->
+  <g transform="translate(510, 260) scale(0.95)">
+    <path d="M -24,18 L -24,-10 Q -24,-34 0,-34 Q 24,-34 24,-10 L 24,18 L 16,10 L 8,18 L 0,10 L -8,18 L -16,10 Z" fill="url(#ghostPink)" stroke="#ffffff" stroke-width="2" filter="url(#glow)" />
+    <ellipse cx="-10" cy="-14" rx="7" ry="9" fill="#ffffff" />
+    <circle cx="-13" cy="-14" r="4" fill="#0284c7" />
+    <ellipse cx="6" cy="-14" rx="7" ry="9" fill="#ffffff" />
+    <circle cx="3" cy="-14" r="4" fill="#0284c7" />
+  </g>
+
+  <!-- Ghost 3: Inky (Cyan) -->
+  <g transform="translate(600, 260) scale(0.95)">
+    <path d="M -24,18 L -24,-10 Q -24,-34 0,-34 Q 24,-34 24,-10 L 24,18 L 16,10 L 8,18 L 0,10 L -8,18 L -16,10 Z" fill="url(#ghostCyan)" stroke="#ffffff" stroke-width="2" filter="url(#glow)" />
+    <ellipse cx="-10" cy="-14" rx="7" ry="9" fill="#ffffff" />
+    <circle cx="-13" cy="-14" r="4" fill="#0284c7" />
+    <ellipse cx="6" cy="-14" rx="7" ry="9" fill="#ffffff" />
+    <circle cx="3" cy="-14" r="4" fill="#0284c7" />
+  </g>
+
+  <!-- Title Badge Box -->
+  <g transform="translate(400, 530)">
+    <rect x="-210" y="-36" width="420" height="56" rx="18" fill="#030712" stroke="#00f0ff" stroke-width="2.5" filter="url(#glow)" />
+    <text x="0" y="-8" fill="#ffffff" font-size="22" font-weight="900" font-family="sans-serif" text-anchor="middle" letter-spacing="2">
+      CYBER NEON PAC-MAZE 3D
+    </text>
+    <text x="0" y="12" fill="#f43f5e" font-size="11" font-weight="bold" font-family="sans-serif" text-anchor="middle" letter-spacing="4">
+      RETRO ARCADE • 3D NEON CHASE
+    </text>
+  </g>
+</svg>

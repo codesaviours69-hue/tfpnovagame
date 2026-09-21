@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="50%" stop-color="#051b24"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <linearGradient id="snakeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="50%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur1"/>
+      <feGaussianBlur stdDeviation="20" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+
+  <!-- 3D Perspective Grid -->
+  <g opacity="0.3" stroke="#00f0ff" stroke-width="1.5">
+    <line x1="100" y1="140" x2="700" y2="140"/>
+    <line x1="80" y1="200" x2="720" y2="200"/>
+    <line x1="60" y1="270" x2="740" y2="270"/>
+    <line x1="40" y1="360" x2="760" y2="360"/>
+    <line x1="20" y1="460" x2="780" y2="460"/>
+
+    <line x1="400" y1="140" x2="400" y2="480"/>
+    <line x1="260" y1="140" x2="140" y2="480"/>
+    <line x1="540" y1="140" x2="660" y2="480"/>
+  </g>
+
+  <!-- Outer Neon Arena Border -->
+  <polygon points="120,120 680,120 780,480 20,480" fill="none" stroke="#00f0ff" stroke-width="3" filter="url(#neonGlow)"/>
+
+  <!-- Floating Energy Cores -->
+  <circle cx="560" cy="240" r="18" fill="#facc15" filter="url(#neonGlow)"/>
+  <circle cx="560" cy="240" r="10" fill="#ffffff"/>
+
+  <circle cx="240" cy="380" r="16" fill="#f43f5e" filter="url(#neonGlow)"/>
+  <circle cx="240" cy="380" r="8" fill="#ffffff"/>
+
+  <!-- 3D Snake Body -->
+  <g filter="url(#neonGlow)">
+    <!-- Body Segments -->
+    <circle cx="200" cy="240" r="20" fill="#0284c7"/>
+    <circle cx="240" cy="240" r="22" fill="#00f0ff"/>
+    <circle cx="280" cy="240" r="24" fill="#0284c7"/>
+    <circle cx="320" cy="250" r="26" fill="#00f0ff"/>
+    <circle cx="360" cy="270" r="28" fill="#10b981"/>
+    <circle cx="400" cy="300" r="30" fill="#00f0ff"/>
+    <circle cx="440" cy="330" r="32" fill="#10b981"/>
+
+    <!-- Snake Head -->
+    <rect x="470" y="306" width="60" height="52" rx="16" fill="url(#snakeGrad)"/>
+    <!-- Glowing Visor -->
+    <rect x="500" y="318" width="26" height="12" rx="4" fill="#ffffff"/>
+    <circle cx="510" cy="324" r="3" fill="#00f0ff"/>
+    <circle cx="520" cy="324" r="3" fill="#00f0ff"/>
+  </g>
+
+  <!-- Game Title Badge -->
+  <rect x="200" y="510" width="400" height="64" rx="20" fill="#030712" stroke="#10b981" stroke-width="2" filter="url(#neonGlow)"/>
+  <text x="400" y="552" fill="#10b981" font-size="28" font-family="sans-serif" font-weight="900" text-anchor="middle" letter-spacing="2">
+    CYBER SNAKE 3D
+  </text>
+</svg>

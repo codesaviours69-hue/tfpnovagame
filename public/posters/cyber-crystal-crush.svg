@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="gemBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="50%" stop-color="#0e0826"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <radialGradient id="discoPrism" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="25%" stop-color="#00f0ff"/>
+      <stop offset="50%" stop-color="#f43f5e"/>
+      <stop offset="75%" stop-color="#facc15"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </radialGradient>
+    <linearGradient id="cyanDiamond" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#67e8f9"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="rubyStar" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb7185"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+    <linearGradient id="emeraldPrism" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+    <linearGradient id="amberSun" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#gemBg)"/>
+
+  <!-- Glowing Laser Cross Blast on Grid -->
+  <line x1="100" y1="260" x2="700" y2="260" stroke="#00f0ff" stroke-width="8" filter="url(#neonGlow)"/>
+  <line x1="400" y1="80" x2="400" y2="400" stroke="#f43f5e" stroke-width="8" filter="url(#neonGlow)"/>
+
+  <!-- Supernova Rainbow Disco Prism in the Center -->
+  <g transform="translate(400, 260)" filter="url(#neonGlow)">
+    <circle cx="0" cy="0" r="54" fill="url(#discoPrism)"/>
+    <circle cx="0" cy="0" r="54" fill="none" stroke="#ffffff" stroke-width="3"/>
+    <!-- Sparkling Star Center -->
+    <polygon points="0,-35 8,-12 32,-12 12,4 20,28 0,14 -20,28 -12,4 -32,-12 -8,-12" fill="#ffffff"/>
+  </g>
+
+  <!-- Surrounding Glowing Crystals -->
+  <!-- Cyan Diamond (Top Left) -->
+  <g transform="translate(260, 160)" filter="url(#neonGlow)">
+    <polygon points="0,-34 34,0 0,34 -34,0" fill="url(#cyanDiamond)" stroke="#ffffff" stroke-width="2"/>
+    <polygon points="0,-18 18,0 0,18 -18,0" fill="#ffffff" fill-opacity="0.4"/>
+  </g>
+
+  <!-- Ruby Star (Top Right) -->
+  <g transform="translate(540, 160)" filter="url(#neonGlow)">
+    <polygon points="0,-36 10,-12 36,-12 15,6 23,30 0,16 -23,30 -15,6 -36,-12 -10,-12" fill="url(#rubyStar)" stroke="#ffffff" stroke-width="2"/>
+  </g>
+
+  <!-- Emerald Hexagon (Bottom Left) -->
+  <g transform="translate(260, 360)" filter="url(#neonGlow)">
+    <polygon points="0,-32 28,-16 28,16 0,32 -28,16 -28,-16" fill="url(#emeraldPrism)" stroke="#ffffff" stroke-width="2"/>
+  </g>
+
+  <!-- Amber Sun (Bottom Right) -->
+  <g transform="translate(540, 360)" filter="url(#neonGlow)">
+    <circle cx="0" cy="0" r="30" fill="url(#amberSun)" stroke="#ffffff" stroke-width="2"/>
+  </g>
+
+  <!-- Exploding Spark Particles -->
+  <g fill="#ffe600" filter="url(#neonGlow)">
+    <circle cx="340" cy="210" r="4"/>
+    <circle cx="460" cy="190" r="5"/>
+    <circle cx="330" cy="310" r="3.5"/>
+    <circle cx="470" cy="330" r="4.5"/>
+    <circle cx="400" cy="130" r="6"/>
+  </g>
+
+  <!-- Top Title Banner -->
+  <g transform="translate(400, 46)" text-anchor="middle">
+    <text x="0" y="0" fill="#ffffff" font-family="system-ui, sans-serif" font-weight="900" font-size="32" letter-spacing="3" filter="url(#neonGlow)">CYBER CRYSTAL CRUSH DELUXE</text>
+    <text x="0" y="22" fill="#00f0ff" font-family="system-ui, sans-serif" font-weight="700" font-size="13" letter-spacing="4">MATCH-3 • LASER BEAMS • SUPERNOVA PRISMS</text>
+  </g>
+</svg>

@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bubbleBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="50%" stop-color="#090a26"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <radialGradient id="cyanOrb" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#38bdf8"/>
+      <stop offset="85%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#082f49"/>
+    </radialGradient>
+    <radialGradient id="pinkOrb" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#f43f5e"/>
+      <stop offset="85%" stop-color="#be123c"/>
+      <stop offset="100%" stop-color="#4c0519"/>
+    </radialGradient>
+    <radialGradient id="amberOrb" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#facc15"/>
+      <stop offset="85%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </radialGradient>
+    <radialGradient id="emeraldOrb" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#34d399"/>
+      <stop offset="85%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </radialGradient>
+    <radialGradient id="purpleOrb" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#c084fc"/>
+      <stop offset="85%" stop-color="#9333ea"/>
+      <stop offset="100%" stop-color="#581c87"/>
+    </radialGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bubbleBg)"/>
+
+  <!-- Chamber Border -->
+  <rect x="220" y="50" width="360" height="360" rx="18" fill="#0f172a" fill-opacity="0.7" stroke="#00f0ff" stroke-width="3" filter="url(#neonGlow)"/>
+
+  <!-- Top Hexagonal Grid of Glowing Neon Plasma Bubbles -->
+  <g filter="url(#neonGlow)">
+    <!-- Row 1 -->
+    <circle cx="260" cy="90" r="18" fill="url(#cyanOrb)" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="300" cy="90" r="18" fill="url(#cyanOrb)" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="340" cy="90" r="18" fill="url(#pinkOrb)" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="380" cy="90" r="18" fill="url(#pinkOrb)" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="420" cy="90" r="18" fill="url(#amberOrb)" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="460" cy="90" r="18" fill="url(#emeraldOrb)" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="500" cy="90" r="18" fill="url(#purpleOrb)" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="540" cy="90" r="18" fill="url(#purpleOrb)" stroke="#ffffff" stroke-width="1.5"/>
+
+    <!-- Row 2 -->
+    <circle cx="280" cy="122" r="18" fill="url(#cyanOrb)" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="320" cy="122" r="18" fill="url(#pinkOrb)" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="360" cy="122" r="18" fill="url(#pinkOrb)" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="400" cy="122" r="18" fill="url(#amberOrb)" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="440" cy="122" r="18" fill="url(#amberOrb)" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="480" cy="122" r="18" fill="url(#emeraldOrb)" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="520" cy="122" r="18" fill="url(#purpleOrb)" stroke="#ffffff" stroke-width="1.5"/>
+
+    <!-- Row 3 -->
+    <circle cx="300" cy="154" r="18" fill="url(#cyanOrb)" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="340" cy="154" r="18" fill="url(#pinkOrb)" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="420" cy="154" r="18" fill="url(#amberOrb)" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="460" cy="154" r="18" fill="url(#emeraldOrb)" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="500" cy="154" r="18" fill="url(#emeraldOrb)" stroke="#ffffff" stroke-width="1.5"/>
+  </g>
+
+  <!-- Laser Aim Guide Trajectory -->
+  <line x1="400" y1="365" x2="340" y2="185" stroke="#00f0ff" stroke-width="2.5" stroke-dasharray="6,6" filter="url(#neonGlow)"/>
+
+  <!-- Flying Plasma Bubble in Motion -->
+  <g transform="translate(370, 270)" filter="url(#neonGlow)">
+    <circle cx="0" cy="0" r="18" fill="url(#pinkOrb)" stroke="#ffffff" stroke-width="2"/>
+  </g>
+
+  <!-- Bottom Bubble Launcher Cannon -->
+  <g transform="translate(400, 365)" filter="url(#neonGlow)">
+    <circle cx="0" cy="0" r="26" fill="#0f172a" stroke="#00f0ff" stroke-width="3"/>
+    <circle cx="0" cy="0" r="18" fill="url(#pinkOrb)" stroke="#ffffff" stroke-width="2"/>
+    <!-- Next bubble mini preview -->
+    <circle cx="36" cy="10" r="12" fill="url(#cyanOrb)" stroke="#ffffff" stroke-width="1.5"/>
+  </g>
+
+  <!-- Popping Spark Particles -->
+  <g fill="#ffe600" filter="url(#neonGlow)">
+    <circle cx="320" cy="170" r="4"/>
+    <circle cx="360" cy="140" r="5"/>
+    <circle cx="440" cy="130" r="3.5"/>
+    <circle cx="390" cy="170" r="4.5"/>
+  </g>
+
+  <!-- Top Title Banner -->
+  <g transform="translate(400, 44)" text-anchor="middle">
+    <text x="0" y="0" fill="#ffffff" font-family="system-ui, sans-serif" font-weight="900" font-size="30" letter-spacing="3" filter="url(#neonGlow)">CYBER NEON BUBBLE POP</text>
+    <text x="0" y="20" fill="#00f0ff" font-family="system-ui, sans-serif" font-weight="700" font-size="12" letter-spacing="4">MATCH-3 BUBBLES • LASER AIM • CHAIN DROPS</text>
+  </g>
+</svg>

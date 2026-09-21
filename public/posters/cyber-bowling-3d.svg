@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <linearGradient id="laneWood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur1"/>
+      <feGaussianBlur stdDeviation="16" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+
+  <!-- 3D Perspective Bowling Lane -->
+  <polygon points="300,120 500,120 680,560 120,560" fill="url(#laneWood)" stroke="#00f0ff" stroke-width="3" filter="url(#neonGlow)"/>
+
+  <!-- Gutters -->
+  <polygon points="280,120 300,120 120,560 90,560" fill="#020617" stroke="#f43f5e" stroke-width="2"/>
+  <polygon points="500,120 520,120 710,560 680,560" fill="#020617" stroke="#f43f5e" stroke-width="2"/>
+
+  <!-- Pin Deck with 10 Glowing Bowling Pins -->
+  <!-- Row 4 -->
+  <circle cx="340" cy="130" r="10" fill="#ffffff" stroke="#f43f5e" stroke-width="2"/>
+  <circle cx="380" cy="130" r="10" fill="#ffffff" stroke="#f43f5e" stroke-width="2"/>
+  <circle cx="420" cy="130" r="10" fill="#ffffff" stroke="#f43f5e" stroke-width="2"/>
+  <circle cx="460" cy="130" r="10" fill="#ffffff" stroke="#f43f5e" stroke-width="2"/>
+  <!-- Row 3 -->
+  <circle cx="360" cy="155" r="11" fill="#ffffff" stroke="#f43f5e" stroke-width="2"/>
+  <circle cx="400" cy="155" r="11" fill="#ffffff" stroke="#f43f5e" stroke-width="2"/>
+  <circle cx="440" cy="155" r="11" fill="#ffffff" stroke="#f43f5e" stroke-width="2"/>
+  <!-- Row 2 -->
+  <circle cx="380" cy="185" r="13" fill="#ffffff" stroke="#f43f5e" stroke-width="2"/>
+  <circle cx="420" cy="185" r="13" fill="#ffffff" stroke="#f43f5e" stroke-width="2"/>
+  <!-- Head Pin (Row 1) -->
+  <circle cx="400" cy="220" r="16" fill="#ffffff" stroke="#00f0ff" stroke-width="4" filter="url(#neonGlow)"/>
+
+  <!-- Strike Sparks -->
+  <g fill="#ffe600" filter="url(#neonGlow)">
+    <polygon points="400,200 405,170 410,200 435,205 410,210 405,240 400,210 375,205"/>
+  </g>
+
+  <!-- Glowing Bowling Ball with Finger Holes -->
+  <circle cx="400" cy="450" r="42" fill="#00f0ff" filter="url(#neonGlow)"/>
+  <circle cx="400" cy="450" r="38" fill="#0284c7"/>
+  <!-- Holes -->
+  <circle cx="390" cy="435" r="6" fill="#020617"/>
+  <circle cx="410" cy="435" r="6" fill="#020617"/>
+  <circle cx="400" cy="460" r="7" fill="#020617"/>
+
+  <!-- Title Badge -->
+  <rect x="180" y="520" width="440" height="60" rx="18" fill="#030712" stroke="#00f0ff" stroke-width="2" filter="url(#neonGlow)"/>
+  <text x="400" y="560" fill="#00f0ff" font-size="28" font-family="sans-serif" font-weight="900" text-anchor="middle" letter-spacing="2">
+    BOWLING 3D: STRIKE CHAMPION
+  </text>
+</svg>

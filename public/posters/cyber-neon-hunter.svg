@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="huntBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <filter id="huntGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="800" height="450" fill="url(#huntBg)"/>
+
+  <!-- Cyber Dungeon Arena Grid -->
+  <g stroke="#1e293b" stroke-width="1.5" opacity="0.6">
+    <line x1="100" y1="0" x2="100" y2="450"/>
+    <line x1="250" y1="0" x2="250" y2="450"/>
+    <line x1="400" y1="0" x2="400" y2="450"/>
+    <line x1="550" y1="0" x2="550" y2="450"/>
+    <line x1="700" y1="0" x2="700" y2="450"/>
+    <line x1="0" y1="120" x2="800" y2="120"/>
+    <line x1="0" y1="240" x2="800" y2="240"/>
+    <line x1="0" y1="360" x2="800" y2="360"/>
+  </g>
+
+  <!-- Glowing Laser Arrows & Bullet Hell Projectiles -->
+  <g filter="url(#huntGlow)">
+    <!-- Multi-Shot Plasma Arrows -->
+    <line x1="280" y1="260" x2="480" y2="180" stroke="#00f0ff" stroke-width="6" stroke-linecap="round"/>
+    <line x1="280" y1="260" x2="520" y2="240" stroke="#00f0ff" stroke-width="6" stroke-linecap="round"/>
+    <line x1="280" y1="260" x2="470" y2="310" stroke="#00f0ff" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Cyber Mech Archer Hero (Left) -->
+  <g transform="translate(240, 270)" filter="url(#huntGlow)">
+    <circle cx="0" cy="0" r="32" fill="#00f0ff" stroke="#ffffff" stroke-width="4"/>
+    <circle cx="0" cy="0" r="14" fill="#0f172a"/>
+    <!-- Cyber Compound Bow Arc -->
+    <path d="M 25,-35 Q 50,0 25,35" fill="none" stroke="#38bdf8" stroke-width="8" stroke-linecap="round"/>
+    <path d="M 25,-35 Q 50,0 25,35" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+    <!-- Orbital Shield Drone -->
+    <circle cx="45" cy="-45" r="12" fill="#a855f7" stroke="#ffffff" stroke-width="2"/>
+  </g>
+
+  <!-- Giant Cyber Boss Golem (Right) -->
+  <g transform="translate(560, 240)" filter="url(#huntGlow)">
+    <circle cx="0" cy="0" r="60" fill="#f43f5e" stroke="#ffffff" stroke-width="4"/>
+    <circle cx="0" cy="0" r="25" fill="#0f172a" stroke="#fecdd3" stroke-width="3"/>
+    <!-- Red Laser Eyes -->
+    <circle cx="-12" cy="-5" r="5" fill="#facc15"/>
+    <circle cx="12" cy="-5" r="5" fill="#facc15"/>
+    <!-- Spikes / Horns -->
+    <polygon points="-35,-45 -60,-80 -20,-55" fill="#f43f5e"/>
+    <polygon points="35,-45 60,-80 20,-55" fill="#f43f5e"/>
+  </g>
+
+  <!-- Title Badge -->
+  <g transform="translate(400, 50)" text-anchor="middle">
+    <rect x="-260" y="-25" width="520" height="42" rx="12" fill="#0284c7" fill-opacity="0.6" stroke="#38bdf8" stroke-width="2" filter="url(#huntGlow)"/>
+    <text x="0" y="4" fill="#ffffff" font-family="system-ui, sans-serif" font-weight="900" font-size="24" letter-spacing="3" text-anchor="middle">CYBER NEON HUNTER</text>
+  </g>
+</svg>

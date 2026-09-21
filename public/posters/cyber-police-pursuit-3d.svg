@@ -1,0 +1,230 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="40%" stop-color="#090d26"/>
+      <stop offset="70%" stop-color="#180d38"/>
+      <stop offset="100%" stop-color="#04060f"/>
+    </linearGradient>
+
+    <!-- Neon Glow Filter -->
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur1"/>
+      <feGaussianBlur stdDeviation="15" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="hyperGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Speed Lines Gradient -->
+    <linearGradient id="nitroGrad" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#a855f7" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="1"/>
+    </linearGradient>
+
+    <!-- Police Siren Flash Gradients -->
+    <radialGradient id="redFlash" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff0055" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#ef4444" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="blueFlash" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#0284c7" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Car Body Gradients -->
+    <linearGradient id="getawayBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="40%" stop-color="#ef4444"/>
+      <stop offset="80%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+
+    <linearGradient id="policeBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+
+  <!-- Cyberpunk City Skyline in Distance -->
+  <g opacity="0.35">
+    <rect x="20" y="160" width="60" height="260" fill="#0f172a" stroke="#00f0ff" stroke-width="1" opacity="0.4"/>
+    <rect x="90" y="110" width="80" height="310" fill="#1e1b4b" stroke="#f43f5e" stroke-width="1" opacity="0.5"/>
+    <rect x="180" y="80" width="70" height="340" fill="#090d26" stroke="#a855f7" stroke-width="1.5" opacity="0.6"/>
+    <line x1="215" y1="30" x2="215" y2="80" stroke="#facc15" stroke-width="2" filter="url(#neonGlow)"/>
+    <circle cx="215" cy="28" r="4" fill="#facc15" filter="url(#neonGlow)"/>
+
+    <rect x="260" y="140" width="90" height="280" fill="#0f172a" stroke="#00f0ff" stroke-width="1" opacity="0.4"/>
+    <rect x="560" y="100" width="75" height="320" fill="#1e1b4b" stroke="#00f0ff" stroke-width="1.5" opacity="0.5"/>
+    <rect x="645" y="130" width="85" height="290" fill="#090d26" stroke="#f43f5e" stroke-width="1" opacity="0.5"/>
+    <rect x="740" y="90" width="50" height="330" fill="#0f172a" stroke="#a855f7" stroke-width="1" opacity="0.4"/>
+  </g>
+
+  <!-- Synthwave Neon Sun / Moon Grid -->
+  <circle cx="400" cy="240" r="140" fill="#f43f5e" opacity="0.18" filter="url(#hyperGlow)"/>
+  <circle cx="400" cy="240" r="90" fill="#ec4899" opacity="0.22" filter="url(#hyperGlow)"/>
+
+  <!-- Perspective Highway Road Grid -->
+  <polygon points="-50,600 850,600 520,380 280,380" fill="#060919" stroke="#3b82f6" stroke-width="2" opacity="0.9"/>
+  <!-- Road Speed Grid Lines -->
+  <line x1="400" y1="380" x2="400" y2="600" stroke="#facc15" stroke-width="5" stroke-dasharray="25 15" filter="url(#neonGlow)"/>
+  <line x1="340" y1="380" x2="160" y2="600" stroke="#00f0ff" stroke-width="3" stroke-dasharray="20 20" opacity="0.6"/>
+  <line x1="460" y1="380" x2="640" y2="600" stroke="#00f0ff" stroke-width="3" stroke-dasharray="20 20" opacity="0.6"/>
+  <line x1="280" y1="380" x2="-50" y2="600" stroke="#a855f7" stroke-width="4" opacity="0.8"/>
+  <line x1="520" y1="380" x2="850" y2="600" stroke="#a855f7" stroke-width="4" opacity="0.8"/>
+
+  <!-- Siren Ambient Flares -->
+  <circle cx="180" cy="400" r="180" fill="url(#blueFlash)" filter="url(#hyperGlow)"/>
+  <circle cx="620" cy="410" r="180" fill="url(#redFlash)" filter="url(#hyperGlow)"/>
+
+  <!-- Speed Motion Streaks -->
+  <path d="M 50,490 L 260,490" stroke="url(#nitroGrad)" stroke-width="4" stroke-linecap="round" filter="url(#neonGlow)"/>
+  <path d="M 80,520 L 320,520" stroke="url(#nitroGrad)" stroke-width="6" stroke-linecap="round" filter="url(#neonGlow)"/>
+  <path d="M 30,550 L 220,550" stroke="url(#nitroGrad)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 550,510 L 780,510" stroke="#ff0055" stroke-width="4" stroke-linecap="round" opacity="0.7" filter="url(#neonGlow)"/>
+
+  <!-- Left Police Pursuit Interceptor (Angle Chasemobile) -->
+  <g transform="translate(190, 420) rotate(8)">
+    <!-- Shadow -->
+    <ellipse cx="0" cy="45" rx="80" ry="18" fill="#000000" opacity="0.6"/>
+    <!-- Police Car Body -->
+    <polygon points="-65,10 -35,-25 35,-25 65,10 70,35 -70,35" fill="url(#policeBody)" stroke="#00f0ff" stroke-width="2"/>
+    <!-- Windshield -->
+    <polygon points="-30,-20 30,-20 45,5 -45,5" fill="#0284c7" fill-opacity="0.7" stroke="#38bdf8" stroke-width="1.5"/>
+    <!-- Police Decal "POLICE" -->
+    <rect x="-40" y="12" width="80" height="16" fill="#000000" stroke="#00f0ff" stroke-width="1"/>
+    <text x="0" y="24" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="11" fill="#00f0ff" text-anchor="middle" letter-spacing="3">POLICE</text>
+    <!-- Siren Lightbar -->
+    <rect x="-24" y="-32" width="22" height="7" rx="2" fill="#00f0ff" filter="url(#neonGlow)"/>
+    <rect x="2" y="-32" width="22" height="7" rx="2" fill="#ef4444" filter="url(#neonGlow)"/>
+    <rect x="-4" y="-33" width="8" height="9" fill="#ffffff" opacity="0.9" filter="url(#neonGlow)"/>
+    <!-- Wheels -->
+    <rect x="-68" y="22" width="16" height="24" rx="4" fill="#090d16" stroke="#00f0ff" stroke-width="2"/>
+    <rect x="52" y="22" width="16" height="24" rx="4" fill="#090d16" stroke="#00f0ff" stroke-width="2"/>
+    <!-- Headlights -->
+    <circle cx="58" cy="22" r="6" fill="#ffffff" filter="url(#neonGlow)"/>
+    <circle cx="-58" cy="22" r="6" fill="#00f0ff" filter="url(#neonGlow)"/>
+  </g>
+
+  <!-- Right Police Heavy SWAT Cruiser (Ramming Angle) -->
+  <g transform="translate(610, 430) rotate(-10)">
+    <!-- Shadow -->
+    <ellipse cx="0" cy="50" rx="90" ry="20" fill="#000000" opacity="0.6"/>
+    <!-- Heavy Body -->
+    <polygon points="-75,5 -45,-30 45,-30 75,5 80,40 -80,40" fill="url(#policeBody)" stroke="#ef4444" stroke-width="2.5"/>
+    <!-- Windshield Armor Grate -->
+    <polygon points="-40,-25 40,-25 55,0 -55,0" fill="#450a0a" fill-opacity="0.8" stroke="#ef4444" stroke-width="1.5"/>
+    <!-- Bullbar -->
+    <rect x="-70" y="25" width="140" height="12" rx="3" fill="#1e293b" stroke="#ef4444" stroke-width="2" filter="url(#neonGlow)"/>
+    <!-- SWAT Text -->
+    <text x="0" y="18" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="12" fill="#ef4444" text-anchor="middle" letter-spacing="3">SWAT</text>
+    <!-- Siren Lightbar -->
+    <rect x="-26" y="-37" width="24" height="8" rx="2" fill="#ef4444" filter="url(#hyperGlow)"/>
+    <rect x="2" y="-37" width="24" height="8" rx="2" fill="#00f0ff" filter="url(#hyperGlow)"/>
+  </g>
+
+  <!-- CENTER GETAWAY SUPERCAR (Hero Car Launching Forward) -->
+  <g transform="translate(400, 440)">
+    <!-- Plasma Nitro Flame Exhausts -->
+    <polygon points="-30,30 -50,90 -25,50" fill="#ec4899" filter="url(#hyperGlow)"/>
+    <polygon points="-25,30 -35,110 -15,50" fill="#00f0ff" filter="url(#hyperGlow)"/>
+    <polygon points="30,30 50,90 25,50" fill="#ec4899" filter="url(#hyperGlow)"/>
+    <polygon points="25,30 35,110 15,50" fill="#00f0ff" filter="url(#hyperGlow)"/>
+    <ellipse cx="0" cy="55" rx="55" ry="12" fill="#00f0ff" opacity="0.8" filter="url(#hyperGlow)"/>
+
+    <!-- Car Shadow -->
+    <ellipse cx="0" cy="45" rx="95" ry="22" fill="#000000" opacity="0.8"/>
+
+    <!-- Neon Underglow -->
+    <rect x="-80" y="25" width="160" height="10" rx="5" fill="#00f0ff" filter="url(#hyperGlow)"/>
+
+    <!-- Hero Car Body -->
+    <path d="M -80,20 L -60,-15 L -35,-45 L 35,-45 L 60,-15 L 80,20 L 75,38 L -75,38 Z" fill="url(#getawayBody)" stroke="#facc15" stroke-width="2.5" filter="url(#neonGlow)"/>
+
+    <!-- Cockpit & Tinted Canopy -->
+    <path d="M -35,-15 L -25,-42 L 25,-42 L 35,-15 L 42,5 L -42,5 Z" fill="#050b14" stroke="#00f0ff" stroke-width="2"/>
+
+    <!-- Glowing Cyber Core Bonnet Vent -->
+    <polygon points="0,-40 -15,-20 15,-20" fill="#00f0ff" opacity="0.9" filter="url(#neonGlow)"/>
+
+    <!-- Rear Wing / Spoiler -->
+    <rect x="-85" y="2" width="170" height="10" rx="4" fill="#090d16" stroke="#f43f5e" stroke-width="2.5" filter="url(#neonGlow)"/>
+    <rect x="-80" y="0" width="160" height="4" fill="#facc15" filter="url(#neonGlow)"/>
+
+    <!-- Dual Tail Lights (Neon Blades) -->
+    <rect x="-70" y="22" width="40" height="8" rx="3" fill="#f43f5e" filter="url(#hyperGlow)"/>
+    <rect x="30" y="22" width="40" height="8" rx="3" fill="#f43f5e" filter="url(#hyperGlow)"/>
+    <rect x="-65" y="24" width="30" height="4" rx="2" fill="#fef08a"/>
+    <rect x="35" y="24" width="30" height="4" rx="2" fill="#fef08a"/>
+
+    <!-- 4 Wheels with Neon Rims -->
+    <rect x="-86" y="8" width="16" height="32" rx="5" fill="#05070d" stroke="#00f0ff" stroke-width="2"/>
+    <rect x="70" y="8" width="16" height="32" rx="5" fill="#05070d" stroke="#00f0ff" stroke-width="2"/>
+  </g>
+
+  <!-- EMP Shockwave Ring Pulse -->
+  <ellipse cx="400" cy="460" rx="280" ry="85" fill="none" stroke="#00f0ff" stroke-width="3" opacity="0.75" stroke-dasharray="14 8" filter="url(#hyperGlow)"/>
+  <ellipse cx="400" cy="460" rx="340" ry="105" fill="none" stroke="#a855f7" stroke-width="2" opacity="0.5" stroke-dasharray="20 12" filter="url(#hyperGlow)"/>
+
+  <!-- Floating Sparks & Cyber Dust -->
+  <circle cx="340" cy="380" r="3" fill="#facc15" filter="url(#neonGlow)"/>
+  <circle cx="460" cy="360" r="2.5" fill="#00f0ff" filter="url(#neonGlow)"/>
+  <circle cx="280" cy="440" r="3.5" fill="#f43f5e" filter="url(#neonGlow)"/>
+  <circle cx="520" cy="430" r="4" fill="#00f0ff" filter="url(#neonGlow)"/>
+  <circle cx="390" cy="330" r="2" fill="#ffffff" filter="url(#hyperGlow)"/>
+
+  <!-- WANTED 5-STAR BADGE OVERLAY -->
+  <g transform="translate(400, 75)">
+    <!-- Header Glow Plate -->
+    <rect x="-190" y="-30" width="380" height="52" rx="26" fill="#030712" fill-opacity="0.85" stroke="#ef4444" stroke-width="2.5" filter="url(#neonGlow)"/>
+    <text x="0" y="-8" font-family="'Impact', 'Arial Black', sans-serif" font-size="20" fill="#ef4444" text-anchor="middle" letter-spacing="4" filter="url(#hyperGlow)">WANTED LEVEL</text>
+    
+    <!-- 5 Glowing Stars -->
+    <g transform="translate(-70, 10)">
+      <polygon points="0,-10 3,-3 10,-3 4,2 6,9 0,5 -6,9 -4,2 -10,-3 -3,-3" fill="#facc15" filter="url(#hyperGlow)"/>
+    </g>
+    <g transform="translate(-35, 10)">
+      <polygon points="0,-10 3,-3 10,-3 4,2 6,9 0,5 -6,9 -4,2 -10,-3 -3,-3" fill="#facc15" filter="url(#hyperGlow)"/>
+    </g>
+    <g transform="translate(0, 10)">
+      <polygon points="0,-10 3,-3 10,-3 4,2 6,9 0,5 -6,9 -4,2 -10,-3 -3,-3" fill="#facc15" filter="url(#hyperGlow)"/>
+    </g>
+    <g transform="translate(35, 10)">
+      <polygon points="0,-10 3,-3 10,-3 4,2 6,9 0,5 -6,9 -4,2 -10,-3 -3,-3" fill="#facc15" filter="url(#hyperGlow)"/>
+    </g>
+    <g transform="translate(70, 10)">
+      <polygon points="0,-10 3,-3 10,-3 4,2 6,9 0,5 -6,9 -4,2 -10,-3 -3,-3" fill="#facc15" filter="url(#hyperGlow)"/>
+    </g>
+  </g>
+
+  <!-- TITLE TYPOGRAPHY -->
+  <g transform="translate(400, 150)">
+    <!-- Back Glow Text -->
+    <text x="0" y="0" font-family="'Impact', 'Arial Black', sans-serif" font-weight="900" font-size="52" fill="#00f0ff" text-anchor="middle" letter-spacing="6" opacity="0.6" filter="url(#hyperGlow)">CYBER POLICE PURSUIT</text>
+    <!-- Front Text -->
+    <text x="0" y="0" font-family="'Impact', 'Arial Black', sans-serif" font-weight="900" font-size="52" fill="#ffffff" text-anchor="middle" letter-spacing="6">CYBER POLICE PURSUIT</text>
+    <!-- Subtitle Pill -->
+    <rect x="-130" y="10" width="260" height="26" rx="13" fill="#f43f5e" filter="url(#neonGlow)"/>
+    <text x="0" y="28" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="14" fill="#ffffff" text-anchor="middle" letter-spacing="5">3D NEON CHASE</text>
+  </g>
+</svg>

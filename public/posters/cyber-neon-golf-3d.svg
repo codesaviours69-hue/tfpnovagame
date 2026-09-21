@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="50%" stop-color="#051f1c"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur1"/>
+      <feGaussianBlur stdDeviation="18" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+
+  <!-- 3D Perspective Golf Green -->
+  <polygon points="200,100 600,100 700,500 100,500" fill="#04201b" stroke="#10b981" stroke-width="3" filter="url(#neonGlow)"/>
+
+  <!-- Neon Bumpers -->
+  <circle cx="280" cy="260" r="32" fill="#f43f5e" filter="url(#neonGlow)"/>
+  <circle cx="280" cy="260" r="16" fill="#ffffff"/>
+
+  <circle cx="520" cy="260" r="32" fill="#facc15" filter="url(#neonGlow)"/>
+  <circle cx="520" cy="260" r="16" fill="#ffffff"/>
+
+  <!-- Cup Hole & Flag -->
+  <ellipse cx="400" cy="160" rx="26" ry="12" fill="#000000" stroke="#00f0ff" stroke-width="3" filter="url(#neonGlow)"/>
+  <!-- Flagpole -->
+  <line x1="400" y1="160" x2="400" y2="40" stroke="#ffffff" stroke-width="4"/>
+  <!-- Glowing Flag -->
+  <polygon points="400,40 470,60 400,80" fill="#f43f5e" filter="url(#neonGlow)"/>
+
+  <!-- Aim Trajectory Arc -->
+  <line x1="400" y1="420" x2="400" y2="220" stroke="#facc15" stroke-width="4" stroke-dasharray="10 8" filter="url(#neonGlow)"/>
+
+  <!-- Glowing Golf Ball -->
+  <circle cx="400" cy="420" r="22" fill="#00f0ff" filter="url(#neonGlow)"/>
+  <circle cx="400" cy="420" r="14" fill="#ffffff"/>
+
+  <!-- Game Title Badge -->
+  <rect x="180" y="520" width="440" height="60" rx="18" fill="#030712" stroke="#10b981" stroke-width="2" filter="url(#neonGlow)"/>
+  <text x="400" y="560" fill="#10b981" font-size="28" font-family="sans-serif" font-weight="900" text-anchor="middle" letter-spacing="2">
+    CYBER NEON GOLF 3D
+  </text>
+</svg>

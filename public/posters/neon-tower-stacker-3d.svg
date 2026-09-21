@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <rect width="800" height="450" fill="#050512"/>
+  <defs><filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter></defs>
+  <!-- Isometric Stacking Slabs -->
+  <g transform="translate(400, 290)" filter="url(#glow)">
+    <!-- Base Slab -->
+    <polygon points="0,50 160,0 0,-50 -160,0" fill="#0284c7" stroke="#38bdf8" stroke-width="2"/>
+    <!-- Slab 2 -->
+    <polygon points="0,20 150,-25 0,-70 -150,-25" fill="#7c3aed" stroke="#c084fc" stroke-width="2"/>
+    <!-- Slab 3 -->
+    <polygon points="0,-10 140,-50 0,-90 -140,-50" fill="#db2777" stroke="#f472b6" stroke-width="2"/>
+    <!-- Top Moving Slab -->
+    <polygon points="30,-40 160,-80 30,-120 -100,-80" fill="#f59e0b" stroke="#fde047" stroke-width="3"/>
+  </g>
+  <g transform="translate(400, 50)" text-anchor="middle">
+    <text x="0" y="0" fill="#38bdf8" font-family="system-ui, sans-serif" font-weight="900" font-size="38" letter-spacing="2" filter="url(#glow)">TOWER STACKER 3D: SKY CITY</text>
+  </g>
+</svg>

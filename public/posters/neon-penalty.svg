@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <rect width="800" height="450" fill="#022c22"/>
+  <defs><filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter></defs>
+  <!-- Goal Post -->
+  <g transform="translate(180, 80)" filter="url(#glow)">
+    <rect x="0" y="0" width="440" height="240" fill="none" stroke="#34d399" stroke-width="8" rx="8"/>
+    <circle cx="50" cy="50" r="28" fill="none" stroke="#f43f5e" stroke-width="5"/>
+    <text x="50" y="56" fill="#fff" font-family="sans-serif" font-weight="900" font-size="16" text-anchor="middle">+500</text>
+    <circle cx="390" cy="50" r="28" fill="none" stroke="#f43f5e" stroke-width="5"/>
+    <text x="390" y="56" fill="#fff" font-family="sans-serif" font-weight="900" font-size="16" text-anchor="middle">+500</text>
+  </g>
+  <!-- Soccer Ball & Curve Line -->
+  <path d="M 400,410 Q 300,280 230,130" fill="none" stroke="#38bdf8" stroke-width="5" stroke-dasharray="10,6" filter="url(#glow)"/>
+  <circle cx="400" cy="400" r="26" fill="#f8fafc" stroke="#0f172a" stroke-width="3" filter="url(#glow)"/>
+  <g transform="translate(400, 45)" text-anchor="middle">
+    <text x="0" y="0" fill="#34d399" font-family="system-ui, sans-serif" font-weight="900" font-size="38" letter-spacing="2" filter="url(#glow)">NEON STRIKER: PENALTY HERO</text>
+  </g>
+</svg>

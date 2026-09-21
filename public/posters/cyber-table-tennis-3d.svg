@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="tableGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="50%" stop-color="#0369a1" />
+      <stop offset="100%" stop-color="#075985" />
+    </linearGradient>
+    <linearGradient id="paddleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e" />
+      <stop offset="100%" stop-color="#be123c" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="500" fill="url(#bgGrad)" />
+
+  <!-- Stadium Lights Rays -->
+  <path d="M 0 0 L 150 250 L 50 500 Z" fill="#00f0ff" opacity="0.04" />
+  <path d="M 400 0 L 250 250 L 350 500 Z" fill="#f43f5e" opacity="0.04" />
+
+  <!-- 3D Perspective Table -->
+  <polygon points="60,340 340,340 380,440 20,440" fill="url(#tableGrad)" stroke="#38bdf8" stroke-width="3" filter="drop-shadow(0 0 15px rgba(56,189,248,0.4))" />
+  <line x1="200" y1="340" x2="200" y2="440" stroke="#ffffff" stroke-width="2" stroke-dasharray="4,3" opacity="0.8" />
+  <polygon points="50,340 350,340 350,320 50,320" fill="none" stroke="#e2e8f0" stroke-width="2" opacity="0.6" />
+  <!-- Net Mesh -->
+  <line x1="45" y1="330" x2="355" y2="330" stroke="#ffffff" stroke-width="3" filter="drop-shadow(0 0 5px rgba(255,255,255,0.8))" />
+  <line x1="45" y1="320" x2="45" y2="340" stroke="#94a3b8" stroke-width="4" />
+  <line x1="355" y1="320" x2="355" y2="340" stroke="#94a3b8" stroke-width="4" />
+
+  <!-- Ping Pong Ball Motion Trail -->
+  <path d="M 120 180 Q 170 240 200 330 T 260 270" fill="none" stroke="#facc15" stroke-width="3" stroke-dasharray="6,4" opacity="0.6" />
+  <circle cx="200" cy="330" r="14" fill="#fef08a" filter="drop-shadow(0 0 12px rgba(250,204,21,0.9))" />
+
+  <!-- Player 3D Paddle -->
+  <g transform="translate(230, 240) rotate(-15)">
+    <!-- Handle -->
+    <rect x="35" y="90" width="16" height="45" rx="5" fill="#d97706" stroke="#92400e" stroke-width="2" />
+    <!-- Blade -->
+    <ellipse cx="43" cy="55" rx="42" ry="46" fill="#1e293b" stroke="#00f0ff" stroke-width="3" filter="drop-shadow(0 0 12px rgba(0,240,255,0.6))" />
+    <!-- Red Rubber -->
+    <ellipse cx="43" cy="55" rx="38" ry="42" fill="url(#paddleGrad)" />
+    <!-- Shine Highlight -->
+    <ellipse cx="32" cy="42" rx="18" ry="24" fill="#ffffff" opacity="0.25" />
+  </g>
+
+  <!-- Opponent Paddle (In distance) -->
+  <g transform="translate(130, 150) rotate(15) scale(0.6)">
+    <rect x="35" y="90" width="16" height="45" rx="5" fill="#d97706" />
+    <ellipse cx="43" cy="55" rx="42" ry="46" fill="#0f172a" stroke="#f43f5e" stroke-width="3" filter="drop-shadow(0 0 10px rgba(244,63,94,0.6))" />
+    <ellipse cx="43" cy="55" rx="38" ry="42" fill="#0284c7" />
+  </g>
+
+  <!-- Badge / Titles -->
+  <g transform="translate(200, 75)">
+    <rect x="-140" y="-35" width="280" height="70" rx="16" fill="#090d16" fill-opacity="0.85" stroke="#00f0ff" stroke-width="2" filter="url(#neonGlow)" />
+    <text x="0" y="-8" font-family="system-ui, sans-serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">TABLE TENNIS 3D</text>
+    <text x="0" y="18" font-family="system-ui, sans-serif" font-size="12" font-weight="800" fill="#38bdf8" text-anchor="middle" letter-spacing="3">PRO CHAMPIONSHIP</text>
+  </g>
+
+  <!-- Energy Rings / Sparkles -->
+  <circle cx="200" cy="330" r="28" fill="none" stroke="#00f0ff" stroke-width="1.5" opacity="0.6" />
+  <circle cx="200" cy="330" r="42" fill="none" stroke="#f43f5e" stroke-width="1" opacity="0.3" stroke-dasharray="5,5" />
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b051b"/>
+      <stop offset="50%" stop-color="#190a38"/>
+      <stop offset="100%" stop-color="#05020c"/>
+    </linearGradient>
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="100%" stop-color="#4facfe"/>
+    </linearGradient>
+    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff007f"/>
+      <stop offset="100%" stop-color="#7928ca"/>
+    </linearGradient>
+    <linearGradient id="cardGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffea00"/>
+      <stop offset="100%" stop-color="#ff6600"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="400" height="300" fill="url(#bgGrad)"/>
+  
+  <!-- Perspective Cyber Grid -->
+  <g opacity="0.35">
+    <path d="M0,220 L400,220 M0,240 L400,240 M0,260 L400,260 M0,280 L400,280" stroke="#00f2fe" stroke-width="1"/>
+    <path d="M200,160 L-100,300 M200,160 L50,300 M200,160 L200,300 M200,160 L350,300 M200,160 L500,300" stroke="#ff007f" stroke-width="1.5"/>
+  </g>
+
+  <!-- Floating 3D Cards Stack -->
+  <!-- Card 1 (Left Cyan Card) -->
+  <g transform="translate(90, 80) rotate(-18)">
+    <rect width="110" height="160" rx="14" fill="#090514" stroke="#00f2fe" stroke-width="3" filter="url(#neonGlow)"/>
+    <rect x="6" y="6" width="98" height="148" rx="10" fill="url(#cardGrad1)" opacity="0.2"/>
+    <text x="20" y="40" fill="#00f2fe" font-family="sans-serif" font-weight="900" font-size="28">7</text>
+    <text x="20" y="60" fill="#00f2fe" font-family="sans-serif" font-weight="bold" font-size="14">✦</text>
+    <circle cx="55" cy="80" r="26" fill="none" stroke="#00f2fe" stroke-width="3"/>
+    <text x="55" y="90" fill="#00f2fe" font-family="sans-serif" font-weight="900" font-size="32" text-anchor="middle">7</text>
+  </g>
+
+  <!-- Card 2 (Right Yellow Card) -->
+  <g transform="translate(195, 85) rotate(16)">
+    <rect width="110" height="160" rx="14" fill="#090514" stroke="#ffea00" stroke-width="3" filter="url(#neonGlow)"/>
+    <rect x="6" y="6" width="98" height="148" rx="10" fill="url(#cardGrad3)" opacity="0.2"/>
+    <text x="20" y="40" fill="#ffea00" font-family="sans-serif" font-weight="900" font-size="28">+2</text>
+    <circle cx="55" cy="80" r="26" fill="none" stroke="#ffea00" stroke-width="3"/>
+    <text x="55" y="88" fill="#ffea00" font-family="sans-serif" font-weight="900" font-size="24" text-anchor="middle">⚡</text>
+  </g>
+
+  <!-- Card 3 (Center Pink Main Card) -->
+  <g transform="translate(142, 60)">
+    <rect width="116" height="170" rx="14" fill="#0c061a" stroke="#ff007f" stroke-width="4" filter="url(#neonGlow)"/>
+    <rect x="6" y="6" width="104" height="158" rx="10" fill="url(#cardGrad2)" opacity="0.25"/>
+    <text x="22" y="42" fill="#ff007f" font-family="sans-serif" font-weight="900" font-size="30">A</text>
+    <circle cx="58" cy="85" r="30" fill="none" stroke="#ff007f" stroke-width="4"/>
+    <text x="58" y="96" fill="#ff007f" font-family="sans-serif" font-weight="900" font-size="36" text-anchor="middle">★</text>
+  </g>
+
+  <!-- Title Banner -->
+  <text x="200" y="268" fill="#00f2fe" font-family="sans-serif" font-weight="900" font-size="22" text-anchor="middle" letter-spacing="3" filter="url(#neonGlow)">
+    CYBER CARD CLASH
+  </text>
+</svg>

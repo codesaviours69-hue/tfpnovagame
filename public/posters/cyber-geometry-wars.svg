@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050114"/>
+      <stop offset="50%" stop-color="#0b0024"/>
+      <stop offset="100%" stop-color="#14023b"/>
+    </linearGradient>
+
+    <radialGradient id="vortexGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.6"/>
+      <stop offset="40%" stop-color="#00f0ff" stop-opacity="0.3"/>
+      <stop offset="80%" stop-color="#ff007f" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#050114" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Bloom Filters -->
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="superBloom" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur1"/>
+      <feGaussianBlur stdDeviation="15" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Deep Space Backdrop -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+  <circle cx="400" cy="225" r="360" fill="url(#vortexGlow)"/>
+
+  <!-- Warped Neon Vector Grid -->
+  <g stroke="#3b82f6" stroke-opacity="0.3" stroke-width="1.2">
+    <!-- Horizontal Grid Lines with Central Distortion -->
+    <path d="M0,40 Q400,45 800,40"/>
+    <path d="M0,90 Q400,105 800,90"/>
+    <path d="M0,140 Q400,175 800,140"/>
+    <path d="M0,190 Q400,240 800,190"/>
+    <path d="M0,240 Q400,285 800,240"/>
+    <path d="M0,290 Q400,325 800,290"/>
+    <path d="M0,340 Q400,360 800,340"/>
+    <path d="M0,390 Q400,400 800,390"/>
+
+    <!-- Vertical Grid Lines Warping Inward -->
+    <path d="M60,0 Q65,225 60,450"/>
+    <path d="M140,0 Q170,225 140,450"/>
+    <path d="M220,0 Q290,225 220,450"/>
+    <path d="M300,0 Q370,225 300,450"/>
+    <path d="M380,0 Q400,225 380,450"/>
+    <path d="M460,0 Q430,225 460,450"/>
+    <path d="M540,0 Q490,225 540,450"/>
+    <path d="M620,0 Q570,225 620,450"/>
+    <path d="M700,0 Q670,225 700,450"/>
+    <path d="M760,0 Q750,225 760,450"/>
+  </g>
+
+  <!-- Gravity Singularity / Black Hole in center-right -->
+  <g transform="translate(560, 190)" filter="url(#superBloom)">
+    <circle cx="0" cy="0" r="38" fill="#000000" stroke="#ff007f" stroke-width="3" stroke-dasharray="10,6"/>
+    <circle cx="0" cy="0" r="28" fill="#000000" stroke="#a855f7" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="18" fill="#000000" stroke="#00f0ff" stroke-width="2"/>
+    <!-- Accretion Disk Swirls -->
+    <path d="M-60,0 A60,25 30 0,1 60,0 A60,25 30 0,1 -60,0" fill="none" stroke="#ffe600" stroke-width="2" stroke-dasharray="8,4" opacity="0.8"/>
+  </g>
+
+  <!-- Neon Geometric Enemies -->
+  <!-- Diamond Stalkers (Red/Pink) -->
+  <g transform="translate(480, 100) rotate(25)" filter="url(#neonGlow)">
+    <polygon points="0,-22 16,0 0,22 -16,0" fill="none" stroke="#ff0055" stroke-width="3"/>
+    <polygon points="0,-12 9,0 0,12 -9,0" fill="#ff0055" fill-opacity="0.3" stroke="#ff77aa" stroke-width="1.5"/>
+  </g>
+  <g transform="translate(640, 110) rotate(-15)" filter="url(#neonGlow)">
+    <polygon points="0,-18 13,0 0,18 -13,0" fill="none" stroke="#ff0055" stroke-width="2.5"/>
+  </g>
+  <g transform="translate(680, 270) rotate(45)" filter="url(#neonGlow)">
+    <polygon points="0,-20 15,0 0,20 -15,0" fill="none" stroke="#ff0055" stroke-width="3"/>
+  </g>
+
+  <!-- Pinwheel Spinners (Cyan) -->
+  <g transform="translate(220, 120) rotate(50)" filter="url(#neonGlow)">
+    <polygon points="0,-24 20,16 -20,16" fill="none" stroke="#00f0ff" stroke-width="2.5"/>
+    <polygon points="0,24 -20,-16 20,-16" fill="none" stroke="#00f0ff" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="4" fill="#ffffff"/>
+  </g>
+
+  <!-- Neon Centipede / Snake Segments (Yellow / Green) -->
+  <g filter="url(#neonGlow)">
+    <circle cx="160" cy="310" r="14" fill="none" stroke="#39ff14" stroke-width="3"/>
+    <circle cx="135" cy="325" r="12" fill="none" stroke="#ffe600" stroke-width="2.5"/>
+    <circle cx="110" cy="335" r="10" fill="none" stroke="#ffe600" stroke-width="2.5"/>
+    <circle cx="88" cy="340" r="8" fill="none" stroke="#39ff14" stroke-width="2"/>
+  </g>
+
+  <!-- Glowing Geoms / Sparks Particles (Score Multipliers) -->
+  <g filter="url(#neonGlow)">
+    <polygon points="340,160 345,150 350,160 345,170" fill="#39ff14" stroke="#ffffff" stroke-width="1"/>
+    <polygon points="390,130 395,120 400,130 395,140" fill="#39ff14" stroke="#ffffff" stroke-width="1"/>
+    <polygon points="450,220 455,210 460,220 455,230" fill="#ffe600" stroke="#ffffff" stroke-width="1"/>
+    <polygon points="500,280 505,270 510,280 505,290" fill="#39ff14" stroke="#ffffff" stroke-width="1"/>
+    <polygon points="300,250 305,240 310,250 305,260" fill="#39ff14" stroke="#ffffff" stroke-width="1"/>
+  </g>
+
+  <!-- Player Geo-Fighter Ship (Cyan/White Neon Arrowhead) -->
+  <g transform="translate(260, 240) rotate(35)" filter="url(#superBloom)">
+    <!-- Plasma Thruster Trails -->
+    <line x1="-12" y1="28" x2="-22" y2="65" stroke="#00f0ff" stroke-width="4" stroke-linecap="round"/>
+    <line x1="12" y1="28" x2="22" y2="65" stroke="#00f0ff" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-12" y1="28" x2="-18" y2="50" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+    <line x1="12" y1="28" x2="18" y2="50" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Outer Neon Arrowhead Hull -->
+    <polygon points="0,-36 28,26 0,14 -28,26" fill="#041226" stroke="#00f0ff" stroke-width="3"/>
+    <polygon points="0,-22 18,20 0,10 -18,20" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="0" cy="0" r="5" fill="#00f0ff"/>
+  </g>
+
+  <!-- High-Energy Laser Streams & Plasma Blast Barrage -->
+  <g filter="url(#superBloom)">
+    <!-- Main Twin Lasers -->
+    <line x1="280" y1="225" x2="520" y2="105" stroke="#00f0ff" stroke-width="4" stroke-linecap="round"/>
+    <line x1="280" y1="225" x2="520" y2="105" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="290" y1="240" x2="550" y2="180" stroke="#00f0ff" stroke-width="4" stroke-linecap="round"/>
+    <line x1="290" y1="240" x2="550" y2="180" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
+
+    <!-- Spread Spread Cannons -->
+    <line x1="270" y1="220" x2="470" y2="50" stroke="#ff007f" stroke-width="3" stroke-linecap="round"/>
+    <line x1="270" y1="250" x2="640" y2="300" stroke="#ff007f" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Homing Missile Trails -->
+    <path d="M290,230 Q380,260 480,180" fill="none" stroke="#ffe600" stroke-width="3" stroke-dasharray="6,4"/>
+  </g>
+
+  <!-- EMP Shockwave Ring Expanding -->
+  <circle cx="260" cy="240" r="140" fill="none" stroke="#00f0ff" stroke-width="2" stroke-dasharray="14,8" opacity="0.5" filter="url(#neonGlow)"/>
+
+  <!-- Top Title Banner -->
+  <g transform="translate(400, 48)" text-anchor="middle">
+    <rect x="-260" y="-22" width="520" height="44" rx="22" fill="#0a0524" fill-opacity="0.8" stroke="#00f0ff" stroke-width="2.5" filter="url(#neonGlow)"/>
+    <text x="0" y="8" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="22" letter-spacing="3" filter="url(#superBloom)">
+      CYBER GEOMETRY WARS: GRID SURGE
+    </text>
+  </g>
+
+  <!-- Bottom Badges -->
+  <g transform="translate(400, 425)" text-anchor="middle">
+    <text x="0" y="0" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="13" letter-spacing="2" filter="url(#neonGlow)">
+      ⚡ 360° TWIN-STICK SHOOTER • WARPING NEON GRID • EMP NUKES • MULTIPLIER COMBOS
+    </text>
+  </g>
+</svg>

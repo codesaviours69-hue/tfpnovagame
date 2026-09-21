@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bgKatana" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050515"/>
+      <stop offset="50%" stop-color="#120524"/>
+      <stop offset="100%" stop-color="#24043b"/>
+    </linearGradient>
+
+    <!-- Neon Glow Filters -->
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="bladeGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur2"/>
+      <feComposite in="SourceGraphic" in2="blur2" operator="over"/>
+    </filter>
+
+    <!-- Fruit Gradients -->
+    <radialGradient id="watermelonOuter" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="80%" stop-color="#15803d"/>
+      <stop offset="100%" stop-color="#052e16"/>
+    </radialGradient>
+    <radialGradient id="watermelonInner" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff2e63"/>
+      <stop offset="85%" stop-color="#e11d48"/>
+      <stop offset="100%" stop-color="#881337"/>
+    </radialGradient>
+
+    <radialGradient id="dragonfruitGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ff76ac"/>
+      <stop offset="70%" stop-color="#d946ef"/>
+      <stop offset="100%" stop-color="#701a75"/>
+    </radialGradient>
+
+    <radialGradient id="orangeGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Dark Cyber Dojo Background -->
+  <rect width="800" height="450" fill="url(#bgKatana)"/>
+
+  <!-- Background Dojo Grid / Wood Slats -->
+  <g opacity="0.15">
+    <line x1="0" y1="90" x2="800" y2="90" stroke="#00f0ff" stroke-width="1.5"/>
+    <line x1="0" y1="180" x2="800" y2="180" stroke="#00f0ff" stroke-width="1.5"/>
+    <line x1="0" y1="270" x2="800" y2="270" stroke="#00f0ff" stroke-width="1.5"/>
+    <line x1="0" y1="360" x2="800" y2="360" stroke="#00f0ff" stroke-width="1.5"/>
+    <line x1="160" y1="0" x2="160" y2="450" stroke="#ff007f" stroke-width="1.5"/>
+    <line x1="320" y1="0" x2="320" y2="450" stroke="#ff007f" stroke-width="1.5"/>
+    <line x1="480" y1="0" x2="480" y2="450" stroke="#ff007f" stroke-width="1.5"/>
+    <line x1="640" y1="0" x2="640" y2="450" stroke="#ff007f" stroke-width="1.5"/>
+  </g>
+
+  <!-- Giant Sliced Watermelon (Hero Center) -->
+  <g transform="translate(400, 230)">
+    <!-- Juice Splash Particles -->
+    <circle cx="-60" cy="-40" r="8" fill="#ff2e63" opacity="0.8" filter="url(#neonGlow)"/>
+    <circle cx="70" cy="50" r="10" fill="#ff2e63" opacity="0.7" filter="url(#neonGlow)"/>
+    <circle cx="110" cy="-30" r="6" fill="#ff2e63" opacity="0.9" filter="url(#neonGlow)"/>
+    <circle cx="-120" cy="40" r="7" fill="#ff2e63" opacity="0.8" filter="url(#neonGlow)"/>
+
+    <!-- Left Sliced Half -->
+    <g transform="translate(-45, -25) rotate(-20)">
+      <path d="M 0,-70 A 70 70 0 0 0 -70,0 L 0,0 Z" fill="url(#watermelonOuter)" stroke="#4ade80" stroke-width="3" filter="url(#neonGlow)"/>
+      <path d="M 0,-60 A 60 60 0 0 0 -60,0 L 0,0 Z" fill="url(#watermelonInner)"/>
+      <!-- Seeds -->
+      <ellipse cx="-25" cy="-25" rx="3" ry="6" fill="#050505" transform="rotate(45, -25, -25)"/>
+      <ellipse cx="-15" cy="-40" rx="3" ry="6" fill="#050505" transform="rotate(20, -15, -40)"/>
+      <ellipse cx="-40" cy="-15" rx="3" ry="6" fill="#050505" transform="rotate(70, -40, -15)"/>
+    </g>
+
+    <!-- Right Sliced Half -->
+    <g transform="translate(45, 25) rotate(20)">
+      <path d="M 0,70 A 70 70 0 0 0 70,0 L 0,0 Z" fill="url(#watermelonOuter)" stroke="#4ade80" stroke-width="3" filter="url(#neonGlow)"/>
+      <path d="M 0,60 A 60 60 0 0 0 60,0 L 0,0 Z" fill="url(#watermelonInner)"/>
+      <!-- Seeds -->
+      <ellipse cx="25" cy="25" rx="3" ry="6" fill="#050505" transform="rotate(45, 25, 25)"/>
+      <ellipse cx="15" cy="40" rx="3" ry="6" fill="#050505" transform="rotate(20, 15, 40)"/>
+      <ellipse cx="40" cy="15" rx="3" ry="6" fill="#050505" transform="rotate(70, 40, 15)"/>
+    </g>
+  </g>
+
+  <!-- Flying Glowing Dragonfruit (Left) -->
+  <g transform="translate(180, 260) rotate(-15)" filter="url(#neonGlow)">
+    <ellipse cx="0" cy="0" rx="42" ry="52" fill="url(#dragonfruitGrad)" stroke="#f472b6" stroke-width="2.5"/>
+    <ellipse cx="0" cy="0" rx="34" ry="44" fill="#ffffff"/>
+    <!-- Dragonfruit Seeds -->
+    <circle cx="-12" cy="-15" r="2" fill="#000000"/>
+    <circle cx="8" cy="-10" r="2" fill="#000000"/>
+    <circle cx="-5" cy="12" r="2" fill="#000000"/>
+    <circle cx="14" cy="18" r="2" fill="#000000"/>
+    <circle cx="-16" cy="2" r="2" fill="#000000"/>
+  </g>
+
+  <!-- Flying Glowing Solar Orange (Right) -->
+  <g transform="translate(630, 220) rotate(25)" filter="url(#neonGlow)">
+    <circle cx="0" cy="0" r="45" fill="url(#orangeGrad)" stroke="#fde047" stroke-width="3"/>
+    <circle cx="0" cy="0" r="38" fill="#f59e0b" opacity="0.6"/>
+  </g>
+
+  <!-- Slicing Laser Katana Neon Arc (Diagonal Slash) -->
+  <g filter="url(#bladeGlow)">
+    <!-- Outer Cyan Blur Arc -->
+    <path d="M 80,400 Q 400,180 720,60" fill="none" stroke="#00f0ff" stroke-width="14" stroke-linecap="round" opacity="0.6"/>
+    <!-- Core White Hot Laser -->
+    <path d="M 80,400 Q 400,180 720,60" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Sparkle Stars along Slice Line -->
+  <g filter="url(#neonGlow)">
+    <polygon points="400,170 404,180 414,184 404,188 400,198 396,188 386,184 396,180" fill="#ffffff"/>
+    <polygon points="280,240 283,247 290,250 283,253 280,260 277,253 270,250 277,247" fill="#00f0ff"/>
+    <polygon points="530,120 533,127 540,130 533,133 530,140 527,133 520,130 527,127" fill="#f43f5e"/>
+  </g>
+
+  <!-- Top Title Banner -->
+  <g transform="translate(400, 48)" text-anchor="middle">
+    <rect x="-260" y="-22" width="520" height="44" rx="22" fill="#ff007f" fill-opacity="0.3" stroke="#f43f5e" stroke-width="2" filter="url(#neonGlow)"/>
+    <text x="0" y="6" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="21" letter-spacing="3" filter="url(#neonGlow)">
+      CYBER FRUIT KATANA 3D
+    </text>
+  </g>
+
+  <!-- Bottom Tagline -->
+  <g transform="translate(400, 432)" text-anchor="middle">
+    <text x="0" y="0" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="12" letter-spacing="2">
+      ⚔️ 3D HOLOGRAPHIC BLADE SLICER • MULTI-CUT COMBOS • SLOW-MO FREEZE • 60 FPS
+    </text>
+  </g>
+</svg>

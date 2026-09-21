@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <!-- Dark City Cyberpunk Sky -->
+    <linearGradient id="ninjaSky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#02010a"/>
+      <stop offset="40%" stop-color="#0a021c"/>
+      <stop offset="75%" stop-color="#1f0338"/>
+      <stop offset="100%" stop-color="#4a044e"/>
+    </linearGradient>
+
+    <radialGradient id="neonMoon" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="60%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#02010a" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Bloom Filters -->
+    <filter id="bladeGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="superBloom" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="b1"/>
+      <feGaussianBlur stdDeviation="16" result="b2"/>
+      <feMerge>
+        <feMergeNode in="b2"/>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Sky Backdrop -->
+  <rect width="800" height="450" fill="url(#ninjaSky)"/>
+
+  <!-- Giant Cyber Holographic Moon -->
+  <circle cx="580" cy="160" r="95" fill="url(#neonMoon)" filter="url(#superBloom)"/>
+  <circle cx="580" cy="160" r="90" fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="12,8" opacity="0.6"/>
+
+  <!-- Distant Neon Cyber Scrapers -->
+  <g fill="#070314" stroke="#3b82f6" stroke-opacity="0.3" stroke-width="1">
+    <rect x="50" y="160" width="60" height="290"/>
+    <rect x="130" y="120" width="75" height="330"/>
+    <polygon points="167,80 175,120 160,120"/>
+    <rect x="225" y="190" width="55" height="260"/>
+    <rect x="300" y="140" width="80" height="310"/>
+    <rect x="400" y="210" width="70" height="240"/>
+    <rect x="490" y="130" width="65" height="320"/>
+    <rect x="680" y="150" width="80" height="300"/>
+    <polygon points="720,105 730,150 710,150"/>
+  </g>
+
+  <!-- High-Tech Rooftop Platforms -->
+  <g fill="#0b061c" stroke="#ff007f" stroke-width="2.5" filter="url(#bladeGlow)">
+    <rect x="0" y="380" width="340" height="70"/>
+    <rect x="460" y="350" width="340" height="100"/>
+    <!-- Warning Neon Edge Lines -->
+    <line x1="0" y1="380" x2="340" y2="380" stroke="#00f0ff" stroke-width="4"/>
+    <line x1="460" y1="350" x2="800" y2="350" stroke="#00f0ff" stroke-width="4"/>
+  </g>
+
+  <!-- Sliced Cyber Enemy Drone (Exploding in Half) -->
+  <g transform="translate(520, 210)" filter="url(#superBloom)">
+    <!-- Top Half Flying Up -->
+    <g transform="translate(-10, -25) rotate(-20)">
+      <polygon points="-30,0 0,-30 30,0" fill="#1e1b4b" stroke="#f43f5e" stroke-width="2.5"/>
+      <circle cx="0" cy="-10" r="5" fill="#ef4444"/>
+    </g>
+    <!-- Bottom Half Falling Down -->
+    <g transform="translate(15, 20) rotate(25)">
+      <polygon points="-30,0 0,30 30,0" fill="#1e1b4b" stroke="#f43f5e" stroke-width="2.5"/>
+      <line x1="-15" y1="0" x2="15" y2="0" stroke="#00f0ff" stroke-width="3"/>
+    </g>
+    <!-- Sparks & Laser Blood Splatter -->
+    <circle cx="5" cy="0" r="8" fill="#ff0055" filter="url(#superBloom)"/>
+    <line x1="-40" y1="-30" x2="40" y2="30" stroke="#00f0ff" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="-35" cy="-20" r="3" fill="#ffffff"/>
+    <circle cx="45" cy="15" r="2.5" fill="#facc15"/>
+  </g>
+
+  <!-- Searing Neon Katana Blade Slash Arc (Cyan & White Hot) -->
+  <g filter="url(#superBloom)">
+    <path d="M190,320 Q320,110 570,180" fill="none" stroke="#00f0ff" stroke-width="8" stroke-linecap="round"/>
+    <path d="M200,315 Q325,115 565,185" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M180,330 Q315,100 580,175" fill="none" stroke="#a855f7" stroke-width="14" stroke-linecap="round" opacity="0.4"/>
+  </g>
+
+  <!-- Flying Glowing Cyber Shurikens -->
+  <g transform="translate(420, 140) rotate(45)" filter="url(#bladeGlow)">
+    <polygon points="0,-16 6,-4 16,0 6,4 0,16 -6,4 -16,0 -6,-4" fill="#00f0ff" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="3" fill="#ffffff"/>
+  </g>
+  <g transform="translate(460, 110) rotate(15)" filter="url(#bladeGlow)">
+    <polygon points="0,-12 4,-3 12,0 4,3 0,12 -4,3 -12,0 -4,-3" fill="#00f0ff" stroke="#ffffff" stroke-width="1.2"/>
+  </g>
+
+  <!-- Player Cyber Shadow Ninja in Dynamic Air Slash Pose -->
+  <g transform="translate(250, 240)" filter="url(#superBloom)">
+    <!-- Shadow Afterimage Ghost Trail -->
+    <g opacity="0.35" transform="translate(-35, 20) scale(0.95)">
+      <polygon points="0,-40 25,10 -15,35" fill="#a855f7"/>
+      <circle cx="8" cy="-45" r="14" fill="#a855f7"/>
+    </g>
+
+    <!-- Ninja Scarf Trail (Long Flowing Neon Magenta) -->
+    <path d="M-5,-42 Q-60,-65 -120,-40 Q-80,-25 -20,-30 Z" fill="#ff007f" filter="url(#bladeGlow)"/>
+
+    <!-- Cyborg Ninja Body Armor -->
+    <polygon points="-12,-35 18,-35 24,15 -18,15" fill="#0f172a" stroke="#00f0ff" stroke-width="2.5"/>
+    <polygon points="-8,-25 14,-25 18,5 -12,5" fill="#1e293b" stroke="#ffffff" stroke-width="1"/>
+
+    <!-- Legs in Dynamic Mid-Air Kicking Pose -->
+    <polygon points="12,15 35,45 22,50 5,20" fill="#0f172a" stroke="#00f0ff" stroke-width="2"/>
+    <polygon points="-12,15 -40,35 -30,42 -5,20" fill="#0f172a" stroke="#00f0ff" stroke-width="2"/>
+
+    <!-- Ninja Helmet Mask & Glowing Cyber Visor -->
+    <circle cx="5" cy="-48" r="15" fill="#090d16" stroke="#00f0ff" stroke-width="2.5"/>
+    <!-- Glowing Slit Visor -->
+    <path d="M2,-52 Q18,-50 20,-46 Q10,-42 2,-46 Z" fill="#00f0ff" filter="url(#bladeGlow)"/>
+
+    <!-- Arm & Katana Hilt -->
+    <polygon points="15,-30 45,-15 40,-5 12,-20" fill="#0f172a" stroke="#00f0ff" stroke-width="2"/>
+    <!-- Katana Metal Hilt & Guard -->
+    <rect x="42" y="-18" width="6" height="14" rx="2" fill="#facc15" stroke="#ffffff" stroke-width="1"/>
+    <!-- Katana Blade Base -->
+    <line x1="45" y1="-11" x2="110" y2="-45" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Title Badge Top Header -->
+  <g transform="translate(400, 46)" text-anchor="middle">
+    <rect x="-270" y="-22" width="540" height="44" rx="22" fill="#0a031f" fill-opacity="0.85" stroke="#00f0ff" stroke-width="2.5" filter="url(#bladeGlow)"/>
+    <text x="0" y="8" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="22" letter-spacing="3" filter="url(#superBloom)">
+      CYBER SHADOW NINJA
+    </text>
+  </g>
+
+  <!-- Subtitle Badge Bottom -->
+  <g transform="translate(400, 428)" text-anchor="middle">
+    <text x="0" y="0" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="12" letter-spacing="2" filter="url(#bladeGlow)">
+      🗡️ KATANA DASH COMBOS • BULLET PARRY • WALL CLIMB • CYBER SHOGUN BOSS
+    </text>
+  </g>
+</svg>

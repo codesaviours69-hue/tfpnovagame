@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="smashBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="50%" stop-color="#081028"/>
+      <stop offset="100%" stop-color="#16082f"/>
+    </linearGradient>
+
+    <!-- Glass Gradients -->
+    <linearGradient id="crystalCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#67e8f9" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0891b2" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <linearGradient id="crystalMagenta" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f472b6" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#d946ef" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <linearGradient id="orbChrome" x1="25%" y1="20%" x2="80%" y2="85%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#38bdf8"/>
+      <stop offset="70%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#082f49"/>
+    </linearGradient>
+
+    <linearGradient id="orbGold" x1="25%" y1="20%" x2="80%" y2="85%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#fde047"/>
+      <stop offset="70%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#854d0e"/>
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="hyperGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur2"/>
+      <feComposite in="SourceGraphic" in2="blur2" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#smashBg)"/>
+
+  <!-- Futuristic Perspective 3D Corridor Lines -->
+  <g stroke="#06b6d4" stroke-width="1.2" opacity="0.35">
+    <!-- Vanishing point at 400, 210 -->
+    <line x1="0" y1="0" x2="400" y2="210"/>
+    <line x1="800" y1="0" x2="400" y2="210"/>
+    <line x1="0" y1="450" x2="400" y2="210"/>
+    <line x1="800" y1="450" x2="400" y2="210"/>
+    <line x1="0" y1="225" x2="400" y2="210"/>
+    <line x1="800" y1="225" x2="400" y2="210"/>
+    <line x1="200" y1="0" x2="400" y2="210"/>
+    <line x1="600" y1="0" x2="400" y2="210"/>
+    <line x1="200" y1="450" x2="400" y2="210"/>
+    <line x1="600" y1="450" x2="400" y2="210"/>
+  </g>
+
+  <!-- Concentric Corridor Square Frames -->
+  <g stroke="#38bdf8" stroke-width="1" fill="none" opacity="0.25">
+    <rect x="360" y="190" width="80" height="40"/>
+    <rect x="310" y="165" width="180" height="90"/>
+    <rect x="230" y="125" width="340" height="170"/>
+    <rect x="120" y="70" width="560" height="280"/>
+  </g>
+
+  <!-- Distant Glowing Core Portal -->
+  <circle cx="400" cy="210" r="38" fill="#06b6d4" opacity="0.4" filter="url(#hyperGlow)"/>
+  <circle cx="400" cy="210" r="18" fill="#ffffff" filter="url(#neonGlow)"/>
+
+  <!-- Shattered Glass Shards Flying in 3D -->
+  <g filter="url(#neonGlow)">
+    <!-- Shard 1 -->
+    <polygon points="460,180 500,165 485,210" fill="#a5f3fc" opacity="0.85" stroke="#ffffff" stroke-width="1"/>
+    <!-- Shard 2 -->
+    <polygon points="340,160 310,195 365,205" fill="#67e8f9" opacity="0.8" stroke="#ffffff" stroke-width="1"/>
+    <!-- Shard 3 -->
+    <polygon points="490,240 540,220 520,270" fill="#e0e7ff" opacity="0.9" stroke="#ffffff" stroke-width="1.5"/>
+    <!-- Shard 4 -->
+    <polygon points="280,220 250,260 305,250" fill="#f472b6" opacity="0.85" stroke="#ffffff" stroke-width="1.2"/>
+    <!-- Shard 5 -->
+    <polygon points="560,140 610,120 580,170" fill="#a5f3fc" opacity="0.75" stroke="#ffffff" stroke-width="1"/>
+    <!-- Shard 6 -->
+    <polygon points="210,130 180,180 230,170" fill="#67e8f9" opacity="0.7" stroke="#ffffff" stroke-width="1"/>
+    <!-- Shard 7 -->
+    <polygon points="420,130 450,110 435,150" fill="#fbcfe8" opacity="0.9" stroke="#ffffff" stroke-width="1"/>
+    <!-- Shard 8 -->
+    <polygon points="370,270 395,300 350,310" fill="#c4b5fd" opacity="0.8" stroke="#ffffff" stroke-width="1"/>
+  </g>
+
+  <!-- Left Side: Massive Glowing Glass Octahedron Crystal Pyramid -->
+  <g transform="translate(180, 270)" filter="url(#neonGlow)">
+    <!-- Crystal Top Facets -->
+    <polygon points="0,-75 -45,0 0,25" fill="url(#crystalCyan)" stroke="#ffffff" stroke-width="1.5"/>
+    <polygon points="0,-75 45,0 0,25" fill="#22d3ee" fill-opacity="0.8" stroke="#ffffff" stroke-width="1.5"/>
+    <!-- Crystal Bottom Facets -->
+    <polygon points="0,75 -45,0 0,25" fill="#0891b2" fill-opacity="0.8" stroke="#ffffff" stroke-width="1.5"/>
+    <polygon points="0,75 45,0 0,25" fill="#0e7490" fill-opacity="0.9" stroke="#ffffff" stroke-width="1.5"/>
+    <!-- Inner Core Sparkle -->
+    <circle cx="0" cy="0" r="10" fill="#ffffff" filter="url(#hyperGlow)"/>
+  </g>
+
+  <!-- Right Side: Glowing Magenta/Violet Crystal Monolith -->
+  <g transform="translate(620, 270)" filter="url(#neonGlow)">
+    <!-- Crystal Top Facets -->
+    <polygon points="0,-85 -40,0 0,20" fill="url(#crystalMagenta)" stroke="#ffffff" stroke-width="1.5"/>
+    <polygon points="0,-85 40,0 0,20" fill="#f472b6" fill-opacity="0.8" stroke="#ffffff" stroke-width="1.5"/>
+    <!-- Crystal Bottom Facets -->
+    <polygon points="0,85 -40,0 0,20" fill="#9333ea" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.5"/>
+    <polygon points="0,85 40,0 0,20" fill="#7e22ce" fill-opacity="0.9" stroke="#ffffff" stroke-width="1.5"/>
+    <!-- Inner Core Sparkle -->
+    <circle cx="0" cy="0" r="10" fill="#ffffff" filter="url(#hyperGlow)"/>
+  </g>
+
+  <!-- Center Floating Glass Pane (Fracturing in Real-time) -->
+  <g transform="translate(400, 210)" filter="url(#neonGlow)">
+    <polygon points="-70,-60 70,-60 85,60 -85,60" fill="#06b6d4" fill-opacity="0.25" stroke="#38bdf8" stroke-width="2.5"/>
+    <!-- Fracture Crack Lines -->
+    <path d="M 0,0 L -40,-45 M 0,0 L 45,-30 M 0,0 L -50,30 M 0,0 L 55,40 M 0,0 L 0,-60 M 0,0 L -70,5" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="0" cy="0" r="14" fill="#ffffff" filter="url(#hyperGlow)"/>
+  </g>
+
+  <!-- High-Velocity Multi-Shot Metallic Orbs in Flight -->
+  <g filter="url(#neonGlow)">
+    <!-- Ball Motion Trail -->
+    <line x1="390" y1="390" x2="400" y2="230" stroke="#00f0ff" stroke-width="8" opacity="0.6" stroke-linecap="round"/>
+    <line x1="390" y1="390" x2="400" y2="230" stroke="#ffffff" stroke-width="3" opacity="0.9" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(390, 370)">
+    <circle cx="0" cy="0" r="36" fill="url(#orbChrome)" stroke="#ffffff" stroke-width="2.5"/>
+    <ellipse cx="-12" cy="-12" rx="14" ry="7" fill="#ffffff" opacity="0.75" transform="rotate(-30, -12, -12)"/>
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.6" filter="url(#hyperGlow)"/>
+  </g>
+
+  <!-- Orb 2: Left Flanking Ball -->
+  <g filter="url(#neonGlow)">
+    <line x1="280" y1="410" x2="200" y2="280" stroke="#38bdf8" stroke-width="6" opacity="0.5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(280, 395)">
+    <circle cx="0" cy="0" r="26" fill="url(#orbChrome)" stroke="#ffffff" stroke-width="2"/>
+    <ellipse cx="-8" cy="-8" rx="10" ry="5" fill="#ffffff" opacity="0.75" transform="rotate(-30, -8, -8)"/>
+  </g>
+
+  <!-- Orb 3: Right Flanking Ball (Golden Multiplier Ball) -->
+  <g filter="url(#neonGlow)">
+    <line x1="500" y1="410" x2="600" y2="280" stroke="#facc15" stroke-width="6" opacity="0.5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(500, 395)">
+    <circle cx="0" cy="0" r="26" fill="url(#orbGold)" stroke="#ffffff" stroke-width="2"/>
+    <ellipse cx="-8" cy="-8" rx="10" ry="5" fill="#ffffff" opacity="0.75" transform="rotate(-30, -8, -8)"/>
+  </g>
+
+  <!-- Top Banner / Badge -->
+  <g transform="translate(400, 48)" text-anchor="middle">
+    <!-- Glowing pill badge -->
+    <rect x="-240" y="-22" width="480" height="40" rx="20" fill="#0284c7" fill-opacity="0.3" stroke="#38bdf8" stroke-width="2" filter="url(#neonGlow)"/>
+    <text x="0" y="4" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="20" letter-spacing="3" filter="url(#neonGlow)">
+      CYBER SMASH HIT 3D
+    </text>
+  </g>
+
+  <!-- Subtitle Tags Bottom Right -->
+  <g transform="translate(400, 425)" text-anchor="middle">
+    <text x="0" y="0" fill="#67e8f9" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="13" letter-spacing="2">
+      ⚡ REAL-TIME GLASS SHATTER PHYSICS • MULTI-BALL STREAK • 60 FPS
+    </text>
+  </g>
+</svg>

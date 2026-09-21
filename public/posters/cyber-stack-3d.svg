@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <rect width="800" height="450" fill="#070a1e"/>
+  <defs><filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter></defs>
+  <g transform="translate(400, 280)" filter="url(#glow)">
+    <polygon points="0,40 140,0 0,-40 -140,0" fill="#3b82f6" stroke="#93c5fd" stroke-width="2"/>
+    <polygon points="0,10 130,-30 0,-70 -130,-30" fill="#8b5cf6" stroke="#c4b5fd" stroke-width="2"/>
+    <polygon points="0,-20 120,-60 0,-100 -120,-60" fill="#ec4899" stroke="#fbcfe8" stroke-width="2"/>
+  </g>
+  <g transform="translate(400, 50)" text-anchor="middle">
+    <text x="0" y="0" fill="#a78bfa" font-family="system-ui, sans-serif" font-weight="900" font-size="38" letter-spacing="2" filter="url(#glow)">CYBER STACK 3D: NEON BUILDER</text>
+  </g>
+</svg>

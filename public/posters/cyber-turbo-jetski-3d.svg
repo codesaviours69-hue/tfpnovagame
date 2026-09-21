@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050518"/>
+      <stop offset="45%" stop-color="#180a3a"/>
+      <stop offset="65%" stop-color="#4a0e4e"/>
+      <stop offset="85%" stop-color="#db2777"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+
+    <!-- Water Surface Gradient -->
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0d1b3e"/>
+      <stop offset="40%" stop-color="#062852"/>
+      <stop offset="100%" stop-color="#021024"/>
+    </linearGradient>
+
+    <!-- Neon Sun Radial -->
+    <radialGradient id="neonSun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="60%" stop-color="#ff007f"/>
+      <stop offset="100%" stop-color="#ff007f" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Bloom Filters -->
+    <filter id="waterGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="superBloom" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="b1"/>
+      <feGaussianBlur stdDeviation="16" result="b2"/>
+      <feMerge>
+        <feMergeNode in="b2"/>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Sky & Synthwave Horizon -->
+  <rect width="800" height="270" fill="url(#skyGrad)"/>
+
+  <!-- Giant Synthwave Sun -->
+  <circle cx="400" cy="200" r="100" fill="url(#neonSun)" filter="url(#superBloom)"/>
+  <!-- Sun Horizontal Grid Stripes -->
+  <g fill="#180a3a">
+    <rect x="290" y="165" width="220" height="4"/>
+    <rect x="290" y="175" width="220" height="6"/>
+    <rect x="290" y="187" width="220" height="8"/>
+    <rect x="290" y="201" width="220" height="11"/>
+    <rect x="290" y="218" width="220" height="15"/>
+  </g>
+
+  <!-- Distant Neon City Skyline Silhouettes -->
+  <g fill="#0b0826" stroke="#00f0ff" stroke-opacity="0.3" stroke-width="1">
+    <rect x="40" y="150" width="35" height="100"/>
+    <rect x="90" y="130" width="45" height="120"/>
+    <polygon points="112,100 120,130 105,130"/>
+    <rect x="150" y="160" width="30" height="90"/>
+    <rect x="190" y="140" width="50" height="110"/>
+    <rect x="560" y="135" width="40" height="115"/>
+    <rect x="615" y="115" width="55" height="135"/>
+    <polygon points="642,85 650,115 635,115"/>
+    <rect x="685" y="155" width="35" height="95"/>
+    <rect x="730" y="145" width="40" height="105"/>
+  </g>
+
+  <!-- 3D Undulating Cyber Water Ocean Surface -->
+  <rect y="250" width="800" height="200" fill="url(#waterGrad)"/>
+
+  <!-- Perspective Neon Grid Lines on Water Waves -->
+  <g stroke="#00f0ff" stroke-opacity="0.45" stroke-width="1.5">
+    <!-- Horizontal wave swells -->
+    <path d="M0,260 Q200,255 400,262 T800,260"/>
+    <path d="M0,278 Q200,270 400,280 T800,278"/>
+    <path d="M0,302 Q200,292 400,305 T800,302"/>
+    <path d="M0,335 Q200,320 400,340 T800,335" stroke-width="2"/>
+    <path d="M0,378 Q200,360 400,385 T800,378" stroke-width="2.5"/>
+    <path d="M0,430 Q200,410 400,440 T800,430" stroke-width="3"/>
+
+    <!-- Perspective vanishing diagonals -->
+    <line x1="400" y1="250" x2="0" y2="450"/>
+    <line x1="400" y1="250" x2="160" y2="450"/>
+    <line x1="400" y1="250" x2="310" y2="450"/>
+    <line x1="400" y1="250" x2="490" y2="450"/>
+    <line x1="400" y1="250" x2="640" y2="450"/>
+    <line x1="400" y1="250" x2="800" y2="450"/>
+  </g>
+
+  <!-- Giant Wave Jump Ramp -->
+  <g transform="translate(180, 260) skewX(-15)" filter="url(#waterGlow)">
+    <polygon points="0,50 60,0 80,0 20,50" fill="#ff007f" fill-opacity="0.8" stroke="#ffffff" stroke-width="2"/>
+    <!-- Yellow Boost Chevrons on Ramp -->
+    <polygon points="25,35 45,18 55,18 35,35" fill="#fde047"/>
+    <polygon points="40,22 60,5 70,5 50,22" fill="#fde047"/>
+  </g>
+
+  <!-- Glowing Water Spray Wake Behind Jet-Ski -->
+  <g filter="url(#superBloom)">
+    <!-- Main High-Speed Hydro Spray Foam -->
+    <path d="M420,380 Q320,395 180,360 Q260,420 440,395 Z" fill="#00f0ff" fill-opacity="0.6"/>
+    <path d="M430,375 Q480,410 600,380 Q520,430 420,390 Z" fill="#00f0ff" fill-opacity="0.6"/>
+    <!-- Spray particle arcs -->
+    <circle cx="280" cy="360" r="6" fill="#ffffff"/>
+    <circle cx="220" cy="350" r="4.5" fill="#00f0ff"/>
+    <circle cx="560" cy="370" r="5" fill="#ffffff"/>
+    <circle cx="610" cy="365" r="4" fill="#00f0ff"/>
+  </g>
+
+  <!-- Neon Wave Racer Jet-Ski (Mid-Air Stunt Jump / Wave Shred) -->
+  <g transform="translate(420, 240) rotate(-14)" filter="url(#superBloom)">
+    <!-- Underglow Light Aura -->
+    <ellipse cx="0" cy="65" rx="90" ry="22" fill="#00f0ff" fill-opacity="0.4" filter="url(#superBloom)"/>
+
+    <!-- Jet Ski Hull Bottom V-Keel -->
+    <polygon points="-85,55 0,72 85,55 95,45 -95,45" fill="#03152d" stroke="#00f0ff" stroke-width="3"/>
+
+    <!-- Upper Aerodynamic Body Shell (Hot Pink & Cyan) -->
+    <polygon points="-80,45 -55,15 20,10 85,35 75,48 -80,48" fill="#ff007f" stroke="#ffffff" stroke-width="2"/>
+
+    <!-- Cyan Side Racing Flares -->
+    <polygon points="-70,42 -40,25 35,22 80,38 70,44 -65,44" fill="#00f0ff"/>
+
+    <!-- Handlebars, Windshield & Cockpit -->
+    <polygon points="-15,10 -5,-15 15,-15 25,10" fill="#1e1b4b" stroke="#00f0ff" stroke-width="2"/>
+    <polygon points="-2,-12 4,-26 12,-26 8,-12" fill="#38bdf8" stroke="#ffffff" stroke-width="1.5"/>
+
+    <!-- Driver Rider Silhouette with Cyber Helmet -->
+    <g transform="translate(-10, -25)">
+      <!-- Torso / Lifevest -->
+      <polygon points="-12,25 15,22 18,5 -8,5" fill="#facc15" stroke="#f59e0b" stroke-width="1.5"/>
+      <!-- Cyber Helmet -->
+      <circle cx="5" cy="-2" r="14" fill="#0f172a" stroke="#00f0ff" stroke-width="2"/>
+      <!-- Neon Cyan Visor -->
+      <path d="M2,-5 Q16,-3 18,3 Q8,8 2,4 Z" fill="#00f0ff" filter="url(#waterGlow)"/>
+      <!-- Arms to Handlebars -->
+      <line x1="8" y1="12" x2="22" y2="12" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    </g>
+
+    <!-- Twin Turbine Water Jet Thruster Flames (Turbo Boost) -->
+    <polygon points="-85,45 -135,40 -90,52" fill="#00f0ff" filter="url(#superBloom)"/>
+    <polygon points="-85,45 -120,44 -88,49" fill="#ffffff"/>
+  </g>
+
+  <!-- Rival Racer in Distance -->
+  <g transform="translate(620, 235) scale(0.45) rotate(-6)" filter="url(#waterGlow)">
+    <polygon points="-80,45 -55,15 20,10 85,35 75,48 -80,48" fill="#ffe600" stroke="#f59e0b" stroke-width="2"/>
+    <polygon points="-85,55 0,72 85,55 95,45 -95,45" fill="#1e1b4b" stroke="#ffe600" stroke-width="2"/>
+    <circle cx="-5" cy="-10" r="12" fill="#0f172a" stroke="#ffe600" stroke-width="2"/>
+    <!-- Water wake -->
+    <path d="M-85,50 Q-140,65 -200,45 Q-140,80 -80,55 Z" fill="#ffe600" fill-opacity="0.4"/>
+  </g>
+
+  <!-- Buoy Checkpoint Ring / Slalom Gate -->
+  <g transform="translate(680, 270)" filter="url(#waterGlow)">
+    <!-- Neon Gate Arch -->
+    <path d="M-30,0 Q0,-60 30,0" fill="none" stroke="#39ff14" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="-30" cy="0" rx="10" ry="4" fill="#39ff14"/>
+    <ellipse cx="30" cy="0" rx="10" ry="4" fill="#39ff14"/>
+    <text x="0" y="-30" fill="#39ff14" font-family="system-ui, sans-serif" font-weight="900" font-size="11" text-anchor="middle">GATE</text>
+  </g>
+
+  <!-- Header Title Banner -->
+  <g transform="translate(400, 46)" text-anchor="middle">
+    <rect x="-270" y="-22" width="540" height="44" rx="22" fill="#08031d" fill-opacity="0.85" stroke="#ff007f" stroke-width="2.5" filter="url(#waterGlow)"/>
+    <text x="0" y="8" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="21" letter-spacing="3" filter="url(#superBloom)">
+      CYBER TURBO JET-SKI 3D
+    </text>
+  </g>
+
+  <!-- Footer Subtitle -->
+  <g transform="translate(400, 428)" text-anchor="middle">
+    <text x="0" y="0" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="12" letter-spacing="2" filter="url(#waterGlow)">
+      🌊 DYNAMIC 3D WAVE PHYSICS • RAMP AERIAL STUNTS • NITRO BOOST • 4-RACER CUPS
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <radialGradient id="poolBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="60%" stop-color="#022c22"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </radialGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Felt -->
+  <rect width="800" height="450" fill="url(#poolBg)"/>
+
+  <!-- Table Cushions & Rails -->
+  <rect x="40" y="30" width="720" height="390" rx="20" fill="none" stroke="#78350f" stroke-width="24"/>
+  <rect x="40" y="30" width="720" height="390" rx="20" fill="none" stroke="#d97706" stroke-width="4"/>
+
+  <!-- Corner & Side Pockets -->
+  <circle cx="56" cy="46" r="22" fill="#09090b" stroke="#27272a" stroke-width="3"/>
+  <circle cx="400" cy="30" r="18" fill="#09090b" stroke="#27272a" stroke-width="3"/>
+  <circle cx="744" cy="46" r="22" fill="#09090b" stroke="#27272a" stroke-width="3"/>
+  <circle cx="56" cy="404" r="22" fill="#09090b" stroke="#27272a" stroke-width="3"/>
+  <circle cx="400" cy="420" r="18" fill="#09090b" stroke="#27272a" stroke-width="3"/>
+  <circle cx="744" cy="404" r="22" fill="#09090b" stroke="#27272a" stroke-width="3"/>
+
+  <!-- Triangle Rack of Balls -->
+  <g transform="translate(560, 225)" filter="url(#glow)">
+    <!-- 8 Ball in Center -->
+    <circle cx="0" cy="0" r="15" fill="#09090b" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="7" fill="#ffffff"/>
+    <text x="0" y="3.5" fill="#000" font-family="sans-serif" font-weight="900" font-size="9" text-anchor="middle">8</text>
+
+    <!-- Surrounding Solids & Stripes -->
+    <circle cx="-26" cy="0" r="15" fill="#facc15"/><text x="-26" y="3.5" fill="#000" font-family="sans-serif" font-weight="900" font-size="9" text-anchor="middle">1</text>
+    <circle cx="26" cy="-15" r="15" fill="#2563eb"/><text x="26" y="-11.5" fill="#fff" font-family="sans-serif" font-weight="900" font-size="9" text-anchor="middle">2</text>
+    <circle cx="26" cy="15" r="15" fill="#dc2626"/><text x="26" y="18.5" fill="#fff" font-family="sans-serif" font-weight="900" font-size="9" text-anchor="middle">3</text>
+    <circle cx="52" cy="-30" r="15" fill="#9333ea"/><text x="52" y="-26.5" fill="#fff" font-family="sans-serif" font-weight="900" font-size="9" text-anchor="middle">4</text>
+    <circle cx="52" cy="0" r="15" fill="#ea580c"/><text x="52" y="3.5" fill="#fff" font-family="sans-serif" font-weight="900" font-size="9" text-anchor="middle">5</text>
+    <circle cx="52" cy="30" r="15" fill="#16a34a"/><text x="52" y="33.5" fill="#fff" font-family="sans-serif" font-weight="900" font-size="9" text-anchor="middle">6</text>
+  </g>
+
+  <!-- Cue Ball & Aiming Laser Guide -->
+  <g transform="translate(240, 225)" filter="url(#glow)">
+    <!-- Laser Guide line -->
+    <line x1="0" y1="0" x2="290" y2="0" stroke="#38bdf8" stroke-width="4" stroke-dasharray="10,8"/>
+    
+    <!-- Cue Ball -->
+    <circle cx="0" cy="0" r="16" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+    <circle cx="0" cy="0" r="3" fill="#ef4444"/>
+
+    <!-- Cue Stick -->
+    <g transform="translate(-40, 0)">
+      <polygon points="0,-4 0,4 -220,7 -220,-7" fill="#d97706" stroke="#78350f" stroke-width="2"/>
+      <rect x="-10" y="-4" width="10" height="8" fill="#38bdf8"/>
+    </g>
+  </g>
+
+  <!-- Title Banner -->
+  <g transform="translate(400, 65)" text-anchor="middle">
+    <text x="0" y="0" fill="#34d399" font-family="system-ui, sans-serif" font-weight="900" font-size="42" letter-spacing="3" filter="url(#glow)">CYBER 8-BALL POOL</text>
+    <text x="0" y="24" fill="#fef08a" font-family="sans-serif" font-weight="800" font-size="14" letter-spacing="4">PRO BILLIARDS CHAMPIONSHIP</text>
+  </g>
+</svg>

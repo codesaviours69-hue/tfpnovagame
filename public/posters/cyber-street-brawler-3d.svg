@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05020c"/>
+      <stop offset="35%" stop-color="#150524"/>
+      <stop offset="70%" stop-color="#2a0520"/>
+      <stop offset="100%" stop-color="#05020c"/>
+    </linearGradient>
+
+    <!-- Neon Glow Filter -->
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur1"/>
+      <feGaussianBlur stdDeviation="14" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="hyperGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Plasma Dragon Fist Blast Gradient -->
+    <radialGradient id="plasmaBlast" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="30%" stop-color="#00f0ff"/>
+      <stop offset="70%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Fiery Kick Arc Gradient -->
+    <linearGradient id="fireArc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#facc15"/>
+      <stop offset="50%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+
+  <!-- Cyberpunk Downtown Street Alley with Neon Signs -->
+  <g opacity="0.4">
+    <!-- Skyscraper Silhouettes -->
+    <rect x="40" y="100" width="80" height="360" fill="#0c0718" stroke="#f43f5e" stroke-width="1.5"/>
+    <rect x="140" y="70" width="110" height="390" fill="#120a22" stroke="#00f0ff" stroke-width="1"/>
+    <rect x="560" y="80" width="95" height="380" fill="#120a22" stroke="#a855f7" stroke-width="1.5"/>
+    <rect x="670" y="120" width="85" height="340" fill="#0c0718" stroke="#facc15" stroke-width="1"/>
+
+    <!-- Neon Billboards in Back -->
+    <rect x="155" y="110" width="80" height="30" rx="6" fill="#f43f5e" filter="url(#neonGlow)"/>
+    <text x="195" y="130" font-family="'Impact', sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">FIGHT CLUB</text>
+
+    <rect x="575" y="120" width="65" height="24" rx="4" fill="#00f0ff" filter="url(#neonGlow)"/>
+    <text x="607" y="136" font-family="'Impact', sans-serif" font-size="11" fill="#050b14" text-anchor="middle">CYBER 99</text>
+  </g>
+
+  <!-- Wet Asphalt Street Floor with Neon Puddle Reflections -->
+  <polygon points="20,580 780,580 660,390 140,390" fill="#0d0818" stroke="#f43f5e" stroke-width="2.5"/>
+  <ellipse cx="280" cy="490" rx="90" ry="18" fill="#f43f5e" opacity="0.3" filter="url(#neonGlow)"/>
+  <ellipse cx="520" cy="500" rx="100" ry="20" fill="#00f0ff" opacity="0.35" filter="url(#neonGlow)"/>
+
+  <!-- Left: Defeated Cyber Punk Thug Flying Backwards -->
+  <g transform="translate(180, 410) rotate(-35)">
+    <ellipse cx="0" cy="30" rx="40" ry="12" fill="#000000" opacity="0.6"/>
+    <!-- Thug Body -->
+    <rect x="-16" y="-35" width="32" height="45" rx="8" fill="#334155" stroke="#ef4444" stroke-width="2"/>
+    <circle cx="0" cy="-50" r="14" fill="#0f172a" stroke="#ef4444" stroke-width="2"/>
+    <!-- Cyber Mask Eye Glow -->
+    <line x1="-8" y1="-52" x2="8" y2="-52" stroke="#ef4444" stroke-width="4" filter="url(#neonGlow)"/>
+    <!-- Flying Hit Spark Lines -->
+    <line x1="-30" y1="-20" x2="-70" y2="-40" stroke="#facc15" stroke-width="3" filter="url(#hyperGlow)"/>
+  </g>
+
+  <!-- Right: Giant Armored Cyborg Bouncer Boss Rushing In -->
+  <g transform="translate(620, 410)">
+    <ellipse cx="0" cy="35" rx="55" ry="15" fill="#000000" opacity="0.7"/>
+    <!-- Boss Heavy Torso -->
+    <polygon points="-30,30 -40,-35 40,-35 30,30" fill="#1e1b4b" stroke="#a855f7" stroke-width="3" filter="url(#neonGlow)"/>
+    <!-- Cyber Spikes / Shoulders -->
+    <polygon points="-50,-30 -35,-50 -25,-30" fill="#f43f5e" filter="url(#neonGlow)"/>
+    <polygon points="50,-30 35,-50 25,-30" fill="#f43f5e" filter="url(#neonGlow)"/>
+    <!-- Cybernetic Eye Beam -->
+    <circle cx="-6" cy="-55" r="18" fill="#050515" stroke="#a855f7" stroke-width="2"/>
+    <circle cx="0" cy="-56" r="6" fill="#ef4444" filter="url(#hyperGlow)"/>
+  </g>
+
+  <!-- CENTER: CYBER HERO MARTIAL ARTIST (Delivering Dragon Plasma Flying Uppercut) -->
+  <g transform="translate(380, 390)">
+    <!-- Hero Shadow -->
+    <ellipse cx="0" cy="40" rx="45" ry="14" fill="#000000" opacity="0.8"/>
+
+    <!-- Fiery Dragon Ki Aura Arc -->
+    <path d="M -70,30 C -90,-40 -20,-110 50,-130" fill="none" stroke="url(#fireArc)" stroke-width="12" stroke-linecap="round" filter="url(#hyperGlow)"/>
+
+    <!-- Hero Legs (Flying Kick/Uppercut Pose) -->
+    <line x1="-12" y1="10" x2="-35" y2="45" stroke="#0284c7" stroke-width="9" stroke-linecap="round"/>
+    <line x1="12" y1="5" x2="30" y2="-25" stroke="#0284c7" stroke-width="9" stroke-linecap="round"/>
+
+    <!-- Torso Armored Gi -->
+    <polygon points="-16,10 -22,-30 22,-30 16,10" fill="#0f172a" stroke="#00f0ff" stroke-width="2.5"/>
+    <line x1="-15" y1="-10" x2="15" y2="-10" stroke="#f43f5e" stroke-width="3" filter="url(#neonGlow)"/>
+
+    <!-- Head & Cyber Visor -->
+    <circle cx="0" cy="-45" r="15" fill="#050b14" stroke="#00f0ff" stroke-width="2"/>
+    <rect x="-10" y="-48" width="20" height="7" rx="3" fill="#00f0ff" filter="url(#hyperGlow)"/>
+
+    <!-- Uppercut Right Arm with Massive Plasma Dragon Fist -->
+    <line x1="15" y1="-25" x2="35" y2="-80" stroke="#0284c7" stroke-width="9" stroke-linecap="round"/>
+    <!-- Plasma Dragon Fist Blast -->
+    <circle cx="38" cy="-90" r="32" fill="url(#plasmaBlast)" filter="url(#hyperGlow)"/>
+  </g>
+
+  <!-- Impact Sparks & Combos Floating -->
+  <g transform="translate(420, 290)">
+    <text x="0" y="0" font-family="'Impact', sans-serif" font-size="28" fill="#facc15" font-weight="900" letter-spacing="2" filter="url(#hyperGlow)">99x HIT COMBO!</text>
+  </g>
+
+  <!-- TOP BADGE OVERLAY -->
+  <g transform="translate(400, 65)">
+    <rect x="-180" y="-24" width="360" height="48" rx="24" fill="#030712" fill-opacity="0.9" stroke="#f43f5e" stroke-width="2.5" filter="url(#neonGlow)"/>
+    <text x="0" y="8" font-family="'Impact', 'Arial Black', sans-serif" font-size="22" fill="#f43f5e" text-anchor="middle" letter-spacing="4" filter="url(#hyperGlow)">STREET MARTIAL ARTS 3D</text>
+  </g>
+
+  <!-- TITLE TYPOGRAPHY -->
+  <g transform="translate(400, 145)">
+    <text x="0" y="0" font-family="'Impact', 'Arial Black', sans-serif" font-weight="900" font-size="48" fill="#00f0ff" text-anchor="middle" letter-spacing="5" opacity="0.6" filter="url(#hyperGlow)">CYBER STREET BRAWLER</text>
+    <text x="0" y="0" font-family="'Impact', 'Arial Black', sans-serif" font-weight="900" font-size="48" fill="#ffffff" text-anchor="middle" letter-spacing="5">CYBER STREET BRAWLER</text>
+    <rect x="-140" y="10" width="280" height="26" rx="13" fill="#f43f5e" filter="url(#neonGlow)"/>
+    <text x="0" y="28" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle" letter-spacing="4">NEON FIGHT CLUB</text>
+  </g>
+</svg>

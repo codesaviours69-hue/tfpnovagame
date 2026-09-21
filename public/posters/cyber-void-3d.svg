@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#02000d" />
+      <stop offset="50%" stop-color="#0b0424" />
+      <stop offset="100%" stop-color="#1f0238" />
+    </linearGradient>
+    <linearGradient id="vortexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="40%" stop-color="#7000ff" />
+      <stop offset="80%" stop-color="#ff007f" />
+      <stop offset="100%" stop-color="#02000d" />
+    </linearGradient>
+    <radialGradient id="holeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" />
+      <stop offset="60%" stop-color="#020617" />
+      <stop offset="85%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#ff007f" />
+    </radialGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="strongGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="b1" />
+      <feGaussianBlur stdDeviation="4" result="b2" />
+      <feMerge>
+        <feMergeNode in="b1" />
+        <feMergeNode in="b2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#skyGrad)" />
+
+  <!-- Cyber Skyline Silhouette -->
+  <g opacity="0.35">
+    <rect x="50" y="140" width="70" height="300" fill="#0b0f19" stroke="#00f0ff" stroke-width="1" />
+    <rect x="140" y="90" width="80" height="350" fill="#130e2e" stroke="#ff007f" stroke-width="1" />
+    <rect x="580" y="110" width="75" height="330" fill="#0b0f19" stroke="#00f0ff" stroke-width="1" />
+    <rect x="675" y="80" width="85" height="360" fill="#130e2e" stroke="#facc15" stroke-width="1" />
+  </g>
+
+  <!-- Neon Grid Horizon -->
+  <g opacity="0.4">
+    <line x1="0" y1="360" x2="800" y2="360" stroke="#00f0ff" stroke-width="1.5" />
+    <line x1="0" y1="390" x2="800" y2="390" stroke="#00f0ff" stroke-width="2" />
+    <line x1="0" y1="440" x2="800" y2="440" stroke="#ff007f" stroke-width="2.5" />
+    <line x1="120" y1="360" x2="0" y2="500" stroke="#00f0ff" stroke-width="1.5" />
+    <line x1="320" y1="360" x2="220" y2="500" stroke="#00f0ff" stroke-width="1.5" />
+    <line x1="480" y1="360" x2="580" y2="500" stroke="#ff007f" stroke-width="1.5" />
+    <line x1="680" y1="360" x2="800" y2="500" stroke="#ff007f" stroke-width="1.5" />
+  </g>
+
+  <!-- Giant Glowing 3D Neon Black Hole / Gravity Vortex -->
+  <g transform="translate(400, 350) scale(1, 0.45)">
+    <!-- Outer Gravitational Distortion Ring -->
+    <ellipse cx="0" cy="0" rx="180" ry="180" fill="none" stroke="#00f0ff" stroke-width="6" stroke-dasharray="30 15" filter="url(#strongGlow)" opacity="0.8" />
+    <ellipse cx="0" cy="0" rx="150" ry="150" fill="none" stroke="#ff007f" stroke-width="8" filter="url(#strongGlow)" opacity="0.9" />
+    <!-- Event Horizon Singularity -->
+    <circle cx="0" cy="0" r="130" fill="url(#holeGlow)" />
+    <!-- Dark Singularity Core -->
+    <circle cx="0" cy="0" r="95" fill="#000000" />
+  </g>
+
+  <!-- Sucked-In Objects Spiraling & Tumbling into the Void -->
+  <!-- 1. Devoured Hovercar tumbling -->
+  <g transform="translate(340, 290) rotate(35) scale(0.65)">
+    <rect x="-40" y="-18" width="80" height="36" rx="10" fill="#0284c7" stroke="#00f0ff" stroke-width="2" filter="url(#glow)" />
+    <polygon points="-15,-16 15,-16 25,-4 -5,-4" fill="#030014" stroke="#00f0ff" stroke-width="1.5" />
+    <circle cx="-25" cy="18" r="10" fill="#00f0ff" filter="url(#strongGlow)" />
+    <circle cx="25" cy="18" r="10" fill="#00f0ff" filter="url(#strongGlow)" />
+  </g>
+
+  <!-- 2. Devoured Skyscraper Tower leaning & falling inward -->
+  <g transform="translate(480, 230) rotate(-28) scale(0.6)">
+    <rect x="-25" y="-90" width="50" height="180" fill="#1e1b4b" stroke="#ff007f" stroke-width="3" filter="url(#glow)" />
+    <line x1="-25" y1="-50" x2="25" y2="-50" stroke="#facc15" stroke-width="2" />
+    <line x1="-25" y1="0" x2="25" y2="0" stroke="#facc15" stroke-width="2" />
+    <line x1="-25" y1="50" x2="25" y2="50" stroke="#facc15" stroke-width="2" />
+  </g>
+
+  <!-- 3. Sucked In Neon Traffic Cones & Energy Cubes -->
+  <g transform="translate(440, 310) rotate(55) scale(0.55)">
+    <polygon points="0,-25 15,20 -15,20" fill="#facc15" stroke="#ffffff" stroke-width="2" filter="url(#strongGlow)" />
+  </g>
+  <g transform="translate(310, 330) rotate(-45) scale(0.5)">
+    <rect x="-15" y="-15" width="30" height="30" fill="#10b981" stroke="#00ff88" stroke-width="3" filter="url(#strongGlow)" />
+  </g>
+
+  <!-- Swirling Gravitational Particle Stream -->
+  <path d="M 220 280 Q 300 320, 370 340" fill="none" stroke="#00f0ff" stroke-width="4" stroke-linecap="round" filter="url(#strongGlow)" />
+  <path d="M 580 270 Q 500 310, 430 340" fill="none" stroke="#ff007f" stroke-width="4" stroke-linecap="round" filter="url(#strongGlow)" />
+
+  <!-- Bold Glowing Typography -->
+  <g filter="url(#strongGlow)">
+    <text x="400" y="75" fill="#00f0ff" font-family="'Impact', 'Segoe UI Black', system-ui, sans-serif" font-size="46" font-weight="900" letter-spacing="6" text-anchor="middle">CYBER VOID 3D</text>
+  </g>
+  <text x="400" y="75" fill="#ffffff" font-family="'Impact', 'Segoe UI Black', system-ui, sans-serif" font-size="46" font-weight="900" letter-spacing="6" text-anchor="middle">CYBER VOID 3D</text>
+  
+  <text x="400" y="108" fill="#facc15" font-family="'Segoe UI', system-ui, sans-serif" font-size="16" font-weight="900" letter-spacing="8" text-anchor="middle">★ BLACK HOLE CITY DEVOURER ★</text>
+
+  <!-- Feature Badge -->
+  <g transform="translate(400, 468)">
+    <rect x="-170" y="-18" width="340" height="28" rx="14" fill="#030014" fill-opacity="0.85" stroke="#00f0ff" stroke-width="1.5" />
+    <text x="0" y="1" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11" font-weight="800" letter-spacing="2" text-anchor="middle">DEVOUR SKYSCRAPERS • EXPAND VORTEX • ULTRA SATISFYING</text>
+  </g>
+</svg>

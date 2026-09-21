@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <rect width="800" height="450" fill="#080e1a"/>
+  <defs><filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter></defs>
+  <!-- Floating Platforms -->
+  <g filter="url(#glow)">
+    <rect x="220" y="340" width="100" height="18" rx="8" fill="#22c55e"/>
+    <rect x="440" y="270" width="100" height="18" rx="8" fill="#22c55e"/>
+    <rect x="300" y="180" width="100" height="18" rx="8" fill="#38bdf8"/>
+  </g>
+  <!-- Jumper Character with Spring Boots -->
+  <g transform="translate(350, 120)" filter="url(#glow)">
+    <circle cx="0" cy="0" r="24" fill="#a855f7" stroke="#e9d5ff" stroke-width="3"/>
+    <circle cx="-7" cy="-5" r="4" fill="#fff"/><circle cx="7" cy="-5" r="4" fill="#fff"/>
+    <!-- Springs -->
+    <path d="M -10,24 Q -5,35 -10,42 Q -5,48 -10,54" stroke="#facc15" stroke-width="4" fill="none"/>
+    <path d="M 10,24 Q 15,35 10,42 Q 15,48 10,54" stroke="#facc15" stroke-width="4" fill="none"/>
+  </g>
+  <g transform="translate(400, 50)" text-anchor="middle">
+    <text x="0" y="0" fill="#c084fc" font-family="system-ui, sans-serif" font-weight="900" font-size="36" letter-spacing="2" filter="url(#glow)">CYBER DOODLE JUMP: QUANTUM ALTITUDE</text>
+  </g>
+</svg>

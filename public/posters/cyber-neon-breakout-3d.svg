@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="50%" stop-color="#081026"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur1"/>
+      <feGaussianBlur stdDeviation="18" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+
+  <!-- 3D Perspective Arena Table -->
+  <polygon points="180,80 620,80 720,500 80,500" fill="#040914" stroke="#00f0ff" stroke-width="3" filter="url(#neonGlow)"/>
+
+  <!-- Neon Bricks Row 1 (Pink) -->
+  <rect x="220" y="110" width="60" height="24" rx="4" fill="#f43f5e" filter="url(#neonGlow)"/>
+  <rect x="290" y="110" width="60" height="24" rx="4" fill="#f43f5e" filter="url(#neonGlow)"/>
+  <rect x="360" y="110" width="60" height="24" rx="4" fill="#f43f5e" filter="url(#neonGlow)"/>
+  <rect x="430" y="110" width="60" height="24" rx="4" fill="#f43f5e" filter="url(#neonGlow)"/>
+  <rect x="500" y="110" width="60" height="24" rx="4" fill="#f43f5e" filter="url(#neonGlow)"/>
+
+  <!-- Neon Bricks Row 2 (Yellow) -->
+  <rect x="200" y="150" width="68" height="26" rx="4" fill="#facc15" filter="url(#neonGlow)"/>
+  <rect x="280" y="150" width="68" height="26" rx="4" fill="#facc15" filter="url(#neonGlow)"/>
+  <rect x="360" y="150" width="68" height="26" rx="4" fill="#facc15" filter="url(#neonGlow)"/>
+  <rect x="440" y="150" width="68" height="26" rx="4" fill="#facc15" filter="url(#neonGlow)"/>
+  <rect x="520" y="150" width="68" height="26" rx="4" fill="#facc15" filter="url(#neonGlow)"/>
+
+  <!-- Neon Bricks Row 3 (Cyan) -->
+  <rect x="180" y="195" width="76" height="28" rx="4" fill="#00f0ff" filter="url(#neonGlow)"/>
+  <rect x="270" y="195" width="76" height="28" rx="4" fill="#00f0ff" filter="url(#neonGlow)"/>
+  <rect x="360" y="195" width="76" height="28" rx="4" fill="#00f0ff" filter="url(#neonGlow)"/>
+  <rect x="450" y="195" width="76" height="28" rx="4" fill="#00f0ff" filter="url(#neonGlow)"/>
+  <rect x="540" y="195" width="76" height="28" rx="4" fill="#00f0ff" filter="url(#neonGlow)"/>
+
+  <!-- Bouncing Plasma Spheres (Multiball) -->
+  <circle cx="340" cy="300" r="18" fill="#00f0ff" filter="url(#neonGlow)"/>
+  <circle cx="340" cy="300" r="10" fill="#ffffff"/>
+
+  <circle cx="480" cy="270" r="16" fill="#f43f5e" filter="url(#neonGlow)"/>
+  <circle cx="480" cy="270" r="8" fill="#ffffff"/>
+
+  <!-- Laser Blaster Beams -->
+  <line x1="310" y1="460" x2="310" y2="340" stroke="#f43f5e" stroke-width="4" filter="url(#neonGlow)"/>
+  <line x1="490" y1="460" x2="490" y2="340" stroke="#f43f5e" stroke-width="4" filter="url(#neonGlow)"/>
+
+  <!-- Paddle -->
+  <rect x="290" y="460" width="220" height="22" rx="10" fill="#00f0ff" filter="url(#neonGlow)"/>
+  <rect x="300" y="464" width="200" height="6" rx="3" fill="#ffffff"/>
+
+  <!-- Game Title Badge -->
+  <rect x="160" y="520" width="480" height="60" rx="18" fill="#030712" stroke="#00f0ff" stroke-width="2" filter="url(#neonGlow)"/>
+  <text x="400" y="560" fill="#00f0ff" font-size="26" font-family="sans-serif" font-weight="900" text-anchor="middle" letter-spacing="2">
+    CYBER NEON BREAKOUT 3D
+  </text>
+</svg>

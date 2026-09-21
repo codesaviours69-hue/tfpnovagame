@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <rect width="800" height="450" fill="#090514"/>
+  <defs><filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter></defs>
+  <!-- Sliced Watermelon Halves -->
+  <g transform="translate(340, 200)" filter="url(#glow)">
+    <path d="M 0,-40 A 50 50 0 0 0 0 40 Z" fill="#e11d48" stroke="#22c55e" stroke-width="6"/>
+  </g>
+  <g transform="translate(460, 240)" filter="url(#glow)">
+    <path d="M 0,-40 A 50 50 0 0 1 0 40 Z" fill="#e11d48" stroke="#22c55e" stroke-width="6"/>
+  </g>
+  <!-- Katana Blade Slash Trail -->
+  <path d="M 160,340 Q 400,180 640,120" stroke="#00f0ff" stroke-width="8" stroke-linecap="round" fill="none" filter="url(#glow)"/>
+  <g transform="translate(400, 50)" text-anchor="middle">
+    <text x="0" y="0" fill="#f43f5e" font-family="system-ui, sans-serif" font-weight="900" font-size="36" letter-spacing="2" filter="url(#glow)">CYBER KATANA SLICER: 3D NINJA</text>
+  </g>
+</svg>

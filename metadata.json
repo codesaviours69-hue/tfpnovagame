@@ -1,0 +1,6 @@
+{
+  "name": "NovaPlay H5 Games",
+  "description": "Premium HTML5 browser games portal featuring high-speed arcade action, puzzles, responsive controls, and high score tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

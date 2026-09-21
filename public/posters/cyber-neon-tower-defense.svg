@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="tdBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="50%" stop-color="#090d24"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="pathGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="50%" stop-color="#312e81"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <radialGradient id="plasmaCore" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#67e8f9"/>
+      <stop offset="60%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </radialGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Grid -->
+  <rect width="800" height="450" fill="url(#tdBg)"/>
+
+  <!-- Circuit Defense Path -->
+  <path d="M-20,220 L240,220 L240,360 L540,360 L540,140 L820,140" stroke="#00f0ff" stroke-width="48" fill="none" opacity="0.4"/>
+  <path d="M-20,220 L240,220 L240,360 L540,360 L540,140 L820,140" stroke="#0f172a" stroke-width="38" fill="none"/>
+  <path d="M-20,220 L240,220 L240,360 L540,360 L540,140 L820,140" stroke="#00f0ff" stroke-width="2" stroke-dasharray="10,10" fill="none"/>
+
+  <!-- Tesla Tower (Top Left) -->
+  <g transform="translate(140, 130)" filter="url(#neonGlow)">
+    <circle cx="0" cy="0" r="32" fill="#0f172a" stroke="#facc15" stroke-width="3"/>
+    <circle cx="0" cy="0" r="16" fill="#fde047"/>
+    <!-- Lightning Arcs -->
+    <path d="M0,0 L45,60" stroke="#fde047" stroke-width="3"/>
+    <path d="M0,0 L60,40" stroke="#facc15" stroke-width="2"/>
+  </g>
+
+  <!-- Plasma Laser Turret (Center) -->
+  <g transform="translate(390, 250)" filter="url(#neonGlow)">
+    <circle cx="0" cy="0" r="36" fill="#0f172a" stroke="#00f0ff" stroke-width="3"/>
+    <circle cx="0" cy="0" r="18" fill="url(#plasmaCore)"/>
+    <line x1="0" y1="0" x2="110" y2="80" stroke="#00f0ff" stroke-width="5"/>
+  </g>
+
+  <!-- Missile Silo (Bottom Right) -->
+  <g transform="translate(640, 270)" filter="url(#neonGlow)">
+    <rect x="-28" y="-28" width="56" height="56" rx="12" fill="#0f172a" stroke="#f43f5e" stroke-width="3"/>
+    <polygon points="0,-18 10,12 -10,12" fill="#f43f5e"/>
+    <!-- Rocket in flight -->
+    <polygon points="40,-40 60,-60 45,-65" fill="#f43f5e"/>
+  </g>
+
+  <!-- Enemy Creeps on Path -->
+  <!-- Mech Drone (Left) -->
+  <g transform="translate(180, 220)" filter="url(#neonGlow)">
+    <circle cx="0" cy="0" r="14" fill="#ef4444" stroke="#ffffff" stroke-width="2"/>
+  </g>
+  <!-- Cyber Spider (Center) -->
+  <g transform="translate(380, 360)" filter="url(#neonGlow)">
+    <circle cx="0" cy="0" r="18" fill="#f43f5e" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="0" cy="0" r="6" fill="#fbbf24"/>
+  </g>
+  <!-- Titan Boss Mech (Right) -->
+  <g transform="translate(540, 220)" filter="url(#neonGlow)">
+    <rect x="-24" y="-24" width="48" height="48" rx="8" fill="#9333ea" stroke="#f43f5e" stroke-width="3"/>
+    <circle cx="0" cy="0" r="10" fill="#fde047"/>
+  </g>
+
+  <!-- Top Title Banner -->
+  <g transform="translate(400, 48)" text-anchor="middle">
+    <text x="0" y="0" fill="#ffffff" font-family="system-ui, sans-serif" font-weight="900" font-size="32" letter-spacing="3" filter="url(#neonGlow)">CYBER NEON TOWER DEFENSE</text>
+    <text x="0" y="22" fill="#00f0ff" font-family="system-ui, sans-serif" font-weight="700" font-size="13" letter-spacing="4">TACTICAL STRATEGY • 4 TOWERS • 10 WAVES</text>
+  </g>
+</svg>

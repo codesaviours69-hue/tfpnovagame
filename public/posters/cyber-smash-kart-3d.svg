@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="40%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+
+    <!-- Track Grid Gradient -->
+    <linearGradient id="trackGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Kart Cyber Neon Glows -->
+    <linearGradient id="kartBody" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="50%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+
+    <linearGradient id="rivalKart" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+
+    <linearGradient id="goldGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur1"/>
+      <feGaussianBlur stdDeviation="20" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="flameGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+
+  <!-- Distant Cyber City Grid -->
+  <g opacity="0.35">
+    <line x1="0" y1="360" x2="800" y2="360" stroke="#00f0ff" stroke-width="1.5"/>
+    <line x1="0" y1="390" x2="800" y2="390" stroke="#00f0ff" stroke-width="1.5"/>
+    <line x1="0" y1="430" x2="800" y2="430" stroke="#00f0ff" stroke-width="2"/>
+    <line x1="0" y1="480" x2="800" y2="480" stroke="#00f0ff" stroke-width="2.5"/>
+    <line x1="0" y1="540" x2="800" y2="540" stroke="#00f0ff" stroke-width="3"/>
+
+    <!-- Perspective Grid Lines -->
+    <line x1="400" y1="320" x2="0" y2="600" stroke="#00f0ff" stroke-width="2"/>
+    <line x1="400" y1="320" x2="160" y2="600" stroke="#00f0ff" stroke-width="2"/>
+    <line x1="400" y1="320" x2="320" y2="600" stroke="#00f0ff" stroke-width="2"/>
+    <line x1="400" y1="320" x2="480" y2="600" stroke="#00f0ff" stroke-width="2"/>
+    <line x1="400" y1="320" x2="640" y2="600" stroke="#00f0ff" stroke-width="2"/>
+    <line x1="400" y1="320" x2="800" y2="600" stroke="#00f0ff" stroke-width="2"/>
+  </g>
+
+  <!-- Skyline Silhouettes -->
+  <g fill="#0b132b" opacity="0.85">
+    <rect x="60" y="200" width="70" height="160"/>
+    <rect x="145" y="160" width="85" height="200"/>
+    <rect x="245" y="220" width="60" height="140"/>
+    <rect x="320" y="140" width="90" height="220"/>
+    <rect x="430" y="180" width="75" height="180"/>
+    <rect x="520" y="150" width="95" height="210"/>
+    <rect x="635" y="210" width="80" height="150"/>
+  </g>
+
+  <!-- Neon Track Rails -->
+  <path d="M 50 600 C 200 480 320 380 400 340 C 480 380 600 480 750 600" fill="none" stroke="#ec4899" stroke-width="12" filter="url(#neonGlow)"/>
+  <path d="M 120 600 C 240 490 340 400 400 370 C 460 400 560 490 680 600" fill="none" stroke="#00f0ff" stroke-width="8" filter="url(#neonGlow)"/>
+
+  <!-- Mystery Item Box (Floating Left) -->
+  <g transform="translate(180, 310) rotate(-12)" filter="url(#neonGlow)">
+    <rect x="-30" y="-30" width="60" height="60" rx="14" fill="#f59e0b" stroke="#fde047" stroke-width="4"/>
+    <text x="0" y="14" font-family="sans-serif" font-size="38" font-weight="900" fill="#020617" text-anchor="middle">?</text>
+  </g>
+
+  <!-- Mystery Item Box (Floating Right) -->
+  <g transform="translate(620, 290) rotate(15)" filter="url(#neonGlow)">
+    <rect x="-26" y="-26" width="52" height="52" rx="12" fill="#a855f7" stroke="#c084fc" stroke-width="3.5"/>
+    <text x="0" y="12" font-family="sans-serif" font-size="32" font-weight="900" fill="#ffffff" text-anchor="middle">⚡</text>
+  </g>
+
+  <!-- Rival Kart (Drifting Left) -->
+  <g transform="translate(260, 380) scale(0.65)">
+    <!-- Exhaust Flames -->
+    <path d="M -20 60 Q -30 110 0 130 Q 30 110 20 60 Z" fill="#ec4899" filter="url(#flameGlow)"/>
+    <!-- Wheels -->
+    <rect x="-55" y="-30" width="18" height="42" rx="6" fill="#0f172a" stroke="#ec4899" stroke-width="3"/>
+    <rect x="37" y="-30" width="18" height="42" rx="6" fill="#0f172a" stroke="#ec4899" stroke-width="3"/>
+    <rect x="-60" y="30" width="22" height="48" rx="6" fill="#0f172a" stroke="#ec4899" stroke-width="4"/>
+    <rect x="38" y="30" width="22" height="48" rx="6" fill="#0f172a" stroke="#ec4899" stroke-width="4"/>
+    <!-- Body Chassis -->
+    <polygon points="0,-45 -40,40 40,40" fill="url(#rivalKart)" filter="url(#neonGlow)"/>
+    <!-- Driver Helmet -->
+    <circle cx="0" cy="5" r="16" fill="#fde047"/>
+  </g>
+
+  <!-- Lead Hero Player Kart (Center High-Octane Speed) -->
+  <g transform="translate(420, 440) scale(1.15)">
+    <!-- Plasma Jet Thrust -->
+    <path d="M -25 65 Q -40 140 0 170 Q 40 140 25 65 Z" fill="#00f0ff" opacity="0.9" filter="url(#flameGlow)"/>
+    <path d="M -12 65 Q -20 115 0 135 Q 20 115 12 65 Z" fill="#ffffff" filter="url(#flameGlow)"/>
+
+    <!-- Drift Sparks Left & Right -->
+    <circle cx="-65" cy="65" r="7" fill="#facc15" filter="url(#flameGlow)"/>
+    <circle cx="-80" cy="75" r="4" fill="#f43f5e"/>
+    <circle cx="65" cy="65" r="7" fill="#facc15" filter="url(#flameGlow)"/>
+    <circle cx="80" cy="75" r="4" fill="#f43f5e"/>
+
+    <!-- Wide Racing Wheels -->
+    <rect x="-68" y="-35" width="20" height="48" rx="6" fill="#020617" stroke="#00f0ff" stroke-width="4"/>
+    <rect x="48" y="-35" width="20" height="48" rx="6" fill="#020617" stroke="#00f0ff" stroke-width="4"/>
+    <rect x="-76" y="32" width="26" height="54" rx="8" fill="#020617" stroke="#00f0ff" stroke-width="5"/>
+    <rect x="50" y="32" width="26" height="54" rx="8" fill="#020617" stroke="#00f0ff" stroke-width="5"/>
+
+    <!-- Front Wing & Splitter -->
+    <polygon points="-55,-35 55,-35 40,-50 -40,-50" fill="#0f172a" stroke="#00f0ff" stroke-width="3"/>
+
+    <!-- Aerodynamic Chassis Body -->
+    <polygon points="0,-60 -48,45 48,45" fill="url(#kartBody)" filter="url(#neonGlow)"/>
+
+    <!-- Cockpit & Driver Helmet -->
+    <rect x="-14" y="-12" width="28" height="32" rx="8" fill="#020617" stroke="#f43f5e" stroke-width="2"/>
+    <circle cx="0" cy="2" r="18" fill="#0f172a" stroke="#00f0ff" stroke-width="3"/>
+    <!-- Visor Glow -->
+    <rect x="-10" y="-3" width="20" height="9" rx="3" fill="#facc15" filter="url(#flameGlow)"/>
+
+    <!-- Rear Spoiler Wing -->
+    <rect x="-48" y="44" width="96" height="12" rx="4" fill="#f43f5e" stroke="#ffffff" stroke-width="2"/>
+  </g>
+
+  <!-- Homing Rocket Projectile (Trailing Behind) -->
+  <g transform="translate(540, 480) rotate(-35) scale(0.85)" filter="url(#neonGlow)">
+    <path d="M 0 -22 L 10 12 L -10 12 Z" fill="#f43f5e"/>
+    <circle cx="0" cy="-6" r="5" fill="#fde047"/>
+    <path d="M -6 12 Q 0 35 6 12 Z" fill="#f97316"/>
+  </g>
+
+  <!-- Top Floating Header Badge -->
+  <g transform="translate(400, 75)">
+    <!-- Glowing Banner Backdrop -->
+    <rect x="-260" y="-45" width="520" height="80" rx="24" fill="#020617" fill-opacity="0.85" stroke="#00f0ff" stroke-width="2.5" filter="url(#neonGlow)"/>
+
+    <!-- Top Label -->
+    <text x="0" y="-18" font-family="sans-serif" font-size="13" font-weight="900" fill="#f43f5e" letter-spacing="4" text-anchor="middle">★ NEON GRAND PRIX RACER ★</text>
+
+    <!-- Main Title -->
+    <text x="0" y="20" font-family="sans-serif" font-size="34" font-weight="900" fill="#ffffff" letter-spacing="1" text-anchor="middle">CYBER SMASH KART 3D</text>
+  </g>
+</svg>

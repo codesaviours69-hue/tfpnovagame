@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020412"/>
+      <stop offset="30%" stop-color="#0b1736"/>
+      <stop offset="60%" stop-color="#1e0b38"/>
+      <stop offset="85%" stop-color="#2a0820"/>
+      <stop offset="100%" stop-color="#050814"/>
+    </linearGradient>
+
+    <!-- Neon Glow Filter -->
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur1"/>
+      <feGaussianBlur stdDeviation="14" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="hyperGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Jet Afterburner Flame Gradient -->
+    <linearGradient id="afterburnerFlame" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="25%" stop-color="#00f0ff"/>
+      <stop offset="60%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Missile Lock Reticle Gradient -->
+    <radialGradient id="lockReticle" cx="50%" cy="50%" r="50%">
+      <stop offset="70%" stop-color="#ef4444" stop-opacity="0"/>
+      <stop offset="90%" stop-color="#ef4444" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Sky Background -->
+  <rect width="800" height="600" fill="url(#skyGrad)"/>
+
+  <!-- Cyber Metropolis Skyline below Clouds in Horizon -->
+  <g opacity="0.35">
+    <rect x="50" y="380" width="70" height="220" fill="#070d1a" stroke="#00f0ff" stroke-width="1.5"/>
+    <rect x="140" y="330" width="90" height="270" fill="#0c162c" stroke="#f43f5e" stroke-width="1"/>
+    <rect x="250" y="410" width="60" height="190" fill="#070d1a" stroke="#a855f7" stroke-width="1"/>
+    <rect x="520" y="340" width="80" height="260" fill="#0c162c" stroke="#00f0ff" stroke-width="1.5"/>
+    <rect x="620" y="370" width="100" height="230" fill="#070d1a" stroke="#facc15" stroke-width="1"/>
+  </g>
+
+  <!-- Distant Enemy Stealth Fighter Jet (Banked in High Sky) -->
+  <g transform="translate(600, 240) scale(0.6) rotate(-22)">
+    <!-- Enemy Jet Body -->
+    <polygon points="0,-70 -35,50 0,35 35,50" fill="#1e1b4b" stroke="#ef4444" stroke-width="2.5" filter="url(#neonGlow)"/>
+    <circle cx="0" cy="50" r="10" fill="#ef4444" filter="url(#hyperGlow)"/>
+    <!-- Lock-On Box around Enemy -->
+    <rect x="-60" y="-85" width="120" height="150" rx="8" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="16 10" filter="url(#hyperGlow)"/>
+    <text x="0" y="-95" font-family="'Impact', sans-serif" font-size="14" fill="#ef4444" text-anchor="middle" letter-spacing="2">LOCK-ON TARGET</text>
+  </g>
+
+  <!-- Heat-Seeking Micro Missiles Firing from Player Jet toward Enemy -->
+  <g transform="translate(480, 290) rotate(15)">
+    <!-- Missile 1 -->
+    <rect x="-4" y="-15" width="8" height="30" rx="3" fill="#ffffff" stroke="#facc15" stroke-width="1.5"/>
+    <polygon points="0,15 -12,45 0,35 12,45" fill="url(#afterburnerFlame)" filter="url(#hyperGlow)"/>
+    <path d="M 0,35 Q -30,80 -60,110" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.6" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- CENTER: PLAYER ADVANCED STEALTH JET FIGHTER (F-22 Cyber Raptor) -->
+  <g transform="translate(380, 380)">
+    <!-- Jet Shadow -->
+    <ellipse cx="0" cy="90" rx="140" ry="25" fill="#000000" opacity="0.6"/>
+
+    <!-- Twin Afterburner Plumes -->
+    <polygon points="-28,55 -38,160 -18,160" fill="url(#afterburnerFlame)" filter="url(#hyperGlow)"/>
+    <polygon points="28,55 18,160 38,160" fill="url(#afterburnerFlame)" filter="url(#hyperGlow)"/>
+
+    <!-- Main Delta Wings -->
+    <polygon points="0,-110 -150,45 -80,55 0,35 80,55 150,45" fill="#091428" stroke="#00f0ff" stroke-width="3" filter="url(#neonGlow)"/>
+
+    <!-- Wing Wingtips Neon Streaks -->
+    <line x1="-150" y1="45" x2="-80" y2="55" stroke="#f43f5e" stroke-width="4" filter="url(#hyperGlow)"/>
+    <line x1="150" y1="45" x2="80" y2="55" stroke="#f43f5e" stroke-width="4" filter="url(#hyperGlow)"/>
+
+    <!-- Fuselage Body -->
+    <polygon points="0,-120 -32,25 -20,55 20,55 32,25" fill="#0284c7" stroke="#38bdf8" stroke-width="2.5"/>
+    <polygon points="0,-115 -18,15 0,35 18,15" fill="#030712" stroke="#00f0ff" stroke-width="1.5"/>
+
+    <!-- Holographic Cockpit Canopy -->
+    <polygon points="0,-85 -12,-35 0,-15 12,-35" fill="#00f0ff" opacity="0.9" filter="url(#hyperGlow)"/>
+
+    <!-- Twin Tail Fins -->
+    <polygon points="-26,10 -45,-30 -42,50 -24,40" fill="#0c1e3d" stroke="#00f0ff" stroke-width="2"/>
+    <polygon points="26,10 45,-30 42,50 24,40" fill="#0c1e3d" stroke="#00f0ff" stroke-width="2"/>
+  </g>
+
+  <!-- Dual Forward Plasma Laser Cannons Blasting into Distance -->
+  <line x1="330" y1="360" x2="240" y2="80" stroke="#00f0ff" stroke-width="6" stroke-linecap="round" filter="url(#hyperGlow)"/>
+  <line x1="430" y1="360" x2="520" y2="80" stroke="#00f0ff" stroke-width="6" stroke-linecap="round" filter="url(#hyperGlow)"/>
+
+  <!-- SPEED / MACH 3 OVERLAY BADGE -->
+  <g transform="translate(400, 65)">
+    <rect x="-180" y="-24" width="360" height="48" rx="24" fill="#030712" fill-opacity="0.9" stroke="#00f0ff" stroke-width="2.5" filter="url(#neonGlow)"/>
+    <text x="0" y="8" font-family="'Impact', 'Arial Black', sans-serif" font-size="22" fill="#00f0ff" text-anchor="middle" letter-spacing="4" filter="url(#hyperGlow)">MACH 3.5 DOGFIGHT ARENA</text>
+  </g>
+
+  <!-- TITLE TYPOGRAPHY -->
+  <g transform="translate(400, 145)">
+    <text x="0" y="0" font-family="'Impact', 'Arial Black', sans-serif" font-weight="900" font-size="50" fill="#00f0ff" text-anchor="middle" letter-spacing="6" opacity="0.6" filter="url(#hyperGlow)">CYBER AIR COMBAT 3D</text>
+    <text x="0" y="0" font-family="'Impact', 'Arial Black', sans-serif" font-weight="900" font-size="50" fill="#ffffff" text-anchor="middle" letter-spacing="6">CYBER AIR COMBAT 3D</text>
+    <rect x="-150" y="10" width="300" height="26" rx="13" fill="#f43f5e" filter="url(#neonGlow)"/>
+    <text x="0" y="28" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle" letter-spacing="4">TOP GUN SKY STRIKE</text>
+  </g>
+</svg>

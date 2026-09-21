@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050314"/>
+      <stop offset="40%" stop-color="#14062b"/>
+      <stop offset="75%" stop-color="#2a0845"/>
+      <stop offset="100%" stop-color="#4a0e4e"/>
+    </linearGradient>
+
+    <!-- Synthwave Sun Gradient -->
+    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff007f"/>
+      <stop offset="50%" stop-color="#ff7b00"/>
+      <stop offset="100%" stop-color="#ffe600"/>
+    </linearGradient>
+
+    <!-- Hill Gradients -->
+    <linearGradient id="hillBackGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1b003a"/>
+      <stop offset="100%" stop-color="#080018"/>
+    </linearGradient>
+
+    <linearGradient id="hillFrontGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#13082a"/>
+      <stop offset="30%" stop-color="#090314"/>
+      <stop offset="100%" stop-color="#030108"/>
+    </linearGradient>
+
+    <!-- Neon Glow Filters -->
+    <filter id="neonGlowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="neonGlowPink" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur2"/>
+      <feComposite in="SourceGraphic" in2="blur2" operator="over"/>
+    </filter>
+
+    <filter id="ultraGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="12" result="blur3"/>
+      <feComposite in="SourceGraphic" in2="blur3" operator="over"/>
+    </filter>
+
+    <!-- Buggy Body Gradient -->
+    <linearGradient id="carBody" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="50%" stop-color="#0080ff"/>
+      <stop offset="100%" stop-color="#7000ff"/>
+    </linearGradient>
+
+    <!-- Wheel Glow Radial -->
+    <radialGradient id="wheelGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00ffff" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#0088ff" stop-opacity="0.7"/>
+      <stop offset="80%" stop-color="#0a0a23"/>
+      <stop offset="100%" stop-color="#050510"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Sky Background -->
+  <rect width="800" height="450" fill="url(#skyGrad)"/>
+
+  <!-- Starfield Dots -->
+  <g fill="#ffffff" opacity="0.6">
+    <circle cx="60" cy="40" r="1.2"/>
+    <circle cx="140" cy="80" r="1.5"/>
+    <circle cx="220" cy="30" r="1.0"/>
+    <circle cx="310" cy="90" r="1.8"/>
+    <circle cx="480" cy="45" r="1.2"/>
+    <circle cx="590" cy="70" r="1.5"/>
+    <circle cx="700" cy="35" r="1.0"/>
+    <circle cx="760" cy="95" r="2.0"/>
+    <circle cx="100" cy="140" r="1.2"/>
+    <circle cx="670" cy="130" r="1.6"/>
+  </g>
+
+  <!-- Giant Retro Synthwave Sun -->
+  <g transform="translate(400, 210)">
+    <circle cx="0" cy="0" r="110" fill="url(#sunGrad)" filter="url(#ultraGlow)" opacity="0.85"/>
+    <circle cx="0" cy="0" r="110" fill="url(#sunGrad)"/>
+    <!-- Sun Horizontal Blinds Cutouts -->
+    <rect x="-115" y="-10" width="230" height="4" fill="#1b0730"/>
+    <rect x="-115" y="8" width="230" height="7" fill="#24073d"/>
+    <rect x="-115" y="28" width="230" height="10" fill="#2d0848"/>
+    <rect x="-115" y="52" width="230" height="14" fill="#380a56"/>
+    <rect x="-115" y="80" width="230" height="18" fill="#440c64"/>
+  </g>
+
+  <!-- Distant City Skyline & Mountains Silhouette -->
+  <polygon points="0,290 80,240 160,280 240,220 340,270 420,210 520,265 620,200 710,250 800,220 800,450 0,450" fill="url(#hillBackGrad)" opacity="0.8"/>
+  <polyline points="0,290 80,240 160,280 240,220 340,270 420,210 520,265 620,200 710,250 800,220" fill="none" stroke="#ff007f" stroke-width="2" stroke-opacity="0.5" filter="url(#neonGlowPink)"/>
+
+  <!-- Background Grid Perspective -->
+  <g opacity="0.25" stroke="#00f0ff" stroke-width="1.2">
+    <line x1="400" y1="260" x2="-200" y2="450"/>
+    <line x1="400" y1="260" x2="0" y2="450"/>
+    <line x1="400" y1="260" x2="200" y2="450"/>
+    <line x1="400" y1="260" x2="400" y2="450"/>
+    <line x1="400" y1="260" x2="600" y2="450"/>
+    <line x1="400" y1="260" x2="800" y2="450"/>
+    <line x1="400" y1="260" x2="1000" y2="450"/>
+  </g>
+
+  <!-- Foreground Dynamic Rolling Cyber Hills -->
+  <path d="M 0,360 Q 150,280 300,350 T 600,270 T 800,320 L 800,450 L 0,450 Z" fill="url(#hillFrontGrad)"/>
+  <path d="M 0,360 Q 150,280 300,350 T 600,270 T 800,320" fill="none" stroke="#00f0ff" stroke-width="4.5" filter="url(#neonGlowCyan)"/>
+  <path d="M 0,360 Q 150,280 300,350 T 600,270 T 800,320" fill="none" stroke="#ffffff" stroke-width="1.8"/>
+
+  <!-- Floating Collectible Neon Coins & Quantum Battery -->
+  <!-- Coin 1 -->
+  <g transform="translate(180, 270)">
+    <circle cx="0" cy="0" r="14" fill="#ffe600" filter="url(#ultraGlow)"/>
+    <circle cx="0" cy="0" r="12" fill="#ffb700" stroke="#fff" stroke-width="2"/>
+    <text x="0" y="5" font-family="Arial, sans-serif" font-weight="900" font-size="12" fill="#000" text-anchor="middle">⚡</text>
+  </g>
+  <!-- Coin 2 -->
+  <g transform="translate(230, 260)">
+    <circle cx="0" cy="0" r="14" fill="#ffe600" filter="url(#ultraGlow)"/>
+    <circle cx="0" cy="0" r="12" fill="#ffb700" stroke="#fff" stroke-width="2"/>
+    <text x="0" y="5" font-family="Arial, sans-serif" font-weight="900" font-size="12" fill="#000" text-anchor="middle">⚡</text>
+  </g>
+  <!-- Fuel Battery Canister -->
+  <g transform="translate(680, 240)">
+    <rect x="-12" y="-18" width="24" height="36" rx="6" fill="#00ff88" filter="url(#ultraGlow)"/>
+    <rect x="-10" y="-16" width="20" height="32" rx="4" fill="#052e16" stroke="#00ff88" stroke-width="2"/>
+    <rect x="-4" y="-22" width="8" height="5" rx="2" fill="#00ff88"/>
+    <text x="0" y="5" font-family="Arial, sans-serif" font-weight="900" font-size="14" fill="#00ff88" text-anchor="middle">🔋</text>
+  </g>
+
+  <!-- HERO VEHICLE: Mid-Air High Jump Stunt Buggy -->
+  <g transform="translate(480, 195) rotate(-18)">
+    <!-- Rocket Nitro Jet Exhaust Flame -->
+    <path d="M -75, -5 Q -120,-12 -160, -3 Q -110, 8 -75, 5 Z" fill="#00f0ff" filter="url(#ultraGlow)" opacity="0.95"/>
+    <path d="M -75, -3 Q -105,-6 -130, -2 Q -100, 4 -75, 3 Z" fill="#ffffff"/>
+    <circle cx="-140" cy="-2" r="8" fill="#ff00ff" filter="url(#neonGlowPink)" opacity="0.8"/>
+
+    <!-- Suspension Springs -->
+    <line x1="-35" y1="5" x2="-45" y2="28" stroke="#00f0ff" stroke-width="4"/>
+    <line x1="35" y1="5" x2="45" y2="28" stroke="#00f0ff" stroke-width="4"/>
+
+    <!-- Vehicle Main Chassis Body -->
+    <polygon points="-60,10 -70,-8 -30,-12 10,-28 45,-26 70,5 55,18 -45,18" fill="url(#carBody)" stroke="#00f0ff" stroke-width="2.5" filter="url(#neonGlowCyan)"/>
+
+    <!-- Rollcage & Neon Cabin -->
+    <polygon points="-25,-12 8,-26 40,-24 15,-10 -20,-10" fill="#050a1e" stroke="#00f0ff" stroke-width="2"/>
+    <!-- Cyber Driver Helmet -->
+    <circle cx="5" cy="-18" r="9" fill="#ff007f" filter="url(#neonGlowPink)"/>
+    <rect x="7" y="-21" width="6" height="5" rx="2" fill="#00ffff"/>
+
+    <!-- Neon Decal Stripes & Accents -->
+    <path d="M -50,5 L -10,-5 L 45,5" stroke="#ff007f" stroke-width="3" fill="none" filter="url(#neonGlowPink)"/>
+    <circle cx="65" cy="5" r="4" fill="#00ffff" filter="url(#ultraGlow)"/>
+
+    <!-- Rear Big Offroad Wheel -->
+    <g transform="translate(-45, 30)">
+      <circle cx="0" cy="0" r="22" fill="#080812" stroke="#00f0ff" stroke-width="4" filter="url(#neonGlowCyan)"/>
+      <circle cx="0" cy="0" r="14" fill="url(#wheelGlow)"/>
+      <circle cx="0" cy="0" r="6" fill="#00ffff"/>
+      <!-- Tire Treads -->
+      <line x1="-22" y1="0" x2="-16" y2="0" stroke="#00f0ff" stroke-width="3"/>
+      <line x1="22" y1="0" x2="16" y2="0" stroke="#00f0ff" stroke-width="3"/>
+      <line x1="0" y1="-22" x2="0" y2="-16" stroke="#00f0ff" stroke-width="3"/>
+      <line x1="0" y1="22" x2="0" y2="16" stroke="#00f0ff" stroke-width="3"/>
+    </g>
+
+    <!-- Front Big Offroad Wheel -->
+    <g transform="translate(45, 30)">
+      <circle cx="0" cy="0" r="20" fill="#080812" stroke="#00f0ff" stroke-width="4" filter="url(#neonGlowCyan)"/>
+      <circle cx="0" cy="0" r="13" fill="url(#wheelGlow)"/>
+      <circle cx="0" cy="0" r="5" fill="#00ffff"/>
+      <!-- Tire Treads -->
+      <line x1="-20" y1="0" x2="-15" y2="0" stroke="#00f0ff" stroke-width="3"/>
+      <line x1="20" y1="0" x2="15" y2="0" stroke="#00f0ff" stroke-width="3"/>
+      <line x1="0" y1="-20" x2="0" y2="-15" stroke="#00f0ff" stroke-width="3"/>
+      <line x1="0" y1="20" x2="0" y2="15" stroke="#00f0ff" stroke-width="3"/>
+    </g>
+  </g>
+
+  <!-- Game Title Badge Overlay -->
+  <g transform="translate(40, 80)">
+    <!-- Badge Backdrop -->
+    <rect x="0" y="0" width="310" height="76" rx="14" fill="#070b19" fill-opacity="0.85" stroke="#00f0ff" stroke-width="2" filter="url(#neonGlowCyan)"/>
+    
+    <text x="20" y="32" font-family="'Impact', 'Arial Black', sans-serif" font-size="28" fill="#ffffff" letter-spacing="1">
+      CYBER NEON
+    </text>
+    <text x="20" y="60" font-family="'Impact', 'Arial Black', sans-serif" font-size="24" fill="#00f0ff" letter-spacing="2">
+      HILL CLIMB 2D
+    </text>
+
+    <!-- 60 FPS / Physics Badge -->
+    <g transform="translate(235, 12)">
+      <rect x="0" y="0" width="60" height="22" rx="6" fill="#ff007f"/>
+      <text x="30" y="15" font-family="Arial, sans-serif" font-weight="900" font-size="10" fill="#ffffff" text-anchor="middle">PHYSICS</text>
+    </g>
+  </g>
+
+  <!-- Speedometer & Nitro Stunt Badges (Top Right) -->
+  <g transform="translate(680, 50)">
+    <circle cx="0" cy="0" r="28" fill="#080d20" stroke="#ff007f" stroke-width="3" filter="url(#neonGlowPink)"/>
+    <text x="0" y="-3" font-family="'Arial Black', sans-serif" font-size="14" font-weight="900" fill="#fff" text-anchor="middle">185</text>
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#ff007f" text-anchor="middle">KM/H</text>
+  </g>
+</svg>

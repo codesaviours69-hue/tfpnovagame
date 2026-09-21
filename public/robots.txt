@@ -1,0 +1,13 @@
+# robots.txt for NovaPlay H5 Games
+User-agent: *
+Allow: /
+
+# Google AdSense Crawler
+User-agent: Mediapartners-Google
+Allow: /
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+
+Sitemap: http://localhost:3000/sitemap.xml

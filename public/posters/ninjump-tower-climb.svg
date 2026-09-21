@@ -1,0 +1,262 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800">
+  <defs>
+    <!-- Background Sky Gradient -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa" />
+      <stop offset="35%" stop-color="#fde047" />
+      <stop offset="70%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+
+    <!-- Pagoda Silhouette Gradient -->
+    <linearGradient id="pagodaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9a3412" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#451a03" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Wood Scaffold Gradient -->
+    <linearGradient id="woodGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#78350f" />
+      <stop offset="50%" stop-color="#92400e" />
+      <stop offset="100%" stop-color="#451a03" />
+    </linearGradient>
+
+    <!-- Phoenix Wings Glow -->
+    <linearGradient id="wingsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+
+    <!-- Blade Slash Gradient -->
+    <linearGradient id="slashGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="rgba(56, 189, 248, 0)" />
+    </linearGradient>
+
+    <!-- Red Headband Ribbon -->
+    <linearGradient id="ribbonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#991b1b" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Sky Background -->
+  <rect width="600" height="800" fill="url(#skyGrad)" />
+
+  <!-- Distant Mountains & Clouds -->
+  <circle cx="300" cy="180" r="140" fill="#fef08a" opacity="0.4" />
+  <path d="M 50 320 Q 180 240 300 290 Q 420 220 550 330 L 600 800 L 0 800 Z" fill="#d97706" opacity="0.35" />
+
+  <!-- Pagoda Silhouette in Background -->
+  <g fill="url(#pagodaGrad)" opacity="0.75">
+    <!-- Pagoda Spire -->
+    <polygon points="300,120 295,200 305,200" />
+    <circle cx="300" cy="115" r="8" fill="#78350f" />
+    <!-- Tier 1 Roof -->
+    <path d="M 220 230 Q 300 200 380 230 Q 340 220 300 220 Q 260 220 220 230 Z" />
+    <rect x="260" y="230" width="80" height="40" />
+    <!-- Tier 2 Roof -->
+    <path d="M 180 290 Q 300 250 420 290 Q 370 275 300 275 Q 230 275 180 290 Z" />
+    <rect x="230" y="290" width="140" height="60" />
+    <!-- Tier 3 Roof -->
+    <path d="M 130 380 Q 300 320 470 380 Q 400 360 300 360 Q 200 360 130 380 Z" />
+    <rect x="190" y="380" width="220" height="90" />
+    <!-- Tier 4 Base -->
+    <path d="M 80 500 Q 300 420 520 500 Q 430 475 300 475 Q 170 475 80 500 Z" />
+    <rect x="150" y="500" width="300" height="300" />
+  </g>
+
+  <!-- Left Wall Wooden Scaffold Ladder -->
+  <g fill="url(#woodGrad)">
+    <rect x="0" y="0" width="48" height="800" />
+    <!-- Ladder Rungs -->
+    <rect x="0" y="40" width="48" height="10" fill="#522306" />
+    <rect x="0" y="100" width="48" height="10" fill="#522306" />
+    <rect x="0" y="160" width="48" height="10" fill="#522306" />
+    <rect x="0" y="220" width="48" height="10" fill="#522306" />
+    <rect x="0" y="280" width="48" height="10" fill="#522306" />
+    <rect x="0" y="340" width="48" height="10" fill="#522306" />
+    <rect x="0" y="400" width="48" height="10" fill="#522306" />
+    <rect x="0" y="460" width="48" height="10" fill="#522306" />
+    <rect x="0" y="520" width="48" height="10" fill="#522306" />
+    <rect x="0" y="580" width="48" height="10" fill="#522306" />
+    <rect x="0" y="640" width="48" height="10" fill="#522306" />
+    <rect x="0" y="700" width="48" height="10" fill="#522306" />
+    <rect x="0" y="760" width="48" height="10" fill="#522306" />
+  </g>
+
+  <!-- Right Wall Wooden Scaffold Ladder -->
+  <g fill="url(#woodGrad)">
+    <rect x="552" y="0" width="48" height="800" />
+    <!-- Ladder Rungs -->
+    <rect x="552" y="40" width="48" height="10" fill="#522306" />
+    <rect x="552" y="100" width="48" height="10" fill="#522306" />
+    <rect x="552" y="160" width="48" height="10" fill="#522306" />
+    <rect x="552" y="220" width="48" height="10" fill="#522306" />
+    <rect x="552" y="280" width="48" height="10" fill="#522306" />
+    <rect x="552" y="340" width="48" height="10" fill="#522306" />
+    <rect x="552" y="400" width="48" height="10" fill="#522306" />
+    <rect x="552" y="460" width="48" height="10" fill="#522306" />
+    <rect x="552" y="520" width="48" height="10" fill="#522306" />
+    <rect x="552" y="580" width="48" height="10" fill="#522306" />
+    <rect x="552" y="640" width="48" height="10" fill="#522306" />
+    <rect x="552" y="700" width="48" height="10" fill="#522306" />
+    <rect x="552" y="760" width="48" height="10" fill="#522306" />
+  </g>
+
+  <!-- Left Wall Roof Balcony Obstacle -->
+  <g>
+    <!-- Balcony Support Posts -->
+    <polygon points="48,310 110,310 48,340" fill="#78350f" />
+    <!-- Red Curved Roof Tiles -->
+    <path d="M 48 310 Q 90 300 130 310 L 130 295 Q 90 285 48 295 Z" fill="#dc2626" />
+    <path d="M 50 300 Q 90 290 128 300" stroke="#fca5a5" stroke-width="2" fill="none" />
+  </g>
+
+  <!-- Right Wall Enemy Ninja Perched -->
+  <g transform="translate(528, 230)">
+    <!-- Shadow Ninja Body -->
+    <circle cx="0" cy="0" r="14" fill="#0f172a" />
+    <!-- Blue Headband -->
+    <rect x="-14" y="-4" width="28" height="7" fill="#0284c7" rx="3" />
+    <!-- Eyes -->
+    <ellipse cx="-4" cy="-1" rx="2" ry="3" fill="#ffffff" />
+    <ellipse cx="4" cy="-1" rx="2" ry="3" fill="#ffffff" />
+    <!-- Limb crouching on wall -->
+    <path d="M 8 10 L 24 16" stroke="#0f172a" stroke-width="5" stroke-linecap="round" />
+    <path d="M -8 10 L -18 20" stroke="#0f172a" stroke-width="5" stroke-linecap="round" />
+  </g>
+
+  <!-- Flying Black Shuriken with Translucent White Motion Cone Trail -->
+  <g transform="translate(420, 260)">
+    <!-- White Speed Cone Trail -->
+    <polygon points="0,0 45,-60 85,-40 0,0" fill="rgba(255,255,255,0.4)" />
+    <!-- 4-Point Curved Black Shuriken -->
+    <path d="M 0 -22 Q 4 -6 22 0 Q 6 4 0 22 Q -4 6 -22 0 Q -6 -4 0 -22 Z" fill="#18181b" />
+    <!-- Circular Center Hole -->
+    <circle cx="0" cy="0" r="5" fill="#fde047" stroke="#18181b" stroke-width="1.5" />
+  </g>
+  <g transform="translate(360, 310) rotate(35)">
+    <polygon points="0,0 30,-40 60,-25 0,0" fill="rgba(255,255,255,0.3)" />
+    <path d="M 0 -16 Q 3 -4 16 0 Q 4 3 0 16 Q -3 4 -16 0 Q -4 -3 0 -16 Z" fill="#18181b" />
+    <circle cx="0" cy="0" r="3.5" fill="#fde047" stroke="#18181b" stroke-width="1.2" />
+  </g>
+
+  <!-- Blue Bird in Air -->
+  <g transform="translate(180, 210)">
+    <!-- Body -->
+    <ellipse cx="0" cy="0" rx="16" ry="12" fill="#0284c7" />
+    <!-- Wing -->
+    <path d="M -6 -4 Q 8 -22 20 -8 Q 6 -2 -6 -4 Z" fill="#38bdf8" />
+    <!-- Beak -->
+    <polygon points="-16,-2 -26,2 -16,6" fill="#f59e0b" />
+    <!-- Eye -->
+    <circle cx="-8" cy="-3" r="3" fill="#ffffff" />
+    <circle cx="-9" cy="-3" r="1.5" fill="#000000" />
+  </g>
+
+  <!-- Blue Phoenix Wings Boost on Hero Ninja -->
+  <g transform="translate(300, 480)" filter="url(#glow)">
+    <!-- Left Wing -->
+    <path d="M -20 0 C -90 -60, -170 -40, -210 20 C -180 50, -130 60, -20 30 Z" fill="url(#wingsGrad)" opacity="0.95" />
+    <!-- Left Wing Feathers detail -->
+    <path d="M -60 -10 C -120 -30, -170 -10, -190 20" stroke="#93c5fd" stroke-width="4" fill="none" />
+    <path d="M -50 10 C -100 0, -140 20, -160 38" stroke="#93c5fd" stroke-width="3" fill="none" />
+
+    <!-- Right Wing -->
+    <path d="M 20 0 C 90 -60, 170 -40, 210 20 C 180 50, 130 60, 20 30 Z" fill="url(#wingsGrad)" opacity="0.95" />
+    <!-- Right Wing Feathers detail -->
+    <path d="M 60 -10 C 120 -30, 170 -10, 190 20" stroke="#93c5fd" stroke-width="4" fill="none" />
+    <path d="M 50 10 C 100 0, 140 20, 160 38" stroke="#93c5fd" stroke-width="3" fill="none" />
+  </g>
+
+  <!-- Katana Blade Slash Arc (White / Light Blue Crescent) -->
+  <path d="M 200 420 A 130 130 0 0 1 430 450" stroke="url(#slashGrad)" stroke-width="16" stroke-linecap="round" fill="none" filter="url(#glow)" />
+  <path d="M 210 422 A 125 125 0 0 1 420 450" stroke="#ffffff" stroke-width="6" stroke-linecap="round" fill="none" />
+
+  <!-- Hero Ninja Character (Authentic Model from Reference Image) -->
+  <g transform="translate(300, 480)">
+    <!-- Dynamic Waving Red Ribbon Tail (Flowing far back in the wind) -->
+    <path d="M -18 -30 Q -60 -45 -110 -15 Q -65 -22 -15 -20 Z" fill="#ef4444" />
+    <path d="M -18 -27 Q -55 -30 -105 18 Q -55 -2 -14 -18 Z" fill="#dc2626" />
+
+    <!-- Back Leg Running Stride -->
+    <path d="M -8 18 L -32 44 L -40 64" stroke="#27272a" stroke-width="8" stroke-linecap="round" />
+    <ellipse cx="-40" cy="65" rx="9" ry="5.5" fill="#27272a" />
+
+    <!-- Ninja Body Torso -->
+    <ellipse cx="0" cy="12" rx="14" ry="22" fill="#18181b" />
+    <!-- Red Scarf / Collar Bandana Accent -->
+    <ellipse cx="3" cy="-6" rx="12" ry="7" fill="#ef4444" />
+
+    <!-- Front Leg High-Knee Stride -->
+    <path d="M 6 18 L 30 36 L 26 58" stroke="#18181b" stroke-width="9" stroke-linecap="round" />
+    <ellipse cx="28" cy="59" rx="10" ry="6" fill="#18181b" />
+
+    <!-- Left Arm with Clenched Fist in Running Posture -->
+    <path d="M 6 4 L 22 16 L 28 4" stroke="#18181b" stroke-width="7" stroke-linecap="round" />
+    <circle cx="28" cy="4" r="7" fill="#18181b" />
+
+    <!-- Ninja Head Sphere -->
+    <circle cx="0" cy="-24" r="23" fill="#27272a" />
+    <!-- Single Curved White Eye Visor (Signature look from screenshot) -->
+    <ellipse cx="8" cy="-22" rx="14" ry="8" transform="rotate(-15 8 -22)" fill="#ffffff" stroke="#18181b" stroke-width="1.8" />
+    <!-- Vibrant Red Headband Bandana -->
+    <rect x="-20" y="-34" width="40" height="11" rx="5.5" fill="#ef4444" />
+
+    <!-- Katana Sword with Speed Slash Beam Cone -->
+    <g transform="translate(-14, 22)">
+      <!-- Translucent White Speed Slash Beam Cone Trail -->
+      <polygon points="0,0 -80,55 -20,70 0,0" fill="rgba(255,255,255,0.45)" />
+      <!-- Razor-Sharp Steel Katana Blade -->
+      <path d="M 0 0 L -75 50" stroke="#ffffff" stroke-width="6" stroke-linecap="round" />
+      <!-- Golden Tsuba Guard -->
+      <rect x="-4" y="-4" width="8" height="8" fill="#f59e0b" />
+      <!-- Red Hilt Handle -->
+      <path d="M 0 0 L 14 -10" stroke="#ef4444" stroke-width="6" stroke-linecap="round" />
+    </g>
+  </g>
+
+  <!-- Top In-Game Authentic Scoreboard Banner (Like Reference Screenshot) -->
+  <g transform="translate(300, 36)">
+    <!-- Top Tablet/Pill Plate -->
+    <path d="M -90 -16 L 90 -16 Q 100 -16 95 18 L 80 24 Q 0 30 -80 24 L -95 18 Q -100 -16 -90 -16 Z" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2.5" />
+    <text x="0" y="14" font-family="'Impact', 'Arial Black', sans-serif" font-size="28" font-weight="900" fill="#0f172a" text-anchor="middle" letter-spacing="2">4253</text>
+  </g>
+
+  <!-- Top Left Magical Shield Icon -->
+  <g transform="translate(48, 36)">
+    <circle cx="0" cy="0" r="20" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2" />
+    <circle cx="0" cy="0" r="14" fill="#38bdf8" opacity="0.3" stroke="#0284c7" stroke-width="2" />
+    <circle cx="0" cy="0" r="8" fill="#0284c7" />
+  </g>
+
+  <!-- Top Right Pause Button -->
+  <g transform="translate(552, 36)">
+    <circle cx="0" cy="0" r="20" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2" />
+    <rect x="-6" y="-8" width="4" height="16" fill="#0f172a" rx="1" />
+    <rect x="2" y="-8" width="4" height="16" fill="#0f172a" rx="1" />
+  </g>
+
+  <!-- Title Badge Overlay at Bottom -->
+  <g transform="translate(300, 710)">
+    <!-- Backdrop Card -->
+    <rect x="-240" y="-45" width="480" height="90" rx="24" fill="#090a12" opacity="0.9" stroke="#f59e0b" stroke-width="2" />
+    
+    <!-- Main Title -->
+    <text x="0" y="-8" font-family="'Impact', 'Arial Black', sans-serif" font-size="38" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">
+      NIN<tspan fill="#38bdf8">JUMP</tspan>
+    </text>
+    <!-- Subtitle -->
+    <text x="0" y="24" font-family="sans-serif" font-size="14" font-weight="800" fill="#facc15" text-anchor="middle" letter-spacing="3">
+      ★ LEGENDARY TOWER CLIMB ★
+    </text>
+  </g>
+</svg>

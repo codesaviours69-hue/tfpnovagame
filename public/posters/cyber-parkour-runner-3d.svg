@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#02010d" />
+      <stop offset="40%" stop-color="#090422" />
+      <stop offset="100%" stop-color="#190333" />
+    </linearGradient>
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#7000ff" />
+    </linearGradient>
+    <linearGradient id="neonRose" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff007f" />
+      <stop offset="100%" stop-color="#ffaa00" />
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="strongGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14" result="b1" />
+      <feGaussianBlur stdDeviation="5" result="b2" />
+      <feMerge>
+        <feMergeNode in="b1" />
+        <feMergeNode in="b2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#skyGrad)" />
+
+  <!-- Cyber Skyscrapers Skyline -->
+  <g opacity="0.35">
+    <rect x="30" y="140" width="55" height="280" fill="#0f172a" stroke="#00f0ff" stroke-width="1" />
+    <rect x="100" y="190" width="40" height="230" fill="#1e1b4b" />
+    <rect x="155" y="110" width="70" height="310" fill="#0f172a" stroke="#ff007f" stroke-width="1" />
+    <rect x="580" y="130" width="60" height="290" fill="#0f172a" stroke="#00f0ff" stroke-width="1" />
+    <rect x="660" y="80" width="85" height="340" fill="#1e1b4b" stroke="#00f0ff" stroke-width="1" />
+  </g>
+
+  <!-- Giant Perspective Rooftop Platforms -->
+  <g>
+    <!-- Left Rooftop Platform -->
+    <polygon points="0,480 320,380 280,500 0,500" fill="#090d16" stroke="#00f0ff" stroke-width="3" filter="url(#glow)" />
+    <!-- Right Destination Rooftop Platform -->
+    <polygon points="460,360 800,450 800,500 420,500" fill="#090d16" stroke="#ff007f" stroke-width="3" filter="url(#glow)" />
+
+    <!-- Wallrun Neon Glass Billboard in Background -->
+    <polygon points="260,180 540,160 540,360 260,390" fill="#00f0ff" fill-opacity="0.12" stroke="#00f0ff" stroke-width="2.5" stroke-dasharray="16 8" filter="url(#glow)" />
+    <text x="400" y="270" fill="#00f0ff" font-family="system-ui, sans-serif" font-size="18" font-weight="900" letter-spacing="8" text-anchor="middle" opacity="0.6">WALL RUN ZONE</text>
+  </g>
+
+  <!-- Grappling Hook Energy Cable Line -->
+  <path d="M400 320 Q 460 180, 520 160" fill="none" stroke="#00f0ff" stroke-width="3.5" filter="url(#strongGlow)" />
+  <circle cx="520" cy="160" r="8" fill="#ffffff" stroke="#00f0ff" stroke-width="3" filter="url(#strongGlow)" />
+
+  <!-- Mid-Air Parkour Runner Hero Silhouette -->
+  <g transform="translate(400, 310)">
+    <!-- Motion Speed Trails -->
+    <path d="M-90 40 L-40 10 L-60 60 Z" fill="#00f0ff" opacity="0.6" filter="url(#strongGlow)" />
+    <path d="M-80 -20 L-20 -10 L-50 10 Z" fill="#ff007f" opacity="0.6" filter="url(#strongGlow)" />
+
+    <!-- Glowing Cyber Scarf / Streamer -->
+    <path d="M-15 -35 Q -70 -50, -110 -20 Q -80 -15, -20 -28 Z" fill="#00f0ff" filter="url(#strongGlow)" />
+
+    <!-- Body Torso / Cyber Suit -->
+    <path d="M-12 -30 L18 -15 L10 15 L-16 5 Z" fill="#020617" stroke="#00f0ff" stroke-width="3" />
+    
+    <!-- Chest Reactor / Core -->
+    <circle cx="2" cy="-8" r="5" fill="#00f0ff" filter="url(#strongGlow)" />
+
+    <!-- Head / Cyber Visor -->
+    <circle cx="6" cy="-45" r="10" fill="#0f172a" stroke="#00f0ff" stroke-width="2.5" />
+    <path d="M2 -45 L15 -42" stroke="#ff007f" stroke-width="4" stroke-linecap="round" filter="url(#strongGlow)" />
+
+    <!-- Leading Arm (reaching forward with grapple gauntlet) -->
+    <path d="M12 -20 L45 -35 L62 -28" fill="none" stroke="#020617" stroke-width="6" stroke-linecap="round" />
+    <path d="M12 -20 L45 -35 L62 -28" fill="none" stroke="#00f0ff" stroke-width="2.5" stroke-linecap="round" filter="url(#glow)" />
+    <circle cx="62" cy="-28" r="5" fill="#ffffff" filter="url(#strongGlow)" />
+
+    <!-- Trailing Arm -->
+    <path d="M-15 -20 L-40 -5 L-55 -25" fill="none" stroke="#020617" stroke-width="6" stroke-linecap="round" />
+    <path d="M-15 -20 L-40 -5 L-55 -25" fill="none" stroke="#00f0ff" stroke-width="2" stroke-linecap="round" />
+
+    <!-- Leading Leg (Tucked forward for landing vault) -->
+    <path d="M8 12 L35 25 L60 10" fill="none" stroke="#020617" stroke-width="7" stroke-linecap="round" />
+    <path d="M8 12 L35 25 L60 10" fill="none" stroke="#ff007f" stroke-width="3" stroke-linecap="round" filter="url(#glow)" />
+
+    <!-- Trailing Leg (Extended jump push) -->
+    <path d="M-12 8 L-45 35 L-70 55" fill="none" stroke="#020617" stroke-width="7" stroke-linecap="round" />
+    <path d="M-12 8 L-45 35 L-70 55" fill="none" stroke="#00f0ff" stroke-width="3" stroke-linecap="round" filter="url(#glow)" />
+  </g>
+
+  <!-- Typography Header -->
+  <g transform="translate(400, 70)">
+    <rect x="-140" y="-35" width="280" height="26" rx="13" fill="#00f0ff" fill-opacity="0.15" stroke="#00f0ff" stroke-width="1.5" />
+    <text x="0" y="-18" fill="#00f0ff" font-family="system-ui, sans-serif" font-size="11" font-weight="900" letter-spacing="3" text-anchor="middle">3D ROOFTOP FREERUNNING</text>
+
+    <text x="0" y="24" fill="url(#neonCyan)" font-family="system-ui, sans-serif" font-size="44" font-weight="900" letter-spacing="2" text-anchor="middle" filter="url(#glow)">CYBER PARKOUR</text>
+    <text x="0" y="58" fill="url(#neonRose)" font-family="system-ui, sans-serif" font-size="26" font-weight="900" letter-spacing="8" text-anchor="middle" filter="url(#glow)">ROOFTOP VELOCITY</text>
+  </g>
+
+  <!-- Bottom Badge -->
+  <g transform="translate(400, 465)">
+    <rect x="-150" y="-16" width="300" height="32" rx="16" fill="#020617" stroke="#ff007f" stroke-width="2" />
+    <text x="0" y="5" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="800" letter-spacing="2" text-anchor="middle">WALL-RUN • SLIDE • GRAPPLE • SPEEDRUN</text>
+  </g>
+</svg>

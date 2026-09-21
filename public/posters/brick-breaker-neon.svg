@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bbBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0a09"/>
+      <stop offset="100%" stop-color="#1c1917"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="800" height="450" fill="url(#bbBg)"/>
+  
+  <!-- Neon Bricks Grid -->
+  <g transform="translate(140, 80)" filter="url(#glow)">
+    <!-- Row 1 Pink -->
+    <rect x="0" y="0" width="75" height="24" rx="5" fill="#ec4899" stroke="#fbcfe8" stroke-width="2"/>
+    <rect x="90" y="0" width="75" height="24" rx="5" fill="#ec4899" stroke="#fbcfe8" stroke-width="2"/>
+    <rect x="180" y="0" width="75" height="24" rx="5" fill="#ec4899" stroke="#fbcfe8" stroke-width="2"/>
+    <rect x="270" y="0" width="75" height="24" rx="5" fill="#ec4899" stroke="#fbcfe8" stroke-width="2"/>
+    <rect x="360" y="0" width="75" height="24" rx="5" fill="#ec4899" stroke="#fbcfe8" stroke-width="2"/>
+    <rect x="450" y="0" width="75" height="24" rx="5" fill="#ec4899" stroke="#fbcfe8" stroke-width="2"/>
+    <!-- Row 2 Cyan -->
+    <rect x="0" y="34" width="75" height="24" rx="5" fill="#06b6d4" stroke="#a5f3fc" stroke-width="2"/>
+    <rect x="90" y="34" width="75" height="24" rx="5" fill="#06b6d4" stroke="#a5f3fc" stroke-width="2"/>
+    <rect x="270" y="34" width="75" height="24" rx="5" fill="#06b6d4" stroke="#a5f3fc" stroke-width="2"/>
+    <rect x="450" y="34" width="75" height="24" rx="5" fill="#06b6d4" stroke="#a5f3fc" stroke-width="2"/>
+    <!-- Row 3 Amber -->
+    <rect x="0" y="68" width="75" height="24" rx="5" fill="#f59e0b" stroke="#fef08a" stroke-width="2"/>
+    <rect x="180" y="68" width="75" height="24" rx="5" fill="#f59e0b" stroke="#fef08a" stroke-width="2"/>
+    <rect x="360" y="68" width="75" height="24" rx="5" fill="#f59e0b" stroke="#fef08a" stroke-width="2"/>
+    <rect x="450" y="68" width="75" height="24" rx="5" fill="#f59e0b" stroke="#fef08a" stroke-width="2"/>
+  </g>
+
+  <!-- Exploding Brick Shards -->
+  <g transform="translate(340, 110)" filter="url(#glow)">
+    <polygon points="0,0 15,8 10,22" fill="#ec4899"/>
+    <polygon points="25,-5 40,10 20,20" fill="#f43f5e"/>
+    <circle cx="10" cy="5" r="4" fill="#fff"/>
+  </g>
+
+  <!-- Bouncing Neon Laser Ball with trail -->
+  <g filter="url(#glow)">
+    <line x1="380" y1="360" x2="340" y2="130" stroke="#f97316" stroke-width="5" stroke-dasharray="8,6" opacity="0.6"/>
+    <circle cx="340" cy="130" r="14" fill="#fbbf24"/>
+    <circle cx="340" cy="130" r="8" fill="#ffffff"/>
+  </g>
+
+  <!-- Player Energy Paddle -->
+  <g transform="translate(320, 390)" filter="url(#glow)">
+    <rect x="0" y="0" width="160" height="20" rx="10" fill="#06b6d4" stroke="#e0f2fe" stroke-width="3"/>
+    <circle cx="15" cy="10" r="5" fill="#f43f5e"/>
+    <circle cx="145" cy="10" r="5" fill="#f43f5e"/>
+  </g>
+
+  <!-- Title Badge -->
+  <g transform="translate(400, 45)" text-anchor="middle">
+    <text x="0" y="0" fill="#f97316" font-family="system-ui, sans-serif" font-weight="900" font-size="36" letter-spacing="2" filter="url(#glow)">BRICK BREAKER: NEON INFERNO</text>
+  </g>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="50%" stop-color="#0b1329"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <linearGradient id="tableGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#090d24"/>
+      <stop offset="100%" stop-color="#050b18"/>
+    </linearGradient>
+
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur1"/>
+      <feGaussianBlur stdDeviation="20" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+
+  <!-- 3D Perspective Table -->
+  <polygon points="220,120 580,120 720,480 80,480" fill="url(#tableGrad)" stroke="#00f0ff" stroke-width="3" filter="url(#neonGlow)"/>
+
+  <!-- Table Net -->
+  <line x1="150" y1="300" x2="650" y2="300" stroke="#ffffff" stroke-width="3" stroke-dasharray="10 6" filter="url(#neonGlow)"/>
+
+  <!-- AI Paddle (Pink) -->
+  <rect x="340" y="130" width="120" height="14" rx="7" fill="#f43f5e" filter="url(#neonGlow)"/>
+
+  <!-- Player Paddle (Cyan) -->
+  <rect x="300" y="440" width="200" height="22" rx="10" fill="#00f0ff" filter="url(#neonGlow)"/>
+  <rect x="310" y="444" width="180" height="6" rx="3" fill="#ffffff"/>
+
+  <!-- Glowing Plasma Ball with Motion Streaks -->
+  <line x1="360" y1="220" x2="420" y2="360" stroke="#00f0ff" stroke-width="8" stroke-linecap="round" opacity="0.4" filter="url(#neonGlow)"/>
+  <line x1="380" y1="260" x2="420" y2="360" stroke="#facc15" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+  <circle cx="420" cy="360" r="22" fill="#00f0ff" filter="url(#neonGlow)"/>
+  <circle cx="420" cy="360" r="14" fill="#ffffff"/>
+
+  <!-- Game Title Badge -->
+  <rect x="180" y="510" width="440" height="64" rx="20" fill="#030712" stroke="#00f0ff" stroke-width="2" filter="url(#neonGlow)"/>
+  <text x="400" y="552" fill="#00f0ff" font-size="28" font-family="sans-serif" font-weight="900" text-anchor="middle" letter-spacing="2">
+    CYBER NEON PONG 3D
+  </text>
+</svg>

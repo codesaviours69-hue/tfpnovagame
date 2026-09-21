@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <rect width="800" height="450" fill="#0f172a"/>
+  <defs><filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter></defs>
+  <!-- Archero Hero & Glowing Bow -->
+  <g transform="translate(260, 240)" filter="url(#glow)">
+    <circle cx="0" cy="0" r="28" fill="#0284c7" stroke="#38bdf8" stroke-width="4"/>
+    <path d="M 20,-30 Q 50,0 20,30" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round"/>
+    <line x1="10" y1="0" x2="160" y2="0" stroke="#facc15" stroke-width="6" stroke-linecap="round"/>
+    <line x1="10" y1="0" x2="150" y2="-45" stroke="#38bdf8" stroke-width="5" stroke-linecap="round"/>
+    <line x1="10" y1="0" x2="150" y2="45" stroke="#38bdf8" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <!-- Monster Dungeon Boss -->
+  <g transform="translate(620, 240)" filter="url(#glow)">
+    <polygon points="-40,-40 40,-40 60,20 0,60 -60,20" fill="#be123c" stroke="#f43f5e" stroke-width="4"/>
+    <circle cx="-15" cy="-10" r="8" fill="#facc15"/>
+    <circle cx="15" cy="-10" r="8" fill="#facc15"/>
+  </g>
+  <g transform="translate(400, 50)" text-anchor="middle">
+    <text x="0" y="0" fill="#38bdf8" font-family="system-ui, sans-serif" font-weight="900" font-size="36" letter-spacing="2" filter="url(#glow)">CYBER ARCHERO: ROGUE HERO</text>
+  </g>
+</svg>

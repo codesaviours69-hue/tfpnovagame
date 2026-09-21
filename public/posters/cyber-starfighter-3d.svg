@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="spaceDeepBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#02020a"/>
+      <stop offset="50%" stop-color="#09051d"/>
+      <stop offset="100%" stop-color="#180a2e"/>
+    </linearGradient>
+
+    <radialGradient id="nebulaGlow" cx="65%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.45"/>
+      <stop offset="50%" stop-color="#3b82f6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#02020a" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="fighterCyan" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="50%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+
+    <linearGradient id="wingGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#facc15"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+
+    <filter id="laserGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="megaExplosion" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur2"/>
+      <feComposite in="SourceGraphic" in2="blur2" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Deep Space Void -->
+  <rect width="800" height="450" fill="url(#spaceDeepBg)"/>
+  <rect width="800" height="450" fill="url(#nebulaGlow)"/>
+
+  <!-- Warp Speed Stars & Streaks -->
+  <g stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.6">
+    <line x1="120" y1="80" x2="90" y2="60"/>
+    <line x1="280" y1="40" x2="250" y2="20"/>
+    <line x1="720" y1="120" x2="760" y2="100"/>
+    <line x1="680" y1="340" x2="730" y2="370"/>
+    <line x1="160" y1="380" x2="120" y2="410"/>
+    <line x1="420" y1="70" x2="420" y2="30"/>
+    <line x1="560" y1="90" x2="590" y2="50"/>
+  </g>
+  <g fill="#ffffff" opacity="0.8">
+    <circle cx="95" cy="180" r="1.5"/>
+    <circle cx="210" cy="110" r="2"/>
+    <circle cx="340" cy="70" r="1"/>
+    <circle cx="640" cy="80" r="2.5"/>
+    <circle cx="750" cy="220" r="1.5"/>
+    <circle cx="580" cy="390" r="2"/>
+    <circle cx="230" cy="350" r="1.5"/>
+  </g>
+
+  <!-- Distant Destructible Asteroids -->
+  <polygon points="120,240 145,215 170,230 180,265 150,285 125,270" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <polygon points="680,180 705,160 735,175 745,205 715,225 685,210" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/>
+
+  <!-- Distant Enemy Omega Dreadnought Flagship -->
+  <g transform="translate(480, 110)" filter="url(#laserGlow)">
+    <polygon points="-80,0 80,0 120,45 -120,45" fill="#4c0519" stroke="#f43f5e" stroke-width="2"/>
+    <rect x="-60" y="-15" width="120" height="15" rx="3" fill="#881337" stroke="#fb7185" stroke-width="1.5"/>
+    <circle cx="-30" cy="15" r="5" fill="#ef4444"/>
+    <circle cx="30" cy="15" r="5" fill="#ef4444"/>
+    <!-- Capital Shield Aura -->
+    <ellipse cx="0" cy="20" rx="140" ry="40" fill="none" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="8,6" opacity="0.6"/>
+  </g>
+
+  <!-- Dreadnought Laser Fire Tracers -->
+  <line x1="450" y1="130" x2="380" y2="220" stroke="#f43f5e" stroke-width="3" filter="url(#laserGlow)"/>
+  <line x1="510" y1="130" x2="430" y2="230" stroke="#f43f5e" stroke-width="3" filter="url(#laserGlow)"/>
+
+  <!-- Player Starfighter (Viper X-1) in Main View -->
+  <g transform="translate(380, 260)" filter="url(#laserGlow)">
+    <!-- Engine Ion Plasma Flames -->
+    <polygon points="-16,70 -8,110 -2,70" fill="#00f0ff" filter="url(#megaExplosion)"/>
+    <polygon points="16,70 8,110 2,70" fill="#00f0ff" filter="url(#megaExplosion)"/>
+    <polygon points="-12,70 -8,95 -4,70" fill="#ffffff"/>
+    <polygon points="12,70 8,95 4,70" fill="#ffffff"/>
+
+    <!-- Main Fuselage Body -->
+    <polygon points="0,-75 22,25 14,70 -14,70 -22,25" fill="url(#fighterCyan)" stroke="#ffffff" stroke-width="2"/>
+
+    <!-- Swept-Back Forward Wings -->
+    <polygon points="14,10 95,45 105,65 20,45" fill="#0f172a" stroke="#00f0ff" stroke-width="2.5"/>
+    <polygon points="-14,10 -95,45 -105,65 -20,45" fill="#0f172a" stroke="#00f0ff" stroke-width="2.5"/>
+
+    <!-- Wingtip Winglets & Gold Accents -->
+    <polygon points="85,42 105,40 108,68 90,62" fill="url(#wingGold)"/>
+    <polygon points="-85,42 -105,40 -108,68 -90,62" fill="url(#wingGold)"/>
+
+    <!-- Glass Holographic Cockpit Canopy -->
+    <polygon points="0,-45 10,-5 0,15 -10,-5" fill="#38bdf8" fill-opacity="0.9" stroke="#ffffff" stroke-width="2"/>
+
+    <!-- Wingtip Dual Twin Plasma Cannons Firing Streams -->
+    <line x1="-95" y1="40" x2="-140" y2="-120" stroke="#00f0ff" stroke-width="5" stroke-linecap="round" filter="url(#laserGlow)"/>
+    <line x1="95" y1="40" x2="140" y2="-120" stroke="#00f0ff" stroke-width="5" stroke-linecap="round" filter="url(#laserGlow)"/>
+    <line x1="-95" y1="40" x2="-140" y2="-120" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+    <line x1="95" y1="40" x2="140" y2="-120" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Lock-On Targeting Reticle -->
+  <g transform="translate(480, 120)" stroke="#00f0ff" stroke-width="2" fill="none" filter="url(#laserGlow)">
+    <circle cx="0" cy="0" r="32" stroke-dasharray="12,8"/>
+    <line x1="-40" y1="0" x2="-24" y2="0"/>
+    <line x1="24" y1="0" x2="40" y2="0"/>
+    <line x1="0" y1="-40" x2="0" y2="-24"/>
+    <line x1="0" y1="24" x2="0" y2="40"/>
+    <text x="0" y="-44" fill="#00f0ff" font-family="system-ui, sans-serif" font-weight="900" font-size="10" text-anchor="middle" letter-spacing="1">LOCK-ON ACQUIRED</text>
+  </g>
+
+  <!-- Title Badge Top Header -->
+  <g transform="translate(400, 46)" text-anchor="middle">
+    <rect x="-240" y="-22" width="480" height="42" rx="21" fill="#0284c7" fill-opacity="0.35" stroke="#38bdf8" stroke-width="2" filter="url(#laserGlow)"/>
+    <text x="0" y="6" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="20" letter-spacing="3" filter="url(#laserGlow)">
+      CYBER STARFIGHTER ACE 3D
+    </text>
+  </g>
+
+  <!-- Subtitle Tags Bottom -->
+  <g transform="translate(400, 430)" text-anchor="middle">
+    <text x="0" y="0" fill="#7dd3fc" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="12" letter-spacing="2">
+      🚀 3D SPACE DOGFIGHT • LOCK-ON PHOTON MISSILES • BARREL ROLLS • DREADNOUGHT BOSS
+    </text>
+  </g>
+</svg>

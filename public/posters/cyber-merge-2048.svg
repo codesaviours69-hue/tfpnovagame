@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <rect width="800" height="450" fill="#020617"/>
+  <defs><filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter></defs>
+  <g transform="translate(400, 230)" filter="url(#glow)">
+    <polygon points="0,-80 70,-40 70,40 0,80 -70,40 -70,-40" fill="#1e1b4b" stroke="#818cf8" stroke-width="4"/>
+    <text x="0" y="16" fill="#a5b4fc" font-family="sans-serif" font-weight="900" font-size="42" text-anchor="middle">2048</text>
+  </g>
+  <g transform="translate(400, 50)" text-anchor="middle">
+    <text x="0" y="0" fill="#818cf8" font-family="system-ui, sans-serif" font-weight="900" font-size="38" letter-spacing="2" filter="url(#glow)">CYBER MERGE 2048: FUSION</text>
+  </g>
+</svg>
