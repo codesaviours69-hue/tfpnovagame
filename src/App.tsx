@@ -9,7 +9,7 @@ import { WalletModal } from './components/modals/WalletModal';
 import { GAMES_DATA } from './data/games';
 import { Game, CategoryFilter, ModalType } from './types';
 import { sound } from './utils/audio';
-import { AdBanner, StickyAnchorAd, AdSenseBanner, ADSENSE_SLOTS } from './components/ads';
+import { AdBanner, StickyAnchorAd, AdManagerBanner, AD_MANAGER_SLOTS } from './components/ads';
 import { ADS_CONFIG } from './config/adsConfig';
 import { Flame, Sparkles, Trophy, Zap, HelpCircle, Gamepad2, Compass, Award, Puzzle, Swords, ChevronRight } from 'lucide-react';
 
@@ -25,6 +25,18 @@ export default function App() {
     window.addEventListener('open_wallet_modal', handleOpenWallet);
     return () => window.removeEventListener('open_wallet_modal', handleOpenWallet);
   }, []);
+
+  // Trigger Google Ad Manager Rewarded Ad & Refresh Sticky Anchor on navigation
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if ((window as any).triggerNovaRewardAd) {
+        (window as any).triggerNovaRewardAd();
+      }
+      if ((window as any).refreshNovaStickyAd) {
+        (window as any).refreshNovaStickyAd();
+      }
+    }
+  }, [selectedGame?.id, selectedCategory]);
 
   const handleToggleMute = () => {
     const isMute = sound.toggleMute();
@@ -64,7 +76,7 @@ export default function App() {
   const puzzleGames = GAMES_DATA.filter((g) => g.category === 'puzzle').slice(0, 6);
 
   return (
-    <div className="w-full min-h-screen bg-[#070b14] text-slate-100 flex flex-col selection:bg-cyan-500 selection:text-slate-950 font-sans">
+    <div className="w-full min-h-screen bg-[#070b14] text-slate-100 flex flex-col selection:bg-cyan-500 selection:text-slate-950 font-sans pb-16 sm:pb-24">
       {/* Navigation Header */}
       <Header
         selectedCategory={selectedCategory}
@@ -100,9 +112,9 @@ export default function App() {
         ) : (
           /* Catalog View */
           <>
-            {/* Top Leaderboard Google AdSense Banner (game_ads-1) */}
+            {/* Top Leaderboard Google Ad Manager Banner (Display-1) */}
             <div className="w-full">
-              <AdSenseBanner adSlot={ADSENSE_SLOTS.GAME_ADS_1} label="FEATURED ADVERTISEMENT" />
+              <AdManagerBanner slot={AD_MANAGER_SLOTS.DISPLAY_1} label="FEATURED ADVERTISEMENT" />
             </div>
 
             {/* Show Categorized Rows when on Home (all categories and no search query) */}
@@ -120,9 +132,9 @@ export default function App() {
                   ))}
                 </div>
 
-                {/* In-Feed Banner Ad 1 */}
+                {/* In-Feed Banner Ad 1 (Display-2) */}
                 <div className="w-full my-2">
-                  <AdSenseBanner adSlot={ADSENSE_SLOTS.GAME_ADS_2} label="SPONSORED ADVERTISEMENT" />
+                  <AdManagerBanner slot={AD_MANAGER_SLOTS.DISPLAY_2} label="SPONSORED ADVERTISEMENT" />
                 </div>
 
                 {/* 2. 🔥 Trending Games Section */}
@@ -150,9 +162,9 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* In-Feed Banner Ad 2 (game_ads-3) */}
+                {/* In-Feed Banner Ad 2 (Display-3) */}
                 <div className="w-full my-3">
-                  <AdSenseBanner adSlot={ADSENSE_SLOTS.GAME_ADS_3} label="SPONSORED ADVERTISEMENT" />
+                  <AdManagerBanner slot={AD_MANAGER_SLOTS.DISPLAY_3} label="SPONSORED ADVERTISEMENT" />
                 </div>
 
                 {/* 3. 💡 Discovery Section */}
@@ -207,9 +219,9 @@ export default function App() {
                   </div>
                 )}
 
-                {/* In-Feed Banner Ad 3 (game_ads-1) */}
+                {/* In-Feed Banner Ad 3 (Display-4) */}
                 <div className="w-full my-3">
-                  <AdSenseBanner adSlot={ADSENSE_SLOTS.GAME_ADS_1} label="FEATURED ADVERTISEMENT" />
+                  <AdManagerBanner slot={AD_MANAGER_SLOTS.DISPLAY_4} label="FEATURED ADVERTISEMENT" />
                 </div>
 
                 {/* 5. 🏆 Sports & Arcade Arena Section */}
@@ -266,9 +278,9 @@ export default function App() {
                   </div>
                 )}
 
-                {/* In-Feed Banner Ad 4 (game_ads-2) */}
+                {/* In-Feed Banner Ad 4 (Display-5) */}
                 <div className="w-full my-3">
-                  <AdSenseBanner adSlot={ADSENSE_SLOTS.GAME_ADS_2} label="SPONSORED ADVERTISEMENT" />
+                  <AdManagerBanner slot={AD_MANAGER_SLOTS.DISPLAY_5} label="SPONSORED ADVERTISEMENT" />
                 </div>
               </div>
             ) : (
@@ -331,9 +343,9 @@ export default function App() {
                   </div>
                 )}
 
-                {/* Category View AdSense Banner */}
+                {/* Category View Google Ad Manager Banner (Display-1) */}
                 <div className="w-full my-4">
-                  <AdSenseBanner adSlot={ADSENSE_SLOTS.GAME_ADS_3} label="SPONSORED ADVERTISEMENT" />
+                  <AdManagerBanner slot={AD_MANAGER_SLOTS.DISPLAY_1} label="SPONSORED ADVERTISEMENT" />
                 </div>
               </div>
             )}

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { 
   Gamepad2, Search, Volume2, VolumeX, Sparkles, ShieldCheck, Mail, Info, 
-  Menu, X, Compass, HelpCircle, FileText, Lock, Wallet
+  Menu, X, Compass, HelpCircle, FileText, Lock, Wallet, Gift
 } from 'lucide-react';
 import { CategoryFilter, ModalType } from '../types';
 import { sound } from '../utils/audio';
@@ -123,6 +123,23 @@ export const Header: React.FC<Props> = ({
               <span>{walletBalance.toLocaleString()} CHIPS</span>
             </button>
 
+            {/* GAM Reward Ad Trigger Button */}
+            <button
+              id="header-reward-ad-btn"
+              onClick={() => {
+                sound.playClick();
+                if (typeof window !== 'undefined' && (window as any).triggerNovaRewardAd) {
+                  (window as any).triggerNovaRewardAd();
+                }
+              }}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gradient-to-r from-purple-600/30 to-pink-600/30 border border-purple-500/50 hover:border-pink-400 text-pink-300 hover:text-white transition-all font-black text-xs shadow-md shadow-purple-500/10 hover:shadow-purple-500/30 cursor-pointer"
+              title="Watch short ad & unlock rewards (+500 Coins)"
+            >
+              <Gift className="w-3.5 h-3.5 text-pink-400" />
+              <span className="hidden sm:inline">REWARD AD</span>
+              <span className="sm:hidden">AD</span>
+            </button>
+
             <button
               id="header-mute-toggle"
               onClick={onToggleMute}
@@ -184,6 +201,21 @@ export const Header: React.FC<Props> = ({
         {/* Mobile Navigation Drawer / Dropdown */}
         {mobileMenuOpen && (
           <div className="sm:hidden border-t border-slate-800 py-3 space-y-3 animate-in fade-in slide-in-from-top-2 duration-200">
+            {/* Mobile Reward Ad Trigger */}
+            <button
+              onClick={() => {
+                sound.playClick();
+                setMobileMenuOpen(false);
+                if (typeof window !== 'undefined' && (window as any).triggerNovaRewardAd) {
+                  (window as any).triggerNovaRewardAd();
+                }
+              }}
+              className="w-full flex items-center justify-center gap-2 p-2.5 rounded-xl bg-gradient-to-r from-purple-600/40 to-pink-600/40 border border-purple-500/60 text-pink-200 font-bold text-xs shadow-lg shadow-purple-500/20"
+            >
+              <Gift className="w-4 h-4 text-pink-400" />
+              <span>🎁 Watch Reward Ad (+500 Coins)</span>
+            </button>
+
             <div className="grid grid-cols-2 gap-2 text-xs font-semibold">
               <button
                 onClick={() => {

@@ -3,4 +3,4 @@ export * from './StickyAnchorAd';
 export * from './InterstitialAdModal';
 export * from './RewardAdModal';
 export * from './AdSenseBanner';
-
+export * from './AdManagerBanner';

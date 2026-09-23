@@ -35,6 +35,10 @@ export const RewardAdModal: React.FC<RewardAdModalProps> = ({
     setSecondsRemaining(watchTotalSeconds);
     setIsCompleted(false);
 
+    if (typeof window !== 'undefined' && (window as any).triggerNovaRewardAd) {
+      (window as any).triggerNovaRewardAd();
+    }
+
     adManager.registerSlot(slotDivId, {
       path: ADS_CONFIG.adUnits.rewarded.path,
       sizes: [[640, 480], [300, 250]],

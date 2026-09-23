@@ -20,7 +20,7 @@ import {
   ScreenShare
 } from 'lucide-react';
 import { Game } from '../types';
-import { AdBanner, StickyAnchorAd, AdSenseBanner, ADSENSE_SLOTS } from './ads';
+import { AdBanner, StickyAnchorAd, AdManagerBanner, AD_MANAGER_SLOTS } from './ads';
 import { ADS_CONFIG } from '../config/adsConfig';
 import { ArrowsPuzzleEscape } from './games/ArrowsPuzzleEscape';
 import { NinJumpTowerClimb } from './games/NinJumpTowerClimb';
@@ -411,9 +411,9 @@ export const GameDetailView: React.FC<Props> = ({ game, onBack, onSelectRelated,
             {renderGameComponent()}
           </div>
 
-          {/* Dedicated Full View Mode Google AdSense Banner */}
+          {/* Dedicated Full View Mode Google Ad Manager Banner */}
           <div className="w-full max-w-4xl mx-auto py-1 px-2 z-40 shrink-0">
-            <AdSenseBanner adSlot={ADSENSE_SLOTS.GAME_ADS_2} label="FULL VIEW SPONSORED AD" />
+            <AdManagerBanner slot={AD_MANAGER_SLOTS.DISPLAY_5} label="FULL VIEW SPONSORED AD" />
           </div>
 
           {/* Bottom Full View Status Hint */}
@@ -481,9 +481,9 @@ export const GameDetailView: React.FC<Props> = ({ game, onBack, onSelectRelated,
           </div>
         </div>
 
-        {/* Top Game View AdSense Banner (game_ads-1) */}
+        {/* Top Game View Google Ad Manager Banner (Display-1) */}
         <div className="w-full">
-          <AdSenseBanner adSlot={ADSENSE_SLOTS.GAME_ADS_1} label="FEATURED SPONSORED AD" />
+          <AdManagerBanner slot={AD_MANAGER_SLOTS.DISPLAY_1} label="FEATURED SPONSORED AD" />
         </div>
 
         {/* 2-COLUMN GRID: Game Arena & In-Game Banner on Left + Sidebar Banner & Games on Right */}
@@ -496,9 +496,9 @@ export const GameDetailView: React.FC<Props> = ({ game, onBack, onSelectRelated,
                 {renderGameComponent()}
               </div>
 
-              {/* In-Content Google AdSense Banner (game_ads-2) */}
+              {/* In-Content Google Ad Manager Banner (Display-2) */}
               <div className="w-full mt-3">
-                <AdSenseBanner adSlot={ADSENSE_SLOTS.GAME_ADS_2} label="IN-GAME SPONSORED AD" />
+                <AdManagerBanner slot={AD_MANAGER_SLOTS.DISPLAY_2} label="IN-GAME SPONSORED AD" />
               </div>
             </div>
 
@@ -581,8 +581,8 @@ export const GameDetailView: React.FC<Props> = ({ game, onBack, onSelectRelated,
 
           {/* RIGHT 1 COLUMN: Sidebar Ad Banner (game_ads-3) FIRST + Popular Games */}
           <div className="space-y-6">
-            {/* Sidebar AdSense Banner (game_ads-3) Placed right next to game! */}
-            <AdSenseBanner adSlot={ADSENSE_SLOTS.GAME_ADS_3} label="SPONSORED AD" className="w-full" />
+            {/* Sidebar Google Ad Manager Banner (Display-3) */}
+            <AdManagerBanner slot={AD_MANAGER_SLOTS.DISPLAY_3} label="SPONSORED AD" className="w-full" />
 
             {/* More Popular Games */}
             <div className="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-4">
@@ -646,8 +646,8 @@ export const GameDetailView: React.FC<Props> = ({ game, onBack, onSelectRelated,
               </div>
             </div>
 
-            {/* Sidebar Bottom AdSense Banner (game_ads-1) */}
-            <AdSenseBanner adSlot={ADSENSE_SLOTS.GAME_ADS_1} label="FEATURED SPONSORED AD" className="w-full" />
+            {/* Sidebar Bottom Google Ad Manager Banner (Display-4) */}
+            <AdManagerBanner slot={AD_MANAGER_SLOTS.DISPLAY_4} label="FEATURED SPONSORED AD" className="w-full" />
           </div>
         </div>
       </div>

@@ -11,16 +11,175 @@
     <meta property="og:description" content="Instant play 60FPS premium HTML5 games right in your browser on mobile and desktop." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
-    <!-- Google AdSense Tag -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1020203735300376" crossorigin="anonymous"></script>
     <!-- Google Publisher Tag (GPT) for Google Ad Manager -->
-    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
     <script>
       window.googletag = window.googletag || { cmd: [] };
+      var rewardSlot;
+      var anchorSlot_2;
+
+      googletag.cmd.push(function() {
+        if (typeof googletag.setConfig === 'function') {
+          googletag.setConfig({ singleRequest: true });
+        }
+
+        if (googletag.pubads && typeof googletag.pubads().enableSingleRequest === 'function') {
+          googletag.pubads().enableSingleRequest();
+        }
+
+        if (googletag.defineOutOfPageSlot && googletag.enums && googletag.enums.OutOfPageFormat) {
+          rewardSlot = googletag.defineOutOfPageSlot(
+            '/22856454650/NovaGame-RewardAD',
+            googletag.enums.OutOfPageFormat.REWARDED
+          );
+        }
+
+        if (rewardSlot) {
+          rewardSlot.addService(googletag.pubads());
+
+          googletag.pubads().addEventListener('rewardedSlotReady', function(event) {
+            if (event.slot === rewardSlot) {
+              var modal = document.getElementById("adhq-reward-modal");
+              if (modal) modal.style.display = "block";
+              event.makeRewardedVisible();
+            }
+          });
+
+          googletag.pubads().addEventListener('rewardedSlotClosed', function(event) {
+            if (event.slot === rewardSlot) {
+              var modal = document.getElementById("adhq-reward-modal");
+              if (modal) modal.style.display = "none";
+              var toast = document.getElementById("adhq-toast");
+              if (toast) {
+                toast.style.display = "block";
+                setTimeout(function() {
+                  toast.style.display = "none";
+                }, 4000);
+              }
+
+              // Double Revenue Hack: Update wallet & refresh ad after 30 seconds
+              try {
+                var cur = parseInt(localStorage.getItem('novaplay_wallet_balance') || '3500', 10);
+                localStorage.setItem('novaplay_wallet_balance', (cur + 500).toString());
+                window.dispatchEvent(new Event('wallet_balance_updated'));
+              } catch(e) {}
+
+              // ૩૦ સેકન્ડ પછી બીજી એડ માટે રિફ્રેશ (Double Revenue Hack)
+              setTimeout(function() {
+                googletag.pubads().refresh([rewardSlot]);
+              }, 30000);
+            }
+          });
+        }
+
+        // GPT Sticky Bottom Anchor Slot (/22856454650/NovaGame-Stickey)
+        if (googletag.defineOutOfPageSlot && googletag.enums && googletag.enums.OutOfPageFormat) {
+          anchorSlot_2 = googletag.defineOutOfPageSlot(
+            '/22856454650/NovaGame-Stickey',
+            googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR
+          );
+        }
+
+        if (anchorSlot_2) {
+          anchorSlot_2.addService(googletag.pubads());
+        }
+
+        googletag.enableServices();
+
+        if (anchorSlot_2) {
+          googletag.display(anchorSlot_2);
+        }
+      });
+
+      // Global refresh function for sticky anchor ad on all pages and games
+      window.refreshNovaStickyAd = function() {
+        if (window.googletag && anchorSlot_2 && window.googletag.pubadsReady) {
+          googletag.cmd.push(function() {
+            googletag.pubads().refresh([anchorSlot_2]);
+          });
+        }
+      };
+
+      // Global trigger function to display reward ad on page change or button click
+      window.triggerNovaRewardAd = function() {
+        if (window.googletag && rewardSlot) {
+          googletag.cmd.push(function() {
+            googletag.display(rewardSlot);
+          });
+        }
+      };
+
+      // Scroll trigger (fires once after scrolling > 250px)
+      var adTriggered = false;
+      window.addEventListener("scroll", function() {
+        if (!adTriggered && window.scrollY > 250) {
+          adTriggered = true;
+          window.triggerNovaRewardAd();
+        }
+      });
     </script>
+    <style>
+      #adhq-reward-modal {
+        display: none;
+        position: fixed;
+        z-index: 10000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(8px);
+      }
+      .modal-content {
+        background: #0f172a;
+        color: #f8fafc;
+        border: 1px solid #334155;
+        padding: 35px 25px;
+        border-radius: 20px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 85%;
+        max-width: 400px;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+      }
+      #adhq-toast {
+        position: fixed !important;
+        bottom: 30px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        background: #111827;
+        color: #38bdf8;
+        border: 1px solid #0284c7;
+        padding: 12px 24px;
+        border-radius: 12px;
+        z-index: 99999;
+        display: none;
+        font-weight: 700;
+        box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.4);
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Google Ad Manager Rewarded Ad Modal & Toast -->
+    <div id="adhq-reward-modal">
+      <div class="modal-content">
+        <h2 style="color: #f8fafc; font-size: 20px; font-weight: 800; margin-bottom: 8px;">Wait! Content Locked</h2>
+        <p style="color: #94a3b8; font-size: 13px; margin-bottom: 18px;">Please watch a short ad to continue reading...</p>
+        <button
+          onclick="document.getElementById('adhq-reward-modal').style.display='none'"
+          style="background: #1e293b; color: #94a3b8; border: 1px solid #334155; padding: 6px 14px; border-radius: 8px; font-size: 11px; cursor: pointer;"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+    <div id="adhq-toast">Content Unlocked!</div>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

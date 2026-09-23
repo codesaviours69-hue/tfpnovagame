@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Sparkles } from 'lucide-react';
-import { AdSenseBanner, ADSENSE_SLOTS } from './AdSenseBanner';
+import { AdManagerBanner, AD_MANAGER_SLOTS } from './AdManagerBanner';
 
 interface StickyAnchorAdProps {
   isFullView?: boolean;
@@ -56,8 +56,8 @@ export const StickyAnchorAd: React.FC<StickyAnchorAdProps> = ({ isFullView = fal
       {/* Main Sticky Banner Body */}
       {!isCollapsed && (
         <div className="w-full max-w-4xl mx-auto bg-slate-950/95 border-t border-slate-800 backdrop-blur-xl shadow-2xl px-2 py-1 flex items-center justify-center">
-          <AdSenseBanner
-            adSlot={ADSENSE_SLOTS.GAME_ADS_3}
+          <AdManagerBanner
+            slot={AD_MANAGER_SLOTS.DISPLAY_5}
             label="STICKY ADVERTISEMENT"
             className="border-0 bg-transparent p-0 shadow-none"
           />

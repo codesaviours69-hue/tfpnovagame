@@ -66,9 +66,9 @@ export const LegalModals: React.FC<Props> = ({ activeModal, onClose }) => {
                 NovaPlay H5 Games values user privacy. We do not require account registration or collection of sensitive personal data. Game high scores and sound preferences are stored locally on your device via standard browser LocalStorage.
               </p>
 
-              <h4 className="font-bold text-white text-base">2. Third-Party Advertising & Google AdSense Policy</h4>
+              <h4 className="font-bold text-white text-base">2. Third-Party Advertising & Google Ad Manager Policy</h4>
               <p>
-                We use third-party advertising companies, including Google AdSense, to serve ads when you visit our website. These companies may use information (not including your name, address, email address, or telephone number) about your visits to this and other websites in order to provide advertisements about goods and services of interest to you.
+                We use third-party advertising companies, including Google Ad Manager and Google Publisher Tag (GPT), to serve ads when you visit our website. These companies may use information (not including your name, address, email address, or telephone number) about your visits to this and other websites in order to provide advertisements about goods and services of interest to you.
               </p>
               <ul className="list-disc pl-5 space-y-1 text-slate-400">
                 <li>Google, as a third-party vendor, uses cookies to serve ads on NovaPlay H5 Games.</li>
